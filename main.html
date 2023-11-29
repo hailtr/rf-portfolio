@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portafolio</title>
+</head>
+<body>
+    <nav id="nav-banner">
+        <ul class="nav-list">
+            <li class="nav-link">
+                <a class="contact-button" href="#Contacto">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>    
+                Contacto
+                </a>
+            </li>
+            <li class="nav-link">
+                <a class="about-button" href="#Sobre mí">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span> 
+                Sobre mí</a>
+            </li>
+            <li class="nav-link">
+                <a class="works-button" href="#Trabajos">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="line"></span>
+                Trabajos</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <div class="welcome-quotes">
+            Frases famosas alguna vez dichas.
+            <p id="quote-text"></p>
+            <p id="person-text"></p>
+        </div>
+        
+
+    </section>
+    <section>
+
+    </section>
+    <footer>
+
+    </footer>
+    <script>
+        const quoteElement = document.getElementById('quote-text');
+        const personElement = document.getElementById('person-text');
+    
+        // Función para cargar y mostrar las citas desde un archivo JSON
+        async function loadQuotes() {
+          try {
+            const response = await fetch('quotes.json'); // Cambia la ruta al archivo JSON si es necesario
+            const quotes = await response.json();
+            let currentQuoteIndex = 0;
+    
+            // Función para mostrar la siguiente cita y persona asociada
+            function showNextQuote() {
+              const currentQuote = quotes[currentQuoteIndex];
+              quoteElement.textContent = currentQuote.quote;
+              personElement.textContent = `- ${currentQuote.person}`;
+              currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+            }
+    
+            // Mostrar la primera cita al cargar la página
+            showNextQuote();
+    
+            // Actualizar la cita cada 5 segundos (5000 milisegundos)
+            setInterval(showNextQuote, 5000); // Cambia el valor para el tiempo deseado en milisegundos
+          } catch (error) {
+            console.error('Error al cargar las citas:', error);
+          }
+        }
+    
+        // Llamar a la función para cargar las citas cuando la página se cargue
+        loadQuotes();
+      </script>
+</body>
+</html>
+
+

@@ -1,0 +1,243 @@
+/* html */
+
+:root {
+    --main-black: #111111;
+    --main-green: #00ff00;
+    --main-spread-green: #rgba(0, 255, 0, 0.4);
+    --main-dgreen: #00c300df;
+  }
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+  }
+
+
+
+
+@media (max-width: 61.25em) {
+    html {
+      font-size: 58%;
+    }
+  }
+  
+  @media (max-width: 28.75em) {
+    html {
+      font-size: 55%;
+    }
+  }
+
+/* body */
+
+body {
+  margin: 0px;
+  min-width: 290px;
+  color: var(--main-green);
+  background-color: var(--main-black);
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.5;
+  font-size: 1.8rem;
+  text-shadow: 0 0 .1em var(--main-green);
+}
+
+/* nav */
+.nav-banner {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .nav-list {
+    display: flex;
+    margin-top: 1px;
+    flex-direction: row;
+  }
+  
+  @media (max-width: 28.75em) {
+    .nav {
+      justify-content: center;
+    }
+  
+    .nav-list {
+      margin: 0 1rem;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+  }
+  
+  .nav-list a {
+    display: block;
+    position: relative;
+    font-size: 2.2rem;
+    padding: 2rem;
+    text-decoration: none;
+    color: var(--main-dgreen);
+    /* glow */
+    outline: none;
+    box-shadow: 0 0 1em 0.25em var(--main-dgreen),
+          0 0 4em 1em var(--main-spread-green),
+          inset 0 0 .75em .25em var(--main-dgreen);
+    text-shadow: 0 0 .5em var(--main-green);
+    transition: 0.5s;
+    overflow: hidden;
+    padding-right: 2.5rem;
+  }
+
+  .nav-list a span{
+    position: absolute;
+    background-color: var(--main-green);
+    transition: .5s;
+  }
+
+/* Animación botón de contacto */
+
+  .nav-list a.contact-button span:nth-child(1) {
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: -100%;
+  }
+  .nav-list a.contact-button span:nth-child(2) {
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    right: -100%;
+  }
+  .nav-list a.contact-button span:nth-child(3) {
+    width: 1px;
+    height: 100%;
+    bottom: -100%;
+    left: 0;
+  }
+  .nav-list a.contact-button span:nth-child(4) {
+    width: 1px;
+    height: 100%;
+    top: -100%;
+    right: 0;
+  }
+  
+  .nav-list a.contact-button:hover {
+    color: var(--main-green)
+  }
+  .nav-list a.contact-button:hover span:nth-child(1) {
+    left: 0;
+  }
+  .nav-list a.contact-button:hover span:nth-child(2) {
+    right: 0;
+  }
+  .nav-list a.contact-button:hover span:nth-child(3) {
+    bottom: 0;
+  }
+  .nav-list a.contact-button:hover span:nth-child(4) {
+    top: 0;
+  }
+
+  /* Animación botón sobre mí */
+
+  .nav-list a.about-button span:nth-child(1) {
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: -100%;
+  }
+  .nav-list a.about-button span:nth-child(2) {
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    right: -100%;
+  }
+  .nav-list a.about-button span:nth-child(3) {
+    width: 1px;
+    height: 100%;
+    bottom: -100%;
+    left: 0;
+  }
+  .nav-list a.about-button span:nth-child(4) {
+    width: 1px;
+    height: 100%;
+    top: -100%;
+    right: 0;
+  }
+  
+  .nav-list a.about-button:hover {
+    color: var(--main-green)
+  }
+  .nav-list a.about-button:hover span:nth-child(1) {
+    left: 0;
+  }
+  .nav-list a.about-button:hover span:nth-child(2) {
+    right: 0;
+  }
+  .nav-list a.about-button:hover span:nth-child(3) {
+    bottom: 0;
+  }
+  .nav-list a.about-button:hover span:nth-child(4) {
+    top: 0;
+  }
+
+/* Animación botón de trabajos */
+
+.nav-list a.works-button span:nth-child(1) {
+  width: 100%;
+  height: 1px;
+  top: 0;
+  left: -100%;
+}
+.nav-list a.works-button span:nth-child(2) {
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  right: -100%;
+}
+.nav-list a.works-button span:nth-child(3) {
+  width: 1px;
+  height: 100%;
+  bottom: -100%;
+  left: 0;
+}
+.nav-list a.works-button span:nth-child(4) {
+  width: 1px;
+  height: 100%;
+  top: -100%;
+  right: 0;
+}
+
+.nav-list a.works-button:hover {
+  color: var(--main-green)
+}
+.nav-list a.works-button:hover span:nth-child(1) {
+  left: 0;
+}
+.nav-list a.works-button:hover span:nth-child(2) {
+  right: 0;
+}
+.nav-list a.works-button:hover span:nth-child(3) {
+  bottom: 0;
+}
+.nav-list a.works-button:hover span:nth-child(4) {
+  top: 0;
+}
+
+.nav-list a:active {
+  border: 1px solid var(--main-green);
+}
+
+/* Sección de citas */
+
+.welcome-quotes {
+  height: 200px;
+  width: 100%;
+  text-align: center;
+}
