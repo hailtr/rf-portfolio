@@ -259,8 +259,10 @@ body {
 /* Sección de citas */
 
 .welcome-quotes {
-  width: 300px;
+  width: 500px;
   padding: 40px 50px;
+  height: 100px;
+  
 }
 
 #quote-text {
