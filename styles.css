@@ -228,8 +228,7 @@ body {
 
 .welcome-quotes {
   width: 50%;
-  padding: 4vw;
-  height: 100px;
+  padding: 2rem 0 2rem 0;
   text-align: center;
 }
 
@@ -260,7 +259,7 @@ h1 {
 }
   @media (max-width: 75em) {
     html {
-      font-size: 60%;
+      font-size: 8;
     }
 
     .banner {
@@ -287,7 +286,7 @@ h1 {
 
 @media (max-width: 61.25em) {
     html {
-      font-size: 8px;
+      font-size: 7px;
     }
 
     .banner {
@@ -311,7 +310,7 @@ h1 {
   
   @media (max-width: 28.75em) {
     html {
-      font-size: 6px;
+      font-size: 5px;
     }
 
     .banner {
