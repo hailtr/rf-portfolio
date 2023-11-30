@@ -6,6 +6,7 @@
     <title>Rafael Ortiz - Portafolio</title>
 </head>
 <body>
+  <div class="banner">
     <nav id="nav-banner">
         <ul class="nav-list">
             <li class="nav-link">
@@ -36,13 +37,15 @@
             </li>
         </ul>
     </nav>
+  </div>
+    <div class="container">
     <section class="welcome-message">
         <div class="welcome-quotes">
             <p id="quote-text"></p>
             <p id="person-text"></p>
         </div>
         <div class="introduce-myself">
-          <h1>Hola, soy Rafael Ortiz.</h1>
+          <h1>Hola, soy Rafael Ortiz</h1>
           <p>Desarrollador Fullstack</p>
         </div>
     </section>
@@ -53,6 +56,7 @@
     <footer>
 
     </footer>
+  </div>
     <script>
         const quoteElement = document.getElementById('quote-text');
         const personElement = document.getElementById('person-text');
@@ -84,6 +88,14 @@
     
         // Llamar a la función para cargar las citas cuando la página se cargue
         loadQuotes();
+      </script>
+      <script>
+        // ocultar scroll
+        const container = document.querySelector('.container');
+        container.addEventListener('wheel', (e) => {
+          container.scrollBy(0, e.deltaY);
+          e.preventDefault();
+        });
       </script>
 </body>
 </html>

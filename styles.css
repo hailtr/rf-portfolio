@@ -41,16 +41,26 @@ body {
   color: var(--main-green);
   background-color: var(--main-black);
   font-family: 'Open Sans', Arial, sans-serif;
-  line-height: 1.5;
   font-size: 1.8rem;
   text-shadow: 0 0 .1em var(--main-green);
+  overflow: hidden;
+}
+
+.banner {
+  height: 70px; 
+  overflow: auto; 
+}
+
+.container {
+  height: calc(100vh - 70px); 
+  overflow: hidden;
 }
 
 /* nav */
 .nav-banner {
     display: flex;
     justify-content: flex-end;
-    position: fixed;
+    position: static;
     top: 0;
     left: 0;
     width: 100%;
@@ -59,7 +69,7 @@ body {
   
   .nav-list {
     display: flex;
-    margin-top: 1px;
+    margin-top: 2px;
     flex-direction: row;
   }
   
@@ -75,6 +85,7 @@ body {
 
   ul {
     list-style-type: none;
+    margin-bottom: 1px;
   }
   
   .nav-list a {
@@ -238,8 +249,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    background: var(--main-dgreen)
+    color: var(--main-black);
+    background: var(--main-dgreen);
+    flex-direction: column;
+    width: 100%;
+    background-image: linear-gradient(32deg, black 0%, white 900%);
+    padding-bottom: 50px;
 }
 /* Sección de citas */
 
@@ -248,9 +263,25 @@ body {
   padding: 40px 50px;
 }
 
+#quote-text {
+  color: var(--main-green);
+  font-size: 1.9rem;
+}
+
 #person-text {
   text-align: right;
+  font-size: 1.6rem;
 }
 .introduce-myself p {
-  color: var(--main-black);
+  text-align: right;
+  margin: 0px;
+  font-size: 3rem;
+}
+
+h1 {
+  color: var(--main-green);
+  font-weight: 700;
+  font-size: 6rem;
+  margin-bottom: 0;
+  margin-top: 50px;
 }
