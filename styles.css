@@ -259,31 +259,31 @@ body {
 /* Sección de citas */
 
 .welcome-quotes {
-  width: 500px;
-  padding: 40px 50px;
+  width: 50%;
+  padding: 4vw;
   height: 100px;
   
 }
 
 #quote-text {
-  color: var(--main-green);
-  font-size: 1.9rem;
+  color: var(--main-dgreen);
+  font-size: 2vw;
 }
 
 #person-text {
   text-align: right;
-  font-size: 1.6rem;
+  font-size: 1.5vw;
 }
 .introduce-myself p {
   text-align: right;
   margin: 0px;
-  font-size: 3rem;
+  font-size: 2vw;
 }
 
 h1 {
   color: var(--main-green);
   font-weight: 700;
-  font-size: 6rem;
+  font-size: 4vw;
   margin-bottom: 0;
-  margin-top: 50px;
+  margin-top: 5vw;
 }
