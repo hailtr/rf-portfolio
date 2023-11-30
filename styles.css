@@ -80,6 +80,7 @@ body {
   
     .nav-list {
       margin: 1rem 1rem;
+      padding-left: 0;
     }
   }
 
