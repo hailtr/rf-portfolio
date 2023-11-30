@@ -82,6 +82,9 @@ body {
       margin: 1rem 1rem;
       padding-left: 0;
     }
+    .welcome-message{
+      padding-bottom: 0;
+    }
   }
 
   ul {
