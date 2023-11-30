@@ -228,7 +228,8 @@ border: 1px solid var(--main-green);
 /* Sección de citas */
 
 .welcome-quotes {
-width: 50%;
+width: 100%;
+height: 10rem;
 padding: 2rem 0 2rem 0;
 text-align: center;
 }
@@ -240,6 +241,7 @@ color: var(--main-dgreen)
 #quote-text {
 color: var(--main-dgreen);
 font-size: 2rem;
+margin-top: 8rem;
 }
 
 #person-text {
@@ -247,7 +249,7 @@ font-size: 1.9rem;
 }
 .introduce-myself p {
 text-align: right;
-margin: 0 0 4rem 0;
+margin: 0;
 font-size: 3.2rem;
 }
 
