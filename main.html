@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Portafolio</title>
+    <title>Rafael Ortiz - Portafolio</title>
 </head>
 <body>
     <nav id="nav-banner">
@@ -41,10 +41,13 @@
             <p id="quote-text"></p>
             <p id="person-text"></p>
         </div>
-        
-
+        <div class="introduce-myself">
+          <h1>Hola, soy Rafael Ortiz.</h1>
+          <p>Desarrollador Fullstack</p>
+        </div>
     </section>
-    <section>
+    
+    <section class="galery">
 
     </section>
     <footer>
@@ -72,8 +75,8 @@
             // Mostrar la primera cita al cargar la página
             showNextQuote();
     
-            // Actualizar la cita cada 5 segundos (5000 milisegundos)
-            setInterval(showNextQuote, 5000); // Cambia el valor para el tiempo deseado en milisegundos
+            // Actualizar la cita cada X segundos (ej: 5000 milisegundos)
+            setInterval(showNextQuote, 10000); // Cambia el valor para el tiempo deseado en milisegundos
           } catch (error) {
             console.error('Error al cargar las citas:', error);
           }

@@ -238,6 +238,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+    background: var(--main-dgreen)
 }
 /* Sección de citas */
 
@@ -248,4 +250,7 @@ body {
 
 #person-text {
   text-align: right;
+}
+.introduce-myself p {
+  color: var(--main-black);
 }
