@@ -245,3 +245,7 @@ body {
   width: 300px;
   padding: 40px 50px;
 }
+
+#person-text {
+  text-align: right;
+}
