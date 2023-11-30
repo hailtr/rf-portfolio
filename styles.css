@@ -233,12 +233,15 @@ body {
 .nav-list a:active {
   border: 1px solid var(--main-green);
 }
-
+/* Mensaje de bienvenida */
+.welcome-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* Sección de citas */
 
 .welcome-quotes {
-  height: 550px;
   width: 300px;
-  text-align: center;
   padding: 40px 50px;
 }
