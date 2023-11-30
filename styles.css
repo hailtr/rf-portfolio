@@ -267,17 +267,17 @@ body {
 
 #quote-text {
   color: var(--main-dgreen);
-  font-size: 2vw;
+  font-size: 1.3vw;
 }
 
 #person-text {
-  text-align: right;
-  font-size: 1vw;
+  text-align: center;
+  font-size: 1.2vw;
 }
 .introduce-myself p {
   text-align: right;
   margin: 0px;
-  font-size: 1.5vw;
+  font-size: 2vw;
 }
 
 h1 {
