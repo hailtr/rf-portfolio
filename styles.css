@@ -262,7 +262,11 @@ body {
   width: 50%;
   padding: 4vw;
   height: 100px;
-  
+  text-align: center;
+}
+
+i {
+  color: var(--main-dgreen)
 }
 
 #quote-text {
@@ -271,7 +275,6 @@ body {
 }
 
 #person-text {
-  text-align: center;
   font-size: 1.2vw;
 }
 .introduce-myself p {
