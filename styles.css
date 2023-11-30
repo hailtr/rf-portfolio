@@ -272,12 +272,12 @@ body {
 
 #person-text {
   text-align: right;
-  font-size: 1.5vw;
+  font-size: 1vw;
 }
 .introduce-myself p {
   text-align: right;
   margin: 0px;
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 
 h1 {
