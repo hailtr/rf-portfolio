@@ -8,30 +8,9 @@
   }
 
 html {
-    font-size: 62.5%;
+    font-size: 10px;
     scroll-behavior: smooth;
 }
-
-@media (max-width: 75em) {
-    html {
-      font-size: 60%;
-    }
-  }
-
-
-
-
-@media (max-width: 61.25em) {
-    html {
-      font-size: 58%;
-    }
-  }
-  
-  @media (max-width: 28.75em) {
-    html {
-      font-size: 55%;
-    }
-  }
 
 /* body */
 
@@ -47,12 +26,12 @@ body {
 }
 
 .banner {
-  height: 10vh; 
-  overflow: auto; 
+  height: 7rem; 
+  overflow: auto;
 }
 
 .container {
-  height: 90vh; 
+  height: 93rem; 
   overflow: hidden;
 }
 
@@ -71,20 +50,6 @@ body {
     display: flex;
     margin-top: 2px;
     flex-direction: row;
-  }
-  
-  @media (max-width: 28.75em) {
-    .nav-banner {
-      justify-content: center;
-    }
-  
-    .nav-list {
-      margin: 1rem 1rem;
-      padding-left: 0;
-    }
-    .welcome-message{
-      padding-bottom: 0;
-    }
   }
 
   ul {
@@ -254,7 +219,6 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--main-black);
-    background: var(--main-dgreen);
     flex-direction: column;
     width: 100%;
     background-image: linear-gradient(32deg, black 0%, white 900%);
@@ -275,22 +239,96 @@ i {
 
 #quote-text {
   color: var(--main-dgreen);
-  font-size: 1.3vw;
+  font-size: 2rem;
 }
 
 #person-text {
-  font-size: 1.2vw;
+  font-size: 1.9rem;
 }
 .introduce-myself p {
   text-align: right;
   margin: 0px;
-  font-size: 2vw;
+  font-size: 3.2rem;
 }
 
 h1 {
   color: var(--main-green);
   font-weight: 700;
-  font-size: 4vw;
+  font-size: 6.2rem;
   margin-bottom: 0;
   margin-top: 5vw;
 }
+  @media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+
+    .banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-banner {
+      justify-content: center;
+    }
+  
+    .nav-list {
+      padding-left: 0;
+      margin-top: 0;
+    }
+    .welcome-message{
+        padding-bottom: 0;
+      }
+  }
+
+
+
+
+@media (max-width: 61.25em) {
+    html {
+      font-size: 6px;
+    }
+
+    .banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-banner {
+      justify-content: center;
+    }
+  
+    .nav-list {
+      padding-left: 0;
+      margin-top: 0;
+    }
+    .welcome-message{
+        padding-bottom: 0;
+      }
+  }
+  
+  @media (max-width: 28.75em) {
+    html {
+      font-size: 4px;
+    }
+
+    .banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-banner {
+      justify-content: center;
+    }
+  
+    .nav-list {
+      padding-left: 0;
+      margin-top: 0;
+    }
+    .welcome-message{
+        padding-bottom: 0;
+      }
+  }
