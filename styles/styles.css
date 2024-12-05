@@ -1,0 +1,123 @@
+/* Variables de colores */
+:root {
+  --main-grey: #c2c6ce;
+  --main-darkblue: #0f1c30;
+  --main-lightdarkblue: #304A6E;
+  --main-blue: #668DC0;
+  --main-lightblue: #C0D0EF; 
+}
+
+/* Estilos generales */
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 290px;
+  color: var(--main-green);
+  background: linear-gradient(175deg, var(--main-lightblue), var(--main-blue), var(--main-lightdarkblue), var(--main-darkblue));
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 1.8rem;
+  overflow: hidden;
+}
+
+/* Estilos para banner */
+.banner {
+  height: 2.5rem; 
+  overflow: hidden; /* Asegurar que el contenido no desborde */
+  background-color: var(--main-lightblue);
+  display: flex;
+  align-items: center; /* Centrar verticalmente el contenido */
+}
+
+.nav-banner {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 2.5rem; /* Asegurarse de que la altura coincida con .banner */
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  display: block;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--main-darkblue);
+  transition: 0.5s;
+  padding: 0 1rem; /* Ajustar el padding según sea necesario */
+}
+
+/* Animación botones */
+.nav-list a:hover {
+  color: var(--main-lightdarkblue);
+}
+
+.nav-list a:active {
+  border: 1px solid var(--main-blue);
+}
+
+/* Media queries para responsividad */
+@media (max-width: 75em) {
+  html {
+    font-size: 8px;
+  }
+
+  .banner, .nav-banner {
+    justify-content: center;
+  }
+
+  .nav-list {
+    padding-left: 0;
+    margin-top: 0;
+  }
+  .welcome-message {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 61.25em) {
+  html {
+    font-size: 7px;
+  }
+
+  .banner, .nav-banner {
+    justify-content: center;
+  }
+
+  .nav-list {
+    padding-left: 0;
+    margin-top: 0;
+  }
+
+  .welcome-message {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 28.75em) {
+  html {
+    font-size: 5px;
+  }
+
+  .banner, .nav-banner {
+    justify-content: center;
+  }
+
+  .nav-list {
+    padding-left: 0;
+    margin-top: 0;
+  }
+
+  .welcome-message {
+    padding-bottom: 0;
+  }
+}
