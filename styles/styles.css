@@ -4,7 +4,8 @@
   --main-darkblue: #0f1c30;
   --main-lightdarkblue: #304A6E;
   --main-blue: #668DC0;
-  --main-lightblue: #C0D0EF; 
+  --main-lightblue: #C0D0EF;
+  --gradiant: linear-gradient(175deg, var(--main-lightblue), var(--main-blue), var(--main-lightdarkblue), var(--main-darkblue));
 }
 
 /* Estilos generales */
@@ -16,27 +17,59 @@ html {
 body {
   margin: 0;
   min-width: 290px;
-  color: var(--main-green);
-  background: linear-gradient(175deg, var(--main-lightblue), var(--main-blue), var(--main-lightdarkblue), var(--main-darkblue));
+  color: whitesmoke;
+  background: var(--main-darkblue);
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 1.8rem;
   overflow: hidden;
+  
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.start {
+  flex: 1;
 }
 
 /* Estilos para banner */
-.banner {
+.banner-top {
   height: 2.5rem; 
-  overflow: hidden; /* Asegurar que el contenido no desborde */
-  background-color: var(--main-lightblue);
+  overflow: hidden; 
+  background-color: var(--main-darkblue);
   display: flex;
-  align-items: center; /* Centrar verticalmente el contenido */
+  align-items: center;
+  justify-content: end;
+  z-index: 10;
 }
 
+.banner-vertical {
+  width: 2.5rem;
+  height: 100vh;
+  background-color: var(--main-darkblue);
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  z-index: 1;
+}
 .nav-banner {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  height: 2.5rem; /* Asegurarse de que la altura coincida con .banner */
+  height: 2.5rem;
+
 }
 
 .nav-list {
@@ -51,18 +84,87 @@ body {
   display: block;
   font-size: 1rem;
   text-decoration: none;
-  color: var(--main-darkblue);
+  color: var(--main-lightblue);
   transition: 0.5s;
-  padding: 0 1rem; /* Ajustar el padding según sea necesario */
+  padding: 0 1rem;
+  color: var(--main-blue)
 }
 
 /* Animación botones */
 .nav-list a:hover {
-  color: var(--main-lightdarkblue);
+  color: cyan;
 }
 
 .nav-list a:active {
-  border: 1px solid var(--main-blue);
+  color: var(--main-blue);
+}
+
+/* Sección de inicio */
+
+.start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile {
+  display: flex;
+  align-items: center; 
+  padding: 2rem;
+}
+
+.profile-picture {
+  flex-shrink: 0; 
+  width: 250px; 
+  height: 300px;
+  margin-right: 10rem;
+  border-radius: 70%;
+  border: 5px solid var(--main-grey)
+}
+
+.profile-greating {
+  display: flex;
+  flex-direction: column; 
+}
+
+.profile-greating h2 {
+  margin: 0; 
+  font-size: 8rem; 
+}
+
+.profile-greating h1 {
+  margin: 0; 
+  font-size: 4rem;
+  color: var(--main-blue);
+  padding-bottom: 2rem;
+}
+
+.profile-greating p {
+  margin: 0.5rem 0 0 0; 
+  font-size: 1.6rem;
+}
+
+.name {
+  color: cyan
+}
+
+.lookingforward {
+  color: cyan
+}
+
+.thanks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--main-grey);
+  border-bottom: 0;
+  border-right: 0;
+  border-left: 0;
+  margin: 0 75vh;
+}
+
+
+.thanks p {
+  font-size: 1rem;
 }
 
 /* Media queries para responsividad */
