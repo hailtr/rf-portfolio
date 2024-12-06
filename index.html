@@ -12,7 +12,7 @@
     <nav id="nav-banner">
       <ul class="nav-list">
         <li class="nav-list">
-        <a class="home">
+        <a class="home" href="#home" onclick="showSection('home'); return false">
           <i class="fa-solid fa-house"></i>
         </a>
         </li>
@@ -23,17 +23,17 @@
         </li>
         <ul class="nav-list">
             <li class="nav-link">
-                <a class="contact-button" href="#About">  
+                <a class="contact-button" href="#about" onclick="showSection('about'); return false">  
                 Acerca de mí
                 </a>
             </li>
             <li class="nav-link">
-                <a class="about-button" href="#Contact">
+                <a class="about-button" href="#contact" onclick="showSection('contact'); return false">
                 Contacto 
                 </a>
             </li>
             <li class="nav-link">
-                <a class="works-button" href="#Job">
+                <a class="works-button" href="#job" onclick="showSection('job'); return false;">
                 Trabajos</a>
             </li>
         </ul>
@@ -57,8 +57,8 @@
         </li>
       </ul>
   </div>
-
-  <section class="start">
+<div class="sections-container">
+  <section id="home" class="section">
     <div class="profile">
       <img src="images/profilepicture.jpg" alt="Foto personal" class="profile-picture">
       <div class="profile-greating">
@@ -68,11 +68,29 @@
       </div>
     </div>
   </section>
-
+  <section id="about" class="section">
+    <div class="aboutme-section">
+      <h1>Acerca de mí</h1>
+      <div class="paragraph">
+      <p> Nací en Venezuela hace 26 años. A los 20 años tuve la oportunidad de viajar a Chile y, tras mucho trabajo, comencé a estudiar informática a los 23 años. Aunque inicialmente huía de la informática, finalmente me di cuenta de que nací para esto. Lamentablemente, no pude graduarme debido a los costos de los estudios, pero no me rendí. </p> 
+      <p> Continué aprendiendo y trabajando de forma independiente, aprovechando clases online y todos los recursos disponibles en la web, tanto en inglés como en español. El rápido desarrollo de la inteligencia artificial en esos años fue de gran ayuda; incluso cuando no entendía algo, podía preguntar y recibir información adicional rápidamente. Además, la IA fue la compañera perfecta para realizar cualquier proyecto, incluyendo este portafolio. </p>
+      <p> Agradezco profundamente a las fuentes de aprendizaje gratuito como el clásico CS50 de Harvard, freeCodeCamp.org, cognitiveclass.ai y Microsoft Learn. Empresas como Austranet y su personal me brindaron una dirección clara a seguir, y finalmente a DuocUC por motivarme a empezar con el pie derecho a pesar de los obstáculos. </p> 
+      <p> Mis primeras experiencias laborales fueron en Austranet y recientemente como asesor para diversas empresas en Venezuela. Actualmente, sigo escribiendo código para quienes estén dispuestos a darme una oportunidad. </p>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="section">
+    Contacto
+  </section>
+  <section id="job" class="section">
+    Trabajo
+  </section>
+</div>
   <footer>
     <div class="thanks">
       <p>Última actualización: 06-12-2024</p>
     </div>
   </footer>
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>
