@@ -22,7 +22,6 @@ body {
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 1.8rem;
   overflow: hidden;
-  
 }
 
 html, body {
@@ -42,8 +41,8 @@ body {
 
 /* Estilos para banner */
 .banner-top {
-  height: 2.5rem; 
-  overflow: hidden; 
+  height: 2.5rem;
+  overflow: hidden;
   background-color: var(--main-darkblue);
   display: flex;
   align-items: center;
@@ -55,21 +54,21 @@ body {
   width: 2.5rem;
   height: 100vh;
   background-color: var(--main-darkblue);
-   display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: fixed;
-  top: 0; 
+  top: 0;
   left: 0;
   z-index: 1;
 }
+
 .nav-banner {
   display: flex;
   justify-content: flex-end;
   width: 100%;
   height: 2.5rem;
-
 }
 
 .nav-list {
@@ -87,7 +86,7 @@ body {
   color: var(--main-lightblue);
   transition: 0.5s;
   padding: 0 1rem;
-  color: var(--main-blue)
+  color: var(--main-blue);
 }
 
 /* Animación botones */
@@ -100,57 +99,59 @@ body {
 }
 
 /* Sección de inicio */
-
 .start {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-left: 10rem;
 }
+
 .profile {
   display: flex;
-  align-items: center; 
+  align-items: center;
   padding: 2rem;
 }
 
 .profile-picture {
-  flex-shrink: 0; 
-  width: 250px; 
+  flex-shrink: 0;
+  width: 250px;
   height: 300px;
   margin-right: 10rem;
   border-radius: 70%;
-  border: 5px solid var(--main-grey)
+  border: 5px solid var(--main-grey);
 }
 
 .profile-greating {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 .profile-greating h2 {
-  margin: 0; 
-  font-size: 8rem; 
+  margin: 0;
+  font-size: 8rem;
 }
 
 .profile-greating h1 {
-  margin: 0; 
+  margin: 0;
   font-size: 4rem;
   color: var(--main-blue);
   padding-bottom: 2rem;
 }
 
 .profile-greating p {
-  margin: 0.5rem 0 0 0; 
+  margin: 0.5rem 0 0 0;
   font-size: 1.6rem;
 }
 
 .name {
-  color: cyan
+  color: cyan;
 }
 
 .lookingforward {
-  color: cyan
+  color: cyan;
 }
 
+/* Footer */
 .thanks {
   display: flex;
   align-items: center;
@@ -162,64 +163,97 @@ body {
   margin: 0 75vh;
 }
 
-
 .thanks p {
   font-size: 1rem;
 }
 
 /* Media queries para responsividad */
-@media (max-width: 75em) {
+
+/* Pantallas grandes */
+@media (max-width: 1200px) {
+  .profile-greating h2 {
+    font-size: 6rem;
+  }
+
+  .profile-greating h1 {
+    font-size: 3rem;
+  }
+
+  .profile-picture {
+    width: 200px;
+    height: 250px;
+  }
+
+  .thanks {
+    margin: 0 20vh;
+  }
+}
+
+
+/* Tablets y Móviles */
+@media (max-width: 768px) {
+  .banner-top {
+    height: 4rem; /* Mantiene altura adecuada para tablets y móviles */
+    flex-direction: row; /* Asegura disposición horizontal */
+    align-items: center;
+    justify-content: space-around; /* Distribuye los elementos horizontalmente */
+    padding: 0 1rem;
+  }
+
+  .nav-list a {
+    padding: 0.5rem 1rem; /* Ajusta el padding para mayor espaciado */
+    font-size: 1.8rem; /* Aumenta el tamaño de la letra para tablets y móviles */
+  }
+
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-picture {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .profile-greating h2 {
+    font-size: 4rem;
+  }
+
+  .profile-greating h1 {
+    font-size: 2.5rem;
+  }
+
+  .thanks {
+    margin: 0 20vh;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
   html {
     font-size: 8px;
   }
 
-  .banner, .nav-banner {
-    justify-content: center;
+  .profile-greating h2 {
+    font-size: 2rem;
   }
 
-  .nav-list {
-    padding-left: 0;
-    margin-top: 0;
+  .profile-greating h1 {
+    font-size: 1.8rem;
   }
-  .welcome-message {
-    padding-bottom: 0;
+
+  .profile-greating p {
+    font-size: 1.4rem;
+  }
+
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+  }
+
+  .thanks {
+    margin: 0 10vh;
   }
 }
 
-@media (max-width: 61.25em) {
-  html {
-    font-size: 7px;
-  }
-
-  .banner, .nav-banner {
-    justify-content: center;
-  }
-
-  .nav-list {
-    padding-left: 0;
-    margin-top: 0;
-  }
-
-  .welcome-message {
-    padding-bottom: 0;
-  }
-}
-
-@media (max-width: 28.75em) {
-  html {
-    font-size: 5px;
-  }
-
-  .banner, .nav-banner {
-    justify-content: center;
-  }
-
-  .nav-list {
-    padding-left: 0;
-    margin-top: 0;
-  }
-
-  .welcome-message {
-    padding-bottom: 0;
-  }
-}
