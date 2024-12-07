@@ -10,7 +10,7 @@
 
 /* Estilos generales */
 html {
-  font-size: 10px;
+  font-size: 8px;
   scroll-behavior: smooth;
 }
 
@@ -21,7 +21,6 @@ body {
   background: var(--main-darkblue);
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 1.8rem;
-  overflow: hidden;
 }
 
 html, body {
@@ -51,10 +50,9 @@ body {
   padding-top: 2rem;
 }
 
-.banner-vertical {
+.banner-footer {
   width: 2.5rem;
   height: 100vh;
-  background-color: var(--main-darkblue);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -77,10 +75,11 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0.5rem 0;
+  align-items: center;
+  text-align: center;
 }
 
-.nav-list a {
-  display: block;
+a {
   font-size: 1rem;
   text-decoration: none;
   color: var(--main-lightblue);
@@ -88,6 +87,8 @@ body {
   padding: 1rem 1rem 1rem 1.5rem;
   color: var(--main-blue);
 }
+
+
 /* Estilo de botón curriculum */
 .download-curriculum {
   background-color: var(--main-lightdarkblue);
@@ -120,46 +121,58 @@ body {
 /* Estilo de secciones */
 /* Contenedor de las secciones */
 .sections-container { 
-  position: relative; 
-  overflow: hidden; 
+  position: relative;
   width: 100%; 
-  height: calc(100vh - 4rem);
+  height: calc(100vh - 4rem); /* Usamos toda la altura disponible menos el banner */
+  overflow: hidden; /* Oculta cualquier desbordamiento */
 }
+
+
 
 /* Secciones individuales */
 .section {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 100%; /* Las secciones inactivas se colocan fuera de la pantalla */
   width: 100%;
   height: 100%;
-  display: flex; /* Centra el contenido de cada sección */
+  display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transform: translateY(10%);
   transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateX(0); /* Reseteamos cualquier movimiento */
 }
+
+
+
 
 /* Sección activa */
 .section.active {
-  opacity: 1;
-  transform: translateY(0);
+  left: 0; /* Posiciona la sección activa en pantalla */
+  opacity: 1; /* Hace visible la sección activa */
   z-index: 1;
 }
 
 
-
-/* Sección de inicio */
-.home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
+/* Oculta la barra de scroll horizontal */
+body, html {
+  overflow-x: hidden; /* No permite scroll horizontal */
 }
 
+/* Estiliza la barra de scroll vertical */
+.sections-container::-webkit-scrollbar {
+  width: 0; /* Oculta la barra de scroll vertical en navegadores WebKit */
+}
+
+.sections-container {
+  scrollbar-width: none; /* Firefox: Oculta la barra de scroll */
+}
+
+
+
+
+/* Sección de inicio */
 .about, .contact, .job {
   display: flex;
   flex-direction: column;
@@ -231,15 +244,24 @@ body {
   color: cyan;
 }
 
+.contact-container {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Footer */
+
+footer {
+  border: 0.1vh solid var(--main-grey);
+  border-bottom: 0;
+  border-right: 0;
+  border-left: 0;
+}
 .thanks {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--main-grey);
-  border-bottom: 0;
-  border-right: 0;
-  border-left: 0;
   margin: 0 75vh;
 }
 
@@ -343,7 +365,7 @@ body {
   }
 
   .profile-greating h2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .profile-greating h1 {
@@ -370,12 +392,8 @@ body {
   .thanks {
     margin: 0 10vh;
   }
-  .banner-vertical {
-    margin-bottom: 10vh;
-  }
-  .banner-vertical .nav-list {
-    padding: 0.5rem 0 10rem 0;
-  }
+
 }
+
 
 
