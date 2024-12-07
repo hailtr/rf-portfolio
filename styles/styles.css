@@ -124,7 +124,8 @@ a {
   position: relative;
   width: 100%; 
   height: calc(100vh - 4rem); /* Usamos toda la altura disponible menos el banner */
-  overflow: auto; /* Oculta cualquier desbordamiento */
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 
@@ -245,6 +246,83 @@ body, html {
   flex-direction: column;
   align-items: center;
 }
+
+/*Estilos para sección de trabajos */
+.filter-banner {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.filter-button {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  background-color: var(--main-blue);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  background-color: var(--main-lightdarkblue);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-item {
+  width: calc(33.333% - 1rem);
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+#project-details {
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.project-content {
+  padding: 1rem; /* Agrega espacio interior */
+  margin: 0 auto; /* Centra el contenido */
+  max-width: 100%; /* Evita desbordamientos */
+  text-align: left; /* Opcional: ajusta la alineación del texto */
+}
+
+.job-gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.back-button {
+  background-color: var(--main-blue);
+  color: white;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: var(--main-lightdarkblue);
+}
+
+
+
 
 /* Footer */
 
