@@ -124,7 +124,7 @@ a {
   position: relative;
   width: 100%; 
   height: calc(100vh - 4rem); /* Usamos toda la altura disponible menos el banner */
-  overflow: hidden; /* Oculta cualquier desbordamiento */
+  overflow: auto; /* Oculta cualquier desbordamiento */
 }
 
 
@@ -185,7 +185,6 @@ body, html {
 .profile {
   display: flex;
   align-items: center;
-  padding: 2rem;
 }
 
 .profile-picture {
@@ -222,8 +221,8 @@ body, html {
 .aboutme-section {
   display: flex;
   align-items: center;
-  padding: 2rem;
   text-align: justify;
+  padding-right: 1rem;
 }
 
 .aboutme-section h1 {
@@ -355,6 +354,9 @@ footer {
 
   .aboutme-section p {
     font-size: 1.3rem;
+  }
+  .section {
+    height: auto;
   }
 }
 
