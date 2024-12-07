@@ -144,9 +144,6 @@ a {
   transform: translateX(0); /* Reseteamos cualquier movimiento */
 }
 
-
-
-
 /* Sección activa */
 .section.active {
   left: 0; /* Posiciona la sección activa en pantalla */
@@ -355,8 +352,8 @@ footer {
   .aboutme-section p {
     font-size: 1.3rem;
   }
-  .section {
-    height: auto;
+  .aboutme-section {
+    margin-top: auto;
   }
 }
 
