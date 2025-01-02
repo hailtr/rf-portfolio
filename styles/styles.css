@@ -184,7 +184,7 @@ body, html {
 .profile-picture {
   flex-shrink: 0;
   width: 150px;
-  height: 150px;
+  height: 170px;
   margin-right: 2rem;
   border-radius: 70%;
   border: 2px solid var(--main-grey);
