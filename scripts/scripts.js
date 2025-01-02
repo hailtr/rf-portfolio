@@ -63,5 +63,19 @@ document.addEventListener("DOMContentLoaded", function () {
     
   });
 
+  const button = document.getElementById("toggleButton");
+  const hiddenText = document.getElementById("hiddenText");
+  
+  button.addEventListener("click", () => {
+    if (hiddenText.style.display === "none") {
+      hiddenText.style.display = "block";
+      button.textContent = "Ver menos";
+    } else {
+      hiddenText.style.display = "none";
+      button.textContent = "Ver más";
+    }
+  });
+  
+
   
   
