@@ -179,6 +179,8 @@ body, html {
 .profile {
   display: flex;
   align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 .profile-picture {
@@ -197,35 +199,18 @@ body, html {
 
 .profile-greating h2 {
   margin: 0;
-  font-size: 10rem;
+  font-size: 8rem;
 }
 
 .profile-greating h1 {
   margin: 0;
-  font-size: 8rem;
+  font-size: 6rem;
   color: var(--main-blue);
 }
 
 .profile-greating p {
   margin: 0.5rem 0 0 0;
   font-size: 1.6rem;
-}
-
-.aboutme-section {
-  display: flex;
-  align-items: center;
-  text-align: justify;
-  padding-right: 1rem;
-}
-
-.aboutme-section h1 {
-  padding: 5rem;
-  font-size: 10rem;
-}
-.paragraph {
-  display: flex;
-  flex-direction: column;
-  font-size: 2rem;
 }
 
 .name {
@@ -237,13 +222,159 @@ body, html {
   text-decoration: line-through;
 }
 
+/* Estilos para sección de about me */
+.aboutme-section {
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  padding-right: 1rem;
+}
+
+.aboutme-section h2 {
+  font-size: 1.6rem;
+  color: var(--main-blue);
+  margin: 0;
+  padding-bottom: 1rem;
+}
+.aboutme-section p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+
+.paragraph {
+  font-size: 2rem;
+  width: 50%;
+  padding: 5rem;
+}
+
+.paragraph p {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Estilos para sección de educación y experiencias laborales */
+
+.educationitems, .experienceitems {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  padding-bottom: 2rem;
+}
+
+/* Cards */
+
+.cards {
+  position: relative;
+  background: whitesmoke;
+  width: 100%;
+  height: 20rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  margin-right:1rem;
+}
+
+
+.container_copy {
+  padding: 1rem 4rem 1rem 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.img_pod {
+  position: absolute;
+  top: -20px; 
+  left: 145px; 
+  z-index: 0;
+  height: 110px;
+  width: 110px;
+}
+
+.institutional-logo {
+  position: relative;
+  border-radius: 50%;
+  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.cards h3 {
+  margin: 0 0 0.5rem 0;
+  color: #999;
+  font-size: 1.25rem;
+}
+
+.cards h1 {
+  margin: 0 0 3rem 0;
+  font-size: 2.5rem;
+  letter-spacing: 0.5px;
+  color: #333;
+}
+
+.cards p {
+  font-size: 1.5rem;
+  line-height: 1.45;
+  color: #333;
+}
+
+.cards .btn_primary {
+  border: none;
+  outline: none;
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+  padding: 1.5rem 2rem;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.2rem;
+  box-shadow: 1px 10px 2rem rgba(255, 94, 98, 0.5);
+  transition: all 0.2s ease-in;
+  text-decoration: none;
+  position: relative;
+  left: 80%;
+}
+
+.cards .btn_primary:hover {
+  box-shadow: 0px 5px 1rem rgba(255, 94, 98, 0.5);
+}
+
+.skill-logo-name {
+  display: block;
+  position:relative;
+  top: 0;
+}
+
+.relative-skill {
+  color: whitesmoke;
+  font-size: 1.3rem;
+  background-color: var(--main-blue);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+/* Fin Cards */
+
+.universities, .experiences {
+  padding-right: 1rem;
+}
+.educationitems p, .experienceitems p{
+  padding: 0;
+}
+
+.title {
+  color: cyan;
+}
+
+/* Estilos para sección de contacto */
 .contact-container {
   display:flex;
   flex-direction: column;
   align-items: center;
 }
 
-/*Estilos para sección de trabajos */
+/*Estilos para sección de galería de trabajos */
 .filter-banner {
   text-align: center;
   margin-bottom: 1rem;
@@ -343,6 +474,9 @@ footer {
 
 /* Pantallas grandes */
 @media (max-width: 1200px) {
+  html {
+    font-size: 6px;
+  }
 
   .banner-vertical {
     width: 4rem;
@@ -371,13 +505,6 @@ footer {
 
   .thanks {
     margin: 0 20vh;
-  }
-  .aboutme-section h1 {
-    font-size: 4rem;
-  }
-
-  .aboutme-section p {
-    font-size: 1.3rem;
   }
 }
 
@@ -434,7 +561,7 @@ footer {
 /* Móviles pequeños */
 @media (max-width: 480px) {
   html {
-    font-size: 8px;
+    font-size: 4px;
   }
 
   .profile-greating h2 {
