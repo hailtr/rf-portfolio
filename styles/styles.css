@@ -228,7 +228,8 @@ body, html {
   align-items: center;
   text-align: justify;
   padding: 1rem;
-  height: 100%;
+  height: 30%;
+  flex-direction: column;
 }
 
 .aboutme-section h2 {
@@ -244,12 +245,14 @@ body, html {
 
 
 .paragraph {
-  font-size: 2rem;
-  width: 50%;
+  font-size: 4rem;
+  width: 80%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-wrap: nowrap;
+  gap: 10rem;
 }
 
 .paragraph p {
@@ -264,8 +267,8 @@ body, html {
   flex-direction: row;
   align-items: center;
   text-align: left;
-  padding-bottom: 2rem;
   justify-content: space-between;
+  height: 100%;
 }
 
 .experienceitems h1, .experienceitems p, .experienceitems h3 {
@@ -359,13 +362,13 @@ body, html {
   display: flex;
   flex-direction: column;
   width: 49%;
-  height: 30rem;
+  height: 100%;
   background-color: whitesmoke;
   border-radius: 5px;
 }
 
 .img-container {
-  height: 50%;
+  height: 60%;
   width: 100%;
 }
 
@@ -396,6 +399,7 @@ body, html {
   justify-content: space-between;
   flex-direction: column;
   padding: 1rem;
+  height: 100%;
 }
 .horizontal {
   display: flex;
