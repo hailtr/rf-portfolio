@@ -136,7 +136,6 @@ a {
   top: 0;
   left: 100%;
   width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -227,8 +226,7 @@ body, html {
   display: flex;
   align-items: center;
   text-align: justify;
-  padding: 1rem;
-  height: 50vh;
+  padding: 20rem 0 10rem 0;
   flex-direction: column;
 }
 
@@ -258,6 +256,37 @@ body, html {
 .paragraph p {
   font-size: 2rem;
   padding-bottom: 2rem;
+}
+
+.paragraph h3 {
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+}
+
+.skill-tree-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.skills-titles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.skill-tree-skill {
+  display: flex;
+  flex-direction: row;
+  
+
+}
+
+.skill-tree-skill p {
+  padding: 0;
+  margin-left: 1px;
 }
 
 /* Estilos para sección de educación y experiencias laborales */
@@ -398,6 +427,7 @@ body, html {
   flex-direction: column;
   padding: 1rem;
   height: 100%;
+  width: 90%
 }
 .horizontal {
   display: flex;
