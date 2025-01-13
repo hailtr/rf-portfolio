@@ -8,7 +8,6 @@
   --gradiant: linear-gradient(175deg, var(--main-lightblue), var(--main-blue), var(--main-lightdarkblue), var(--main-darkblue));
 }
 
-/* Estilos generales */
 html {
   font-size: 8px;
   scroll-behavior: smooth;
@@ -16,57 +15,49 @@ html {
 
 body {
   margin: 0;
-  min-width: 290px;
   color: whitesmoke;
   background: var(--main-darkblue);
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 1.8rem;
 }
 
-html, body {
-  height: 100%;
+html, body, main {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
-body {
+main::-webkit-scrollbar {
+  display: none;
+}
+
+main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-.start {
-  flex: 1;
+  overflow: overlay; /* Usamos esto porque sino main no ocupa el 100% de la pantalla (lo siento por firefox) */
+  scroll-behavior: smooth;
 }
 
 /* Estilos para banner */
 .banner-top {
-  height: 2.5rem;
   background-color: var(--main-darkblue);
   display: flex;
-  align-items: center;
-  justify-content: end;
   z-index: 999;
-  padding: 2rem 2rem 1rem 0;
   position: sticky;
-}
-
-.banner-footer {
-  width: 2.5rem;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  position: fixed;
+  height: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  width: auto;
   top: 0;
-  left: 0;
-  z-index: 1;
 }
 
 .nav-banner {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  height: 2.5rem;
+  height: 100%;
 }
 
 .nav-list {
@@ -77,36 +68,34 @@ body {
   padding: 0.5rem 0;
   align-items: center;
   text-align: center;
+  height: 100%;
+  
 }
 
 a {
   font-size: 2rem;
   text-decoration: none;
-  color: var(--main-lightblue);
   transition: 0.5s;
   padding: 1rem 1rem 1rem 1.5rem;
   color: var(--main-blue);
 }
 
-
 /* Estilo de botón curriculum */
 .download-curriculum {
-  background-color: var(--main-lightdarkblue);
+  background-color: cyan;
   color: var(--main-darkblue);
   border: none;
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  border: 1px solid cyan;
+  outline: 0;
+  padding: 0.5rem 1rem;
 }
 
 .download-curriculum:hover {
-  background-color: cyan;
-}
-
-
-.banner-vertical a {
-  padding-top: 1rem;
-  margin: 0;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
 }
 
 /* Animación botones de banners*/
@@ -118,58 +107,19 @@ a {
   color: var(--main-blue);
 }
 
-/* Estilo de secciones */
-/* Contenedor de las secciones */
-.sections-container { 
-  position: relative;
-  width: 100%; 
-  height: calc(100vh - 4rem);
-}
-
-
-
 /* Secciones individuales */
 .section {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
   transition: opacity 0.5s ease, transform 0.5s ease;
   transform: translateX(0);
 }
 
-/* Sección activa */
-.section.active {
-  left: 0; 
-  opacity: 1; 
-  z-index: 1;
-}
-/* Estilos de barra de scroll */
-.aboutme-section::-webkit-scrollbar {
-  display: none;
-}
-
-.sections-container {
-  scrollbar-width: none; 
-}
-
-
-
-
-/* Sección de inicio */
-.about, .contact, .job {
+.home-section {
+  padding: 33rem 10rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: left; 
-  padding: 2rem;
-  }
+  border-bottom: 1px solid var(--main-grey);
+}
 
 .profile {
   display: flex;
@@ -227,7 +177,16 @@ a {
   width: 100%;
   gap: 5rem;
   overflow: auto;
-  
+  padding: 10rem 0;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 1rem;
+  height: auto;
+  width: 90%
 }
 
 
@@ -273,6 +232,7 @@ a {
   gap: 1rem;
   width: 100%;
   text-align: center;
+  height: 100%;
 }
 
 .skill-tree-column {
@@ -440,18 +400,19 @@ a {
   margin-bottom: 4rem;
 }
 
-.content-container {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  padding: 1rem;
-  height: 100%;
-  width: 90%
-}
 .horizontal {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 1rem;
+  height: 40%;
+  width: 90%
 }
 
 
@@ -469,216 +430,3 @@ a {
 .title {
   color: cyan;
 }
-
-/* Estilos para sección de contacto */
-.contact-container {
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/*Estilos para sección de galería de trabajos */
-.filter-banner {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.filter-button {
-  padding: 0.5rem 1rem;
-  margin: 0.5rem;
-  background-color: var(--main-blue);
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.filter-button:hover {
-  background-color: var(--main-lightdarkblue);
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.gallery-item {
-  width: calc(33.333% - 1rem);
-  margin: 0.5rem;
-  cursor: pointer;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.hidden {
-  display: none;
-}
-
-#project-details {
-  text-align: center;
-  padding: 2rem;
-  width: 100%;
-  margin: 0 auto;
-  overflow-x: hidden;
-}
-
-.project-content {
-  padding: 1rem; 
-  margin: 0 auto; 
-  max-width: 100%; 
-  text-align: left; 
-}
-
-.job-gallery {
-  display: flex;
-  flex-direction: column;
-}
-
-.back-button {
-  background-color: var(--main-blue);
-  color: white;
-  padding: 0.5rem 1rem;
-  margin-bottom: 1rem;
-  border: none;
-  cursor: pointer;
-}
-
-.back-button:hover {
-  background-color: var(--main-lightdarkblue);
-}
-
-
-
-
-/* Footer */
-
-footer {
-  border: 0.1vh solid var(--main-grey);
-  border-bottom: 0;
-  border-right: 0;
-  border-left: 0;
-}
-.thanks {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 75vh;
-}
-
-.thanks p {
-  font-size: 1rem;
-}
-
-/* Media queries para responsividad */
-
-/* Pantallas grandes */
-@media (max-width: 1200px) {
-  html {
-    font-size: 6px;
-  }
-
-  .banner-vertical {
-    width: 4rem;
-  }
-
-  .banner-vertical a {
-    font-size: 3rem;
-  }
-
-  .banner-vertical .home {
-    margin-bottom: 80vh;
-  }
-
-  .profile-greating h2 {
-    font-size: 6rem;
-  }
-
-  .profile-greating h1 {
-    font-size: 3rem;
-  }
-
-  .profile-picture {
-    width: 200px;
-    height: 250px;
-  }
-
-  .thanks {
-    margin: 0 20vh;
-  }
-}
-
-
-/* Tablets y Móviles */
-@media (max-width: 768px) {
-  .banner-top {
-    height: 4rem; /* Mantiene altura adecuada para tablets y móviles */
-    flex-direction: row; /* Asegura disposición horizontal */
-    align-items: center;
-    justify-content: space-around; /* Distribuye los elementos horizontalmente */
-    padding-top: 2rem;
-  }
-
-  .nav-list a {
-    padding: 0.5rem 1rem; /* Ajusta el padding para mayor espaciado */
-    font-size: 1.8rem; /* Aumenta el tamaño de la letra para tablets y móviles */
-  }
-
-  .profile {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .profile-picture {
-    margin-right: 0;
-    margin-bottom: 1rem;
-  }
-
-  .profile-greating h2 {
-    font-size: 4rem;
-  }
-
-  .profile-greating h1 {
-    font-size: 2.5rem;
-  }
-
-  .thanks {
-    margin: 0 20vh;
-  }
-}
-
-/* Móviles pequeños */
-@media (max-width: 480px) {
-  html {
-    font-size: 4px;
-  }
-
-  .profile-greating h2 {
-    font-size: 3rem;
-  }
-
-  .profile-greating h1 {
-    font-size: 1.8rem;
-  }
-
-  .profile-greating p {
-    font-size: 1.4rem;
-  }
-
-  .profile-picture {
-    width: 150px;
-    height: 150px;
-  }
-
-  .thanks {
-    margin: 0 10vh;
-  }
-
-}
-
-
-
