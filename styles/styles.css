@@ -41,13 +41,13 @@ body {
 /* Estilos para banner */
 .banner-top {
   height: 2.5rem;
-  overflow: hidden;
   background-color: var(--main-darkblue);
   display: flex;
   align-items: center;
   justify-content: end;
-  z-index: 10;
+  z-index: 999;
   padding: 2rem 2rem 1rem 0;
+  position: sticky;
 }
 
 .banner-footer {
