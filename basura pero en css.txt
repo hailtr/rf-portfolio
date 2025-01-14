@@ -1,0 +1,240 @@
+
+
+/* Estilos generales */
+
+
+.start {
+  flex: 1;
+}
+
+
+
+.banner-footer {
+  width: 2.5rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.banner-vertical a {
+  padding-top: 1rem;
+  margin: 0;
+}
+
+
+/* Estilos de barra de scroll */
+.aboutme-section::-webkit-scrollbar {
+  display: none;
+}
+
+.sections-container {
+  scrollbar-width: none; 
+}
+
+
+
+
+/* Sección de inicio */
+.about, .contact, .job {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left; 
+  padding: 2rem;
+  }
+
+
+
+
+/* Estilos para sección de contacto */
+.contact-container {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Estilos para sección de galería de trabajos */
+.filter-banner {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.filter-button {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  background-color: var(--main-blue);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  background-color: var(--main-lightdarkblue);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-item {
+  width: calc(33.333% - 1rem);
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#project-details {
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.project-content {
+  padding: 1rem; 
+  margin: 0 auto; 
+  max-width: 100%; 
+  text-align: left; 
+}
+
+.job-gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.back-button {
+  background-color: var(--main-blue);
+  color: white;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: var(--main-lightdarkblue);
+}
+
+/* Media queries para responsividad */
+
+/* Pantallas grandes */
+@media (max-width: 1200px) {
+  html {
+    font-size: 6px;
+  }
+
+  .banner-vertical {
+    width: 4rem;
+  }
+
+  .banner-vertical a {
+    font-size: 3rem;
+  }
+
+  .banner-vertical .home {
+    margin-bottom: 80vh;
+  }
+
+  .profile-greating h2 {
+    font-size: 6rem;
+  }
+
+  .profile-greating h1 {
+    font-size: 3rem;
+  }
+
+  .profile-picture {
+    width: 200px;
+    height: 250px;
+  }
+
+  .thanks {
+    margin: 0 20vh;
+  }
+}
+
+
+/* Tablets y Móviles */
+@media (max-width: 768px) {
+  .banner-top {
+    height: 4rem; /* Mantiene altura adecuada para tablets y móviles */
+    flex-direction: row; /* Asegura disposición horizontal */
+    align-items: center;
+    justify-content: space-around; /* Distribuye los elementos horizontalmente */
+    padding-top: 2rem;
+  }
+
+  .nav-list a {
+    padding: 0.5rem 1rem; /* Ajusta el padding para mayor espaciado */
+    font-size: 1.8rem; /* Aumenta el tamaño de la letra para tablets y móviles */
+  }
+
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-picture {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .profile-greating h2 {
+    font-size: 4rem;
+  }
+
+  .profile-greating h1 {
+    font-size: 2.5rem;
+  }
+
+  .thanks {
+    margin: 0 20vh;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  html {
+    font-size: 4px;
+  }
+
+  .profile-greating h2 {
+    font-size: 3rem;
+  }
+
+  .profile-greating h1 {
+    font-size: 1.8rem;
+  }
+
+  .profile-greating p {
+    font-size: 1.4rem;
+  }
+
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+  }
+
+  .thanks {
+    margin: 0 10vh;
+  }
+
+}
+
+
+

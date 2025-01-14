@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Rafael Ortiz - Portafolio</title>
+  </head>
+  <body>
+    <div class="sections-container">
+      
+
+
+      
+      <section id="contact" class="section">
+        <div class="contact-container">
+          <h3>¡Envíame un WhatsApp!</h3>
+          <a target="_blank" href="https://api.whatsapp.com/send?phone=+584242700455&text=¡Saludos, te escribo porque vi tu portafolio!">
+            <i class="fa-brands fa-whatsapp fa-4x" style="color: #128c7e"></i>
+          </a>
+          <h3> O si lo prefieres... ¡un correo!</h3>
+          <a href="mailto:lustigrfortiz@gmail.com">
+            <i class="fa fa-envelope fa-4x" style="color: grey"></i>
+          </a>
+        </div>
+      </section>
+      <section id="job" class="section">
+        <div class="job-gallery">
+          <h1>Trabajos</h1>
+          <div class="filter-banner">
+            <button class="filter-button" data-filter="all">Todos</button>
+            <button class="filter-button" data-filter="web">Web</button>
+            <button class="filter-button" data-filter="mobile">Móvil</button>
+            <button class="filter-button" data-filter="design">Diseño</button>
+          </div>
+          <div class="gallery">
+            <div class="gallery-item web" data-project="project1">
+              <img src="images/project1.jpg" alt="Proyecto Web 1">
+              <p>Descripción del Proyecto Web 1</p>
+            </div>
+            <div class="gallery-item mobile" data-project="project2">
+              <img src="images/project2.jpg" alt="Proyecto Móvil 1">
+              <p>Descripción del Proyecto Móvil 1</p>
+            </div>
+            <div class="gallery-item design" data-project="project3">
+              <a href="#job/job-3" onclick="showSection('job3'); return false;">
+              <img src="images/project3.jpg" alt="Proyecto de Diseño 1">
+              <p>Descripción del Proyecto de Diseño 1</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+    </div>  
+
+
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>
