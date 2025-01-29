@@ -55,6 +55,7 @@ main {
   padding: 0 2rem;
   width: auto;
   top: 0;
+  border-bottom: 1px solid white;
 }
 
 .nav-banner {
