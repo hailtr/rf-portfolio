@@ -218,7 +218,7 @@ a:active {
 
 .aboutme-section h2, .job-section h2 {
   font-size: 1.6rem;
-  color: var(--main-blue);
+  color: cyan;
   margin: 0;
   padding-bottom: 1rem;
 }
@@ -230,7 +230,7 @@ a:active {
 
 .paragraph {
   font-size: 4rem;
-  width: 80%;
+  width: 90%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -295,6 +295,12 @@ a:active {
 
 .skill-tree-title h3 {
   margin: 0
+}
+
+.skill-tree-column.on {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 1rem;
+  padding: 1rem;
 }
 
 /* Estilos para sección de educación y experiencias laborales */
@@ -364,6 +370,8 @@ a:active {
   font-size: 1.6rem;
   color: whitesmoke;
 }
+
+
 
 .skill-logo-name {
   display: flex;
