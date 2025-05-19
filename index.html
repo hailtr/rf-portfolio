@@ -10,36 +10,26 @@
   </head>
   <body>
     <main>
-      <div class="banner-top">
+      <div class="bg-shape shape1"></div>
+      <div class="bg-shape shape2"></div>
+      <div class="banner-top glass">
         <p><span style="color:cyan">RAFAEL</span>ORTIZ</p>
+        <button class="menu-toggle" aria-label="Abrir menú">
+          &#9776; <!-- Símbolo de menú hamburguesa -->
+        </button>
         <nav id="nav-banner">
           <ul class="nav-list">
-            <li class="nav-list">
-              <a class="nlink" href="#home">
-                Inicio
-              </a>
-            </li>
-            <li class="nav-link">
-              <a class="nlink" href="#about">  
-                Acerca de mí
-              </a>
-            </li>
-            <li class="nav-link">
-              <a class="nlink" href="#contact">
-                Contacto 
-              </a>
-            </li>
-            <li class="nav-link">
-              <a class="nlink" href="#job">
-                Trabajos
-              </a>
-            </li>
+            <li class="nav-link"><a class="nlink" href="#home">Inicio</a></li>
+            <li class="nav-link"><a class="nlink" href="#about">Acerca de mí</a></li>
+            <li class="nav-link"><a class="nlink" href="#contact">Contacto</a></li>
+            <li class="nav-link"><a class="nlink" href="#job">Trabajos</a></li>
           </ul>
         </nav>
         <a href="files/curriculum.pdf" download="curriculum.pdf">
           <button type="button" class="download-curriculum">Descargar CV</button>
         </a>
       </div>
+      
       <section id="home" class="section">
         <div class="home-section">
           <div class="profile">
@@ -52,28 +42,38 @@
           </div>
         </div>
       </section>
+
+      <!-- Galería de proyectos 
+      <section id="job" class="section">
+        <div class="job-section">
+          <div class="content-container">
+            <h2>Proyectos</h2>
+            <div class="projects">
+              <div class="project-cards">
+                <div class="project-card">
+                  <div class="project-card-image">
+                    <img src="./images/projects/thermogroup.png" alt="Logo ThermoGroup">
+                  </div>
+                  <div class="project-card-content">
+                    <h3>ThermoGroup</h3>
+                    <p>Desarrollo de un sistema de análisis de datos para la toma de decisiones en la empresa.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      -->
+      <div class="bg-shape shape3"></div>
+      <div class="bg-shape shape4"></div>
       <section id="about" class="section">
         <div class="aboutme-section">
           <div class="paragraph"> 
             <p style="font-size: 5rem">Me encanta resolver problemas, automatizar tareas y optimizar procesos. Investigador por naturaleza, encuentro en el aprendizaje y la colaboración una forma efectiva de crecer, y compartir conocimiento.</p>
 
           </div>
-
-          <!-- Galería de proyectos -->
-           <div class="content-container">
-              <h2>Proyectos</h2>
-              <div class="projects">
-                <div class="project-cards">
-                  <div class="project-card">
-                    <div class="project-card-image">
-                      <img src="./images/projects/thermogroup.png" alt="Logo ThermoGroup">
-                    </div>
-                    <div class="project-card-content">
-                      <h3>ThermoGroup</h3>
-                      <p>Desarrollo de un sistema de análisis de datos para la toma de decisiones en la empresa.</p>
-           </div>
-
-            <div class="content-container">
+            <div class="content-container glass"> <!-- Contenedor de habilidades -->
               <h2>Habilidades</h2>
               <div class="skills-tree">
                 <div class="skill-tree-column">
@@ -217,10 +217,10 @@
                 
             </div>
 
-            <div class="content-container">
+            <div class="content-container"> <!-- Contenedor de educación -->
               <h2>Educación</h2>
               <div class="educationitems">
-                <div class="cards">
+                <div class="cards glass">
                   
                   <div class="container_copy">
                     <div class="toppart">
@@ -241,7 +241,7 @@
                     <img class="institutional-logo" src="./images/institutions/iugt.png" alt="Logo Rafael Pocaterra">
                   </div>
                 </div>
-                <div class="cards">
+                <div class="cards glass">
                   <div class="container_copy">
                     <div class="toppart">
                       <h3>2023</h3>
@@ -261,6 +261,7 @@
                     <img class="institutional-logo" src="./images/institutions/DuocUC.png" alt="Logo Rafael Pocaterra">
                   </div>
                 </div>
+                <!--
                 <div class="cards">
                   <div class="container_copy">
                     <div class="toppart">
@@ -280,12 +281,14 @@
                     <img class="institutional-logo" src="./images/institutions/pocaterr.jpeg" alt="Logo Rafael Pocaterra">
                   </div>
                 </div>
+                -->
               </div>
             </div>
+
             <div class="content-container">
               <h2>Experiencia</h2>
               <div class="experienceitems">
-                <div class="company-cards">
+                <div class="company-cards glass">
                   <div class="img-container">
                     <img class="company-logo"src="./images/companies/thermogroup-banner.png" alt="Logo ThermoGroup">
                   </div>
@@ -319,7 +322,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="company-cards">
+                <div class="company-cards glass">
                   <div class="img-container">
                     <img class="company-logo"src="./images/companies/austranet-banner.jpeg" alt="Logo ThermoGroup">
                   </div>
@@ -358,6 +361,8 @@
         </div>
           
       </section>
+      <div class="bg-shape shape5"></div>
+      <div class="bg-shape shape6"></div>
     </main>
   </body>
 </html>

@@ -41,11 +41,13 @@ main {
   flex-direction: column;
   overflow: overlay; /* Usamos esto porque sino main no ocupa el 100% de la pantalla (lo siento por firefox) */
   scroll-behavior: smooth;
+  position: relative;
 }
 
 /* Estilos para banner */
 .banner-top {
-  background-color: var(--main-darkblue);
+  /* background-color: var(--main-darkblue); 
+  border-bottom: 1px solid white; */
   display: flex;
   z-index: 999;
   position: sticky;
@@ -55,7 +57,11 @@ main {
   padding: 0 2rem;
   width: auto;
   top: 0;
-  border-bottom: 1px solid white;
+  box-sizing: border-box;
+  background: rgba(15, 28, 48, 0.5); /* fondo oscuro semi-transparente */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .nav-banner {
@@ -82,6 +88,10 @@ a {
   text-decoration: none;
   transition: 0.5s;
   padding: 1rem 1rem 1rem 1.5rem;
+  color: whitesmoke;
+}
+
+a:active {
   color: var(--main-blue);
 }
 
@@ -172,6 +182,16 @@ a {
   text-decoration: line-through;
 }
 
+/* estilos para seccion de proyectos */
+
+.job-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  padding: 10rem 0;
+}
+
 /* Estilos para sección de about me */
 .aboutme-section {
   display: flex;
@@ -196,7 +216,7 @@ a {
 
 
 
-.aboutme-section h2 {
+.aboutme-section h2, .job-section h2 {
   font-size: 1.6rem;
   color: var(--main-blue);
   margin: 0;
@@ -438,4 +458,161 @@ a {
 
 .title {
   color: cyan;
+}
+
+/* Estilos glass */
+.glass {
+  background: rgba(255, 255, 255, 0.000001);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.glass:hover {
+  transform: scale(1.02);
+}
+
+/* Estilos para shapes */
+/* Base */
+.bg-shape {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* Par 1 (home) */
+.shape1 {
+  width: 250px;
+  height: 250px;
+  top: 10%;
+  left: 5%;
+  background: cyan;
+}
+
+.shape2 {
+  width: 300px;
+  height: 300px;
+  top: 40%;
+  right: 10%;
+  background: greenyellow;
+}
+
+/* Par 2 (inicio de About Me) */
+.shape3 {
+  width: 220px;
+  height: 220px;
+  top: 145%;
+  left: 10%;
+  background: cyan;
+}
+
+.shape4 {
+  width: 280px;
+  height: 280px;
+  top: 165%;
+  right: 5%;
+  background: greenyellow;
+}
+
+/* Par 3 (final de About Me) */
+.shape5 {
+  width: 180px;
+  height: 180px;
+  top: 200%;
+  left: 15%;
+  background: greenyellow;
+}
+
+.shape6 {
+  width: 300px;
+  height: 300px;
+  top: 250%;
+  right: 10%;
+  background: cyan;
+}
+
+
+/* Estilos media */
+
+/* Menú */
+#menu-toggle {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+.nav-banner ul {
+  display: flex;
+  list-style-type: none;
+}
+
+@media (max-width: 700px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-banner {
+    display: none;
+  }
+
+  .nav-banner.active {
+    display: block;
+  }
+
+  .nav-banner ul {
+    flex-direction: column;
+  }
+}
+
+/* Media Query para pantallas de menos de 500px */
+@media (max-width: 700px) {
+  /* Mostrar el ícono del menú hamburguesa */
+  .menu-icon {
+    display: flex;
+  }
+
+  /* Ocultar el menú por defecto */
+  nav {
+    display: none;
+  }
+
+  /* Mostrar el menú cuando el checkbox está marcado */
+  #menu-toggle:checked + .menu-icon + nav {
+    display: block;
+  }
+
+  /* Estilos adicionales para el menú desplegable */
+  nav ul {
+    flex-direction: column;
+    background-color: #f9f9f9;
+    position: absolute;
+    top: 50px; /* Ajusta según la altura de tu banner */
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+  /* Tus estilos para iPhone 4 en modo paisaje */
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
+  /* Tus estilos para iPhone 4 en modo retrato */
 }
