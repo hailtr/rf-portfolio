@@ -10,7 +10,7 @@
   </head>
   <body>
     <main>
-      <div class="banner-top glass"> <!-- Banner superior -->
+      <div class="banner-top glass animated-glass"> <!-- Banner superior -->
         <p><span style="color:cyan">RAFAEL</span>ORTIZ</p>
         <button class="menu-toggle" aria-label="Abrir menú">
           &#9776; <!-- Símbolo de menú hamburguesa -->
@@ -33,7 +33,7 @@
         <div class="bg-shape shape2"></div>
         <div class="home-section">
           <div class="profile">
-            <img src="images/profilepicture.jpg" alt="Foto personal" class="profile-picture">
+            <img src="images/profilepicture.jpg" alt="Foto personal" class="profile-picture animated-glass">
             <div class="profile-greating">
               <h2><span class="name">Rafael</span> Ortiz</h2>
               <h1>Análista de datos</h1>
@@ -44,30 +44,46 @@
         </div>
       </section>
 
-      <!-- Galería de proyectos 
+      <!-- Galería de proyectos -->
       <section id="job" class="section">
         <div class="bg-shape shape3"></div>
         <div class="bg-shape shape4"></div>
         <div class="job-section">
           <div class="content-container">
             <h2>Proyectos</h2>
-            <div class="projects">
-              <div class="project-cards">
-                <div class="project-card">
-                  <div class="project-card-image">
-                    <img src="./images/projects/thermogroup.png" alt="Logo ThermoGroup">
+            <div class="experience-gallery-wrapper glass round-border animated-glass">
+              <div class="experience-filters">
+                <button data-filter="all">Todos</button>
+                <button data-filter="proyectos">Proyectos</button>
+                <button data-filter="trabajo">Trabajo</button>
+                <button data-filter="aprendizaje">Aprendizaje</button>
+              </div>
+                <div class="experience-gallery">
+                  <!-- Tarjetas individuales con data-category para filtrar -->
+                  <div class="job-card" data-category="proyectos">
+                    <h3>Sistema de cotizaciones</h3>
+                    <p>Profit Plus - 2022</p>
                   </div>
-                  <div class="project-card-content">
-                    <h3>ThermoGroup</h3>
-                    <p>Desarrollo de un sistema de análisis de datos para la toma de decisiones en la empresa.</p>
+                  <div class="job-card" data-category="trabajo">
+                    <h3>Dashboard de ventas</h3>
+                    <p>PowerBI - 2023</p>
                   </div>
+                  <div class="job-card" data-category="aprendizaje">
+                    <h3>Dashboard de ventas</h3>
+                    <p>PowerBI - 2023</p>
+                  </div>
+                  <!-- ... más tarjetas -->
+                </div>
+                <div class="experience-nav">
+                  <button id="prev-exp">←</button>
+                  <button id="next-exp">→</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      -->
+
       <section id="about" class="section">
         <div class="bg-shape shape5"></div>
         <div class="bg-shape shape6"></div>
@@ -78,8 +94,8 @@
           </div>
             <div class="content-container"> <!-- Contenedor de habilidades -->
               <h2>Habilidades</h2>
-              <div class="skills-tree glass round-border">
-                <div class="skill-tree-column on">
+              <div class="skills-tree glass round-border animated-glass">
+                <div class="skill-tree-column on animated-glass">
                   <div class="skill-tree-title">
                   <h3>Programación</h3>
                   </div>
@@ -103,7 +119,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="skill-tree-column ">
+                <div class="skill-tree-column animated-glass ">
                   <div class="skill-tree-title">
                   <h3>Base de Datos</h3>
                   </div>
@@ -130,7 +146,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="skill-tree-column on">
+                <div class="skill-tree-column on animated-glass">
                   <div class="skill-tree-title">
                   <h3>Visualización de Datos</h3>
                   </div>
@@ -153,7 +169,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="skill-tree-column">
+                <div class="skill-tree-column animated-glass">
                   <div class="skill-tree-title">
                   <h3>Desarrollo Web</h3>
                   </div>
@@ -179,7 +195,7 @@
                   </div>
                   
                 </div>
-                <div class="skill-tree-column on">
+                <div class="skill-tree-column on animated-glass">
                   <div class="skill-tree-title">
                   <h3>Desarrollo Móvil</h3>
                   </div>
@@ -190,7 +206,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="skill-tree-column">
+                <div class="skill-tree-column animated-glass">
                   <div class="skill-tree-title">
                   <h3>Infraestructura</h3>
                   </div>
@@ -223,7 +239,7 @@
             <div class="content-container"> <!-- Contenedor de educación -->
               <h2>Educación</h2>
               <div class="educationitems">
-                <div class="education-card glass round-border" data-aos="fade-up">
+                <div class="education-card glass round-border animated-glass" data-aos="fade-up">
                   <div class="experience-header">
                     <h1>IUGT</h1>
                     <h3>TSU en Informática</h3>
@@ -237,7 +253,7 @@
                   </div>
                 </div>
 
-                <div class="education-card glass round-border" data-aos="fade-up" data-aos-delay="100">
+                <div class="education-card glass round-border animated-glass" data-aos="fade-up" data-aos-delay="100">
                   <div class="experience-header">
                     <h1>DuocUC</h1>
                     <h3>Diplomado en Informática</h3>
@@ -256,7 +272,7 @@
             <div class="content-container">
               <h2>Experiencia</h2>
                 <div class="experienceitems">
-                  <div class="experience-card glass round-border" data-aos="fade-up">
+                  <div class="experience-card glass round-border animated-glass" data-aos="fade-up">
                     <div class="experience-header">
                       <h1>ThermoGroup C.A</h1>
                       <h3>Analista de Datos</h3>
@@ -272,7 +288,7 @@
                     </div>
                   </div>
 
-                  <div class="experience-card glass round-border" data-aos="fade-up" data-aos-delay="100">
+                  <div class="experience-card glass round-border animated-glass" data-aos="fade-up" data-aos-delay="100">
                     <div class="experience-header">
                       <h1>Austranet</h1>
                       <h3>Soporte e Infraestructura</h3>

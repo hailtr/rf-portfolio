@@ -197,15 +197,6 @@ a:active {
   font-weight: 600;
 }
 
-/* estilos para seccion de proyectos */
-
-.job-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: justify;
-  padding: 10rem 0;
-}
 
 /* Estilos para sección de about me */
 .aboutme-section {
@@ -231,13 +222,13 @@ a:active {
 
 
 
-.aboutme-section h2 {
-  font-size: 1.6rem;
+.aboutme-section h2, .job-section h2 {
+  font-size: 3rem;
   color: cyan;
   margin: 0;
   padding: 0 0 1rem 2rem;
 }
-.aboutme-section p {
+.aboutme-section p, .job-section p {
   margin: 0;
   font-size: 1.2rem;
 }
@@ -367,7 +358,7 @@ a:active {
 .experience-header h1 {
   margin: 0;
   font-size: 2.5rem;
-  color: cyan;
+  color: whitesmoke;
 }
 
 .experience-header h3 {
@@ -379,7 +370,7 @@ a:active {
 .experience-card p {
   margin: 0;
   font-size: 1.6rem;
-  color: whitesmoke;
+  color: cyan;
 }
 
 
@@ -437,6 +428,11 @@ a:active {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  
+}
+
+.animated-glass {
+  animation: glass 1.5s ease-in-out infinite;
   transition: transform 0.3s ease;
 }
 
@@ -445,9 +441,100 @@ a:active {
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.glass:hover {
+.animated-glass:hover {
   transform: scale(1.02);
 }
+
+/* Sección de experiencias laborales */
+
+.experiences-section {
+  width: 100%;
+  max-width: 100%;
+  height: 300px;
+  padding: 1rem;
+  background: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.experience-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience-filters button {
+  background: #eee;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.experience-filters button.active,
+.experience-filters button:hover {
+  background: #333;
+  color: #fff;
+}
+
+.experience-gallery-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 1rem;
+  scroll-behavior: smooth;
+}
+
+.experience-gallery {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.job-card {
+  min-width: 300px;
+  height: 260px;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+.experience-nav {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.experience-nav button {
+  background: rgba(0,0,0,0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.job-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  padding: 10rem 0;
+}
+
+
 
 /* Estilos para shapes */
 /* Base */
