@@ -4,14 +4,19 @@
 
 // Function to toggle the menu
 document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navBanner = document.querySelector("#nav-banner");
-  
-    menuToggle.addEventListener("click", function () {
-      navBanner.classList.toggle("active");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navBanner = document.querySelector("#nav-banner");
+
+  menuToggle.addEventListener("click", function () {
+    navBanner.classList.toggle("active");
+  });
+
+  document.querySelectorAll("#nav-banner a").forEach(link => {
+    link.addEventListener("click", () => {
+      navBanner.classList.remove("active");
     });
   });
-  
-document.addEventListener("DOMContentLoaded", () => {
+
+  // Año dinámico del footer
   document.getElementById("year").textContent = new Date().getFullYear();
 });
