@@ -276,23 +276,21 @@ a:active {
 .skill-tree-column {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  width: 30%;
-  height: auto;
+  padding: 1rem;
+  min-height: 25rem;
 }
 
 .skill-tree-title {
-  height: 40%;
-  padding: 1rem 1rem 0 1rem;
+  margin-bottom: auto;
 }
 
 .skill-tree-content {
   display: flex;
-  gap: 1rem;
+  justify-content: center;
   flex-wrap: wrap;
-  padding: 0 1rem 1rem 1rem;
-  height: 60%;
-  justify-content: space-evenly;
+  gap: 1rem;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .skill-tree-skill {
@@ -312,8 +310,6 @@ a:active {
 
 .skill-tree-column.on {
   background: rgba(255, 255, 255, 0.03);
-  border-radius: 1rem;
-  padding: 1rem;
 }
 
 /* Estilos para sección de educación y experiencias laborales */
@@ -403,7 +399,7 @@ a:active {
 /* footer */
 
 .site-footer {
-  width: 100%;
+  max-width: 100%;
   text-align: center;
   padding: 2rem;
   margin-top: 4rem;
@@ -411,6 +407,14 @@ a:active {
   font-size: 1.4rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.02);
+  box-sizing: border-box;
+}
+
+.site-footer p {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  text-align: center;
+  padding: 0 1rem;
 }
 
 
@@ -708,4 +712,32 @@ a:active {
   .skill-logo-name {
     display: none;
   }
+}
+
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.content-container,
+.education-card,
+.experience-card,
+.skill-tree-column,
+.skills-tree {
+  max-width: 100%;
+}
+
+.skill-tree-content {
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 0;
+  overflow: hidden;
+}
+
+img,
+svg,
+.relative-skill,
+.skill-tree-skill {
+  max-width: 100%;
 }
