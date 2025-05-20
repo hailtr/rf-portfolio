@@ -703,3 +703,10 @@ a:active {
     margin-top: 1rem;
   }
 }
+
+@media (max-width: 768px) {
+  .bg-shape.shape5,
+  .bg-shape.shape6 {
+    display: none;
+  }
+}
