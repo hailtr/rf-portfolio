@@ -21,7 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("year").textContent = new Date().getFullYear();
 });
 
-AOS.init({
-  once: true,
-  duration: 600,
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.innerWidth > 768) {
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  }
 });

@@ -126,6 +126,8 @@ a:active {
 .section {
   transition: opacity 0.5s ease, transform 0.5s ease;
   transform: translateX(0);
+  position: relative;
+  z-index: 1;
 }
 
 .home-section {
@@ -451,25 +453,13 @@ a:active {
 /* Base */
 .bg-shape {
   position: absolute;
-  z-index: 0;
+  z-index: -999;
   border-radius: 50%;
-  filter: blur(120px);
+  filter: blur(100px);
   opacity: 0.2;
   pointer-events: none;
 }
 
-.bg-shapecontainer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: -1;
-}
-
-/* Par 1 (home) */
 .shape1 {
   width: 250px;
   height: 250px;
@@ -486,11 +476,10 @@ a:active {
   background: greenyellow;
 }
 
-/* Par 2 (inicio de About Me) */
 .shape3 {
   width: 220px;
   height: 220px;
-  top: 145%;
+  top: 20%;
   left: 10%;
   background: cyan;
 }
@@ -498,16 +487,15 @@ a:active {
 .shape4 {
   width: 280px;
   height: 280px;
-  top: 165%;
+  top: 60%;
   right: 5%;
   background: greenyellow;
 }
 
-/* Par 3 (final de About Me) */
 .shape5 {
   width: 180px;
   height: 180px;
-  top: 200%;
+  top: 10%;
   left: 15%;
   background: greenyellow;
 }
@@ -515,10 +503,11 @@ a:active {
 .shape6 {
   width: 300px;
   height: 300px;
-  top: 250%;
+  top: 50%;
   right: 10%;
   background: cyan;
 }
+
 
 
 /* Estilos media */
@@ -671,6 +660,22 @@ a:active {
 }
 
 @media (max-width: 768px) {
+
+  .bg-shape {
+    filter: blur(60px);
+    opacity: 0.15;
+  }
+
+  .shape1,
+  .shape2,
+  .shape3,
+  .shape4,
+  .shape5,
+  .shape6 {
+    width: 150px;
+    height: 150px;
+  }
+
   .menu-toggle {
     display: block;
   }
@@ -708,14 +713,6 @@ a:active {
   }
 }
 
-@media (max-width: 768px) {
-  .skill-logo-name {
-    display: none;
-  }
-}
-
-
-
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -741,3 +738,4 @@ svg,
 .skill-tree-skill {
   max-width: 100%;
 }
+
