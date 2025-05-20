@@ -513,66 +513,22 @@ a:active {
   list-style-type: none;
 }
 
-@media (max-width: 700px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-banner {
-    display: none;
-  }
-
-  .nav-banner.active {
-    display: block;
-  }
-
-  .nav-banner ul {
-    flex-direction: column;
-  }
-}
-
-/* Media Query para pantallas de menos de 500px */
-@media (max-width: 700px) {
-  /* Mostrar el ícono del menú hamburguesa */
-  .menu-icon {
-    display: flex;
-  }
-
-  /* Ocultar el menú por defecto */
-  nav {
-    display: none;
-  }
-
-  /* Mostrar el menú cuando el checkbox está marcado */
-  #menu-toggle:checked + .menu-icon + nav {
-    display: block;
-  }
-
-  /* Estilos adicionales para el menú desplegable */
-  nav ul {
-    flex-direction: column;
-    background-color: #f9f9f9;
-    position: absolute;
-    top: 50px; /* Ajusta según la altura de tu banner */
-    right: 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
-  /* Tus estilos para iPhone 4 en modo paisaje */
-}
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
-  /* Tus estilos para iPhone 4 en modo retrato */
-}
-
+/* Escala global: controla tamaño de fuente base */
 @media (max-width: 768px) {
-  /* #home */
+  html {
+    font-size: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 5.5px;
+  }
+}
+
+/* Ajustes visuales por sección */
+@media (max-width: 768px) {
+  /* HOME */
   .profile {
     flex-direction: column;
     align-items: center;
@@ -583,6 +539,10 @@ a:active {
     margin-right: 0;
     margin-bottom: 2rem;
     width: 60vw;
+  }
+
+  .home-section {
+    padding: 12rem 2rem;
   }
 
   .profile-greating h2 {
@@ -601,28 +561,17 @@ a:active {
     font-size: 1.2rem;
   }
 
-  /* skills-tree responsive */
+  /* HABILIDADES */
   .skills-tree {
     flex-direction: column;
     align-items: center;
   }
 
   .skill-tree-column {
-    width: 90%;
-  }
-
-  /* tarjetas de educación y experiencia */
-  .education-card,
-  .experience-card {
     width: 100%;
   }
 
-  /* home padding reducido */
-  .home-section {
-    padding: 15rem 3rem;
-  }
-
-  /* párrafos gigantes */
+  /* PÁRRAFOS */
   .paragraph p {
     font-size: 1.6rem;
     text-align: center;
@@ -632,8 +581,61 @@ a:active {
     gap: 3rem;
   }
 
-  /* navbar control extra si hace falta */
+  /* CURRICULUM */
   .download-curriculum {
     font-size: 1.4rem;
+  }
+
+  /* SKILL TAGS */
+  .skill-logo-name {
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .relative-skill {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  /* EDUCACIÓN Y EXPERIENCIA - MODO GRID */
+  .educationitems,
+  .experienceitems {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    justify-items: center;
+  }
+
+  .education-card,
+  .experience-card {
+    width: 95%;
+    box-sizing: border-box;
+  }
+
+  .content-container {
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+}
+
+/* TABLETS */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .home-section {
+    padding: 15rem 4rem;
+  }
+
+  .profile-picture {
+    width: 22rem;
+  }
+
+  .profile-greating h2 {
+    font-size: 8rem;
+  }
+
+  .profile-greating h1 {
+    font-size: 4rem;
   }
 }
