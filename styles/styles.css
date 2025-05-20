@@ -705,21 +705,7 @@ a:active {
 }
 
 @media (max-width: 768px) {
-  .bg-shape {
-    filter: blur(60px);
-    opacity: 0.15;
-  }
-
-  .bg-shape.shape5,
-  .bg-shape.shape6 {
+  .skill-logo-name {
     display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  [data-aos] {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
   }
 }
