@@ -215,7 +215,7 @@ a:active {
   width: 100%;
   gap: 5rem;
   overflow: auto;
-  padding: 10rem 0;
+  padding: 10rem 0 1rem;
 }
 
 .content-container {
@@ -398,6 +398,20 @@ a:active {
 
 
 /* Fin estilos company cards */
+
+
+/* footer */
+
+.site-footer {
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+  color: var(--main-grey);
+  font-size: 1.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+}
 
 
 /* Fin estilos banners */
