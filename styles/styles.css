@@ -229,11 +229,11 @@ a:active {
 
 
 
-.aboutme-section h2, .job-section h2 {
+.aboutme-section h2 {
   font-size: 1.6rem;
   color: cyan;
   margin: 0;
-  padding-bottom: 1rem;
+  padding: 0 0 1rem 2rem;
 }
 .aboutme-section p {
   margin: 0;
