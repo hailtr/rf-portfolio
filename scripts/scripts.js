@@ -20,3 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Año dinámico del footer
   document.getElementById("year").textContent = new Date().getFullYear();
 });
+
+AOS.init({
+  once: true,
+  duration: 600,
+});
