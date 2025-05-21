@@ -1,8 +1,46 @@
 // Date: 2025-02-06 (6th February 2025)
-// Version: 1.0.1
+// Version: 1.0.3
 // Description: JavaScript file for the portfolio website
 
-// Function to toggle the menu
+// --- Inicializar AOS (esperando trigger manual) ---
+AOS.init({
+  duration: 500,
+  once: true,
+  startEvent: 'aos:manual-start',
+  disableMutationObserver: true
+});
+
+// --- Loader y AOS ---
+AOS.init({
+  duration: 500,
+  once: true,
+  startEvent: 'aos:manual-start',
+  disableMutationObserver: true
+});
+
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  const main = document.querySelector("main");
+
+  loader.style.opacity = 0;
+  loader.style.transition = "opacity 0.5s ease";
+
+  setTimeout(() => {
+    loader.style.display = "none";
+    main.style.display = "block";
+
+    // 🔥 Aquí usamos scroll y rAF para asegurar que AOS vea lo que entra
+    setTimeout(() => {
+      requestAnimationFrame(() => {
+        document.dispatchEvent(new Event("aos:manual-start"));
+        AOS.refresh(); // NO usar refreshHard, queremos que escuche scroll
+      });
+    }, 100);
+  }, 600);
+});
+
+
+// --- Menú responsive y footer ---
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelector(".menu-toggle");
   const navBanner = document.querySelector("#nav-banner");
@@ -17,21 +55,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Año dinámico del footer
   document.getElementById("year").textContent = new Date().getFullYear();
 });
 
-
-document.addEventListener("DOMContentLoaded", function () {
-  if (window.innerWidth > 768) {
-    AOS.init({
-      duration: 800,
-      once: true
-    });
-  }
-});
-
-
+// --- Galería: Fades, botones y scroll ---
 document.addEventListener("DOMContentLoaded", () => {
   const gallery = document.querySelector('.experience-gallery');
   const leftFade = document.querySelector('.experience-fade.left');
@@ -52,28 +79,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const canScrollLeft = scrollLeft > tolerance;
     const canScrollRight = scrollLeft < maxScroll - tolerance;
 
-    console.log({
-      scrollLeft,
-      scrollWidth,
-      clientWidth,
-      maxScroll
-    });
-
-    console.log("Fade LEFT visible?", hasOverflow && canScrollLeft);
-    console.log("Fade RIGHT visible?", hasOverflow && canScrollRight);
-    console.log("BTN prev enabled?", canScrollLeft);
-    console.log("BTN next enabled?", canScrollRight);
-
-    // Fades
     if (leftFade) leftFade.classList.toggle("visible", hasOverflow && canScrollLeft);
     if (rightFade) rightFade.classList.toggle("visible", hasOverflow && canScrollRight);
 
-    // Botones
     if (btnPrev) btnPrev.classList.toggle("disabled", !canScrollLeft);
     if (btnNext) btnNext.classList.toggle("disabled", !canScrollRight);
   }
 
-  // Scroll por botones
   if (btnPrev) {
     btnPrev.addEventListener('click', () => {
       gallery.scrollBy({ left: -300, behavior: 'smooth' });
@@ -88,9 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Eventos naturales
   gallery.addEventListener('scroll', updateExperienceFade);
   window.addEventListener('resize', updateExperienceFade);
 
-  updateExperienceFade(); // inicial
+  updateExperienceFade();
 });
