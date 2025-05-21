@@ -482,15 +482,21 @@ a:active {
   color: #fff;
 }
 
+.experience-nav button.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: default;
+}
+
 .experience-gallery-wrapper {
   position: relative;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: visible;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
   display: block;
   contain: paint; /* Esto evita que los ::before/::after/fades afecten el layout de scroll */
+  min-height: 300px;
 }
 
 .experience-gallery-wrapper::-webkit-scrollbar {
@@ -504,7 +510,11 @@ a:active {
   height: 100%;
   z-index: 5;
   pointer-events: none;
-  display: none; /* ← por defecto oculto */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.experience-fade.visible {
+  opacity: 1;
 }
 
 .experience-fade.left {
@@ -518,20 +528,14 @@ a:active {
 }
 
 
-.experience-gallery-wrapper {
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding: 0;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-}
 
 .experience-gallery {
   display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
   gap: 1rem;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .job-card {
@@ -599,7 +603,29 @@ a:active {
   padding: 10rem 0;
 }
 
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 1rem;
+}
 
+.experience-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+
+
+
+.material-symbols-rounded.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: default;
+}
 
 /* Estilos para shapes */
 /* Base */

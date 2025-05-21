@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
     <title>Rafael Ortiz - Portafolio</title>
     <link rel="icon" href="images/icons/favicon/favicon-32x32.png" type="image/x-icon">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <main>
@@ -52,18 +54,21 @@
         <div class="job-section">
           <div class="content-container">
             <h2>Proyectos</h2>
-            <div class="experience-gallery-wrapper glass round-border animated-glass">
+            <div class="experience-gallery-wrapper glass round-border">
               <div class="experience-fade left"></div>
               <div class="experience-fade right"></div>
-              <div class="experience-filters">
-                <button data-filter="all" class="glass animated-glass round-border">Todos</button>
-                <button data-filter="proyectos" class="glass animated-glass round-border">Proyectos</button>
-                <button data-filter="trabajo" class="glass animated-glass round-border">Trabajo</button>
-                <button data-filter="aprendizaje" class="glass animated-glass round-border">Aprendizaje</button>
-              </div>
-              <div class="experience-nav">
-                  <button id="prev-exp" class="glass round-border"><span class="material-symbols-rounded">navigate_before</span></button>
-                  <button id="next-exp" class="glass round-border"><span class="material-symbols-rounded">navigate_next</span></button>
+              <div class="job-header">
+                <div class="experience-filters">
+                  <button data-filter="all" class="glass animated-glass round-border">Todos</button>
+                  <button data-filter="proyectos" class="glass animated-glass round-border">Proyectos</button>
+                  <button data-filter="trabajo" class="glass animated-glass round-border">Trabajo</button>
+                  <button data-filter="aprendizaje" class="glass animated-glass round-border">Aprendizaje</button>
+                
+                </div>
+                <div class="experience-nav">
+                    <button id="prev-exp" class="glass round-border"><span class="material-symbols-rounded">navigate_before</span></button>
+                    <button id="next-exp" class="glass round-border"><span class="material-symbols-rounded">navigate_next</span></button>
+                </div>
               </div>
                 <div class="experience-gallery">
                   <!-- Tarjetas individuales con data-category para filtrar -->
@@ -87,7 +92,7 @@
         </div>
       </section>
 
-      <section id="about" class="section">
+      <section id="about" class="section"> <!-- Sección de acerca de mí -->
         <div class="bg-shape shape5"></div>
         <div class="bg-shape shape6"></div>
         <div class="aboutme-section">
@@ -97,7 +102,7 @@
           </div>
             <div class="content-container"> <!-- Contenedor de habilidades -->
               <h2>Habilidades</h2>
-              <div class="skills-tree glass round-border animated-glass">
+              <div class="skills-tree glass round-border">
                 <div class="skill-tree-column on animated-glass">
                   <div class="skill-tree-title">
                   <h3>Programación</h3>
@@ -312,7 +317,7 @@
         </div>
           
       </section>
-      <footer class="site-footer">
+      <footer class="site-footer"> <!-- Pie de página -->
         <p>© Rafael Ortiz, 2023–<span id="year"></span> — Hecho con 💻, datos y <em>"casi"</em> sin procrastinar.</p>
       </footer>
     </main>

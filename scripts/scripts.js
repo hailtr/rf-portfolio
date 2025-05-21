@@ -32,52 +32,65 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Function to handle the experience gallery
-function updateExperienceFade() {
-  const wrapper = document.querySelector('.experience-gallery-wrapper');
-  const leftFade = wrapper.querySelector('.experience-fade.left');
-  const rightFade = wrapper.querySelector('.experience-fade.right');
-
-  const scrollLeft = wrapper.scrollLeft;
-  const clientWidth = wrapper.clientWidth;
-  const scrollWidth = wrapper.scrollWidth;
-  const maxScroll = scrollWidth - clientWidth;
-
-  const hasOverflow = scrollWidth > clientWidth + 1;
-  const tolerance = 5; // píxeles de margen
-
-  leftFade.style.display = hasOverflow && scrollLeft > tolerance ? 'block' : 'none';
-  rightFade.style.display = hasOverflow && scrollLeft < maxScroll - tolerance ? 'block' : 'none';
-}
-
-
-const wrapper = document.querySelector('.experience-gallery-wrapper');
-wrapper.addEventListener('scroll', updateExperienceFade);
-window.addEventListener('resize', updateExperienceFade);
-window.addEventListener('DOMContentLoaded', updateExperienceFade);
-
-// funtion to on and off button
-
-function updateExperienceFade() {
-  const wrapper = document.querySelector('.experience-gallery-wrapper');
-  const leftFade = wrapper.querySelector('.experience-fade.left');
-  const rightFade = wrapper.querySelector('.experience-fade.right');
+document.addEventListener("DOMContentLoaded", () => {
+  const gallery = document.querySelector('.experience-gallery');
+  const leftFade = document.querySelector('.experience-fade.left');
+  const rightFade = document.querySelector('.experience-fade.right');
   const btnPrev = document.getElementById('prev-exp');
   const btnNext = document.getElementById('next-exp');
 
-  const scrollLeft = wrapper.scrollLeft;
-  const clientWidth = wrapper.clientWidth;
-  const scrollWidth = wrapper.scrollWidth;
-  const maxScroll = scrollWidth - clientWidth;
-  const tolerance = 5;
+  function updateExperienceFade() {
+    if (!gallery) return;
 
-  const hasOverflow = scrollWidth > clientWidth + 1;
+    const scrollLeft = gallery.scrollLeft;
+    const clientWidth = gallery.clientWidth;
+    const scrollWidth = gallery.scrollWidth;
+    const maxScroll = scrollWidth - clientWidth;
+    const tolerance = 5;
 
-  // FADES
-  leftFade.classList.toggle("visible", hasOverflow && scrollLeft > tolerance);
-  rightFade.classList.toggle("visible", hasOverflow && scrollLeft < maxScroll - tolerance);
+    const hasOverflow = scrollWidth > clientWidth + 1;
+    const canScrollLeft = scrollLeft > tolerance;
+    const canScrollRight = scrollLeft < maxScroll - tolerance;
 
-  // BOTONES
-  btnPrev.classList.toggle("disabled", scrollLeft <= tolerance);
-  btnNext.classList.toggle("disabled", scrollLeft >= maxScroll - tolerance);
-}
+    console.log({
+      scrollLeft,
+      scrollWidth,
+      clientWidth,
+      maxScroll
+    });
+
+    console.log("Fade LEFT visible?", hasOverflow && canScrollLeft);
+    console.log("Fade RIGHT visible?", hasOverflow && canScrollRight);
+    console.log("BTN prev enabled?", canScrollLeft);
+    console.log("BTN next enabled?", canScrollRight);
+
+    // Fades
+    if (leftFade) leftFade.classList.toggle("visible", hasOverflow && canScrollLeft);
+    if (rightFade) rightFade.classList.toggle("visible", hasOverflow && canScrollRight);
+
+    // Botones
+    if (btnPrev) btnPrev.classList.toggle("disabled", !canScrollLeft);
+    if (btnNext) btnNext.classList.toggle("disabled", !canScrollRight);
+  }
+
+  // Scroll por botones
+  if (btnPrev) {
+    btnPrev.addEventListener('click', () => {
+      gallery.scrollBy({ left: -300, behavior: 'smooth' });
+      setTimeout(updateExperienceFade, 350);
+    });
+  }
+
+  if (btnNext) {
+    btnNext.addEventListener('click', () => {
+      gallery.scrollBy({ left: 300, behavior: 'smooth' });
+      setTimeout(updateExperienceFade, 350);
+    });
+  }
+
+  // Eventos naturales
+  gallery.addEventListener('scroll', updateExperienceFade);
+  window.addEventListener('resize', updateExperienceFade);
+
+  updateExperienceFade(); // inicial
+});
