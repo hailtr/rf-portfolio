@@ -465,9 +465,10 @@ a:active {
 }
 
 .experience-filters button {
-  background: #eee;
   border: none;
-  padding: 0.5rem 1rem;
+  box-shadow: 0 0 2px rgba(0, 255, 255, 0.15);
+  color: whitesmoke;
+  padding: 0.5rem 2rem;
   border-radius: 0.75rem;
   font-weight: 500;
   cursor: pointer;
@@ -479,6 +480,18 @@ a:active {
   background: #333;
   color: #fff;
 }
+
+.experience-gallery-wrapper {
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE/Edge */
+}
+
+.experience-gallery-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+
 
 .experience-gallery-wrapper {
   overflow-x: auto;
@@ -496,7 +509,7 @@ a:active {
 }
 
 .job-card {
-  min-width: 300px;
+  min-width: 350px;
   height: 260px;
   border-radius: 1rem;
   padding: 1rem;
@@ -517,7 +530,6 @@ a:active {
 }
 
 .experience-nav button {
-  background: rgba(0,0,0,0.7);
   color: white;
   border: none;
   border-radius: 50%;
