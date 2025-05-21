@@ -462,6 +462,7 @@ a:active {
   display: flex;
   gap: 1rem;
   margin-bottom: 0.5rem;
+  padding: 1rem 0 0 2rem;
 }
 
 .experience-filters button {
@@ -482,15 +483,39 @@ a:active {
 }
 
 .experience-gallery-wrapper {
+  position: relative;
   overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE/Edge */
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  display: block;
+  contain: paint; /* Esto evita que los ::before/::after/fades afecten el layout de scroll */
 }
 
 .experience-gallery-wrapper::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
 
+.experience-fade {
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+  display: none; /* ← por defecto oculto */
+}
+
+.experience-fade.left {
+  left: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0));
+}
+
+.experience-fade.right {
+  right: -10px;
+  background: linear-gradient(to left, rgba(0,0,0,0.2), rgba(0,0,0,0));
+}
 
 
 .experience-gallery-wrapper {
@@ -498,14 +523,15 @@ a:active {
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  padding: 1rem;
+  padding: 0;
   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
 }
 
 .experience-gallery {
   display: flex;
   gap: 1rem;
-  padding-bottom: 0.5rem;
+  padding: 1rem;
 }
 
 .job-card {
@@ -837,4 +863,3 @@ svg,
 .skill-tree-skill {
   max-width: 100%;
 }
-
