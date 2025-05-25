@@ -25,9 +25,9 @@
         <nav id="nav-banner">
           <ul class="nav-list">
             <li class="nav-link"><a class="nlink" href="#home">Inicio</a></li>
-            <li class="nav-link"><a class="nlink" href="#about">Acerca de mí</a></li>
-            <li class="nav-link"><a class="nlink" href="#contact">Contacto</a></li>
             <li class="nav-link"><a class="nlink" href="#job">Trabajos</a></li>
+            <li class="nav-link"><a class="nlink" href="#about">Acerca de mí</a></li>
+            <li class="nav-link"><a class="nlink" id="contact-link" href="#contact">Contacto</a></li>
           </ul>
         </nav>
         <a href="files/curriculum.pdf" download="curriculum.pdf">
@@ -100,11 +100,11 @@
         <div class="bg-shape shape5"></div>
         <div class="bg-shape shape6"></div>
         <div class="aboutme-section">
-          <div class="paragraph"> 
+          <div class="paragraph presentation-section reveal-section"> 
             <p style="font-size: 5rem">Me encanta resolver problemas, automatizar tareas y optimizar procesos. Investigador por naturaleza, encuentro en el aprendizaje y la colaboración una forma efectiva de crecer, y compartir conocimiento.</p>
 
           </div>
-            <div class="content-container"> <!-- Contenedor de habilidades -->
+            <div class="content-container" data-aos="zoom-in" data-aos-duration="750"> <!-- Contenedor de habilidades -->
               <h2>Habilidades</h2>
               <div class="skills-tree glass round-border">
                 <div class="skill-tree-column on animated-glass">
@@ -248,10 +248,10 @@
                 
             </div>
 
-            <div class="content-container"> <!-- Contenedor de educación -->
+            <div class="content-container presentation-section reveal-section"> <!-- Contenedor de educación -->
               <h2>Educación</h2>
               <div class="educationitems">
-                <div class="education-card glass round-border animated-glass" data-aos="fade-up">
+                <div class="education-card glass round-border animated-glass">
                   <div class="experience-header">
                     <h1>IUGT</h1>
                     <h3>TSU en Informática</h3>
@@ -265,7 +265,7 @@
                   </div>
                 </div>
 
-                <div class="education-card glass round-border animated-glass" data-aos="fade-up" data-aos-delay="100">
+                <div class="education-card glass round-border animated-glass">
                   <div class="experience-header">
                     <h1>DuocUC</h1>
                     <h3>Diplomado en Informática</h3>
@@ -281,10 +281,10 @@
               </div>
             </div>
 
-            <div class="content-container">
+            <div class="content-container" data-aos="fade-up" data-aos-delay="100">
               <h2>Experiencia</h2>
                 <div class="experienceitems">
-                  <div class="experience-card glass round-border animated-glass" data-aos="fade-up">
+                  <div class="experience-card glass round-border animated-glass">
                     <div class="experience-header">
                       <h1>ThermoGroup C.A</h1>
                       <h3>Analista de Datos</h3>
@@ -300,7 +300,7 @@
                     </div>
                   </div>
 
-                  <div class="experience-card glass round-border animated-glass" data-aos="fade-up" data-aos-delay="100">
+                  <div class="experience-card glass round-border animated-glass">
                     <div class="experience-header">
                       <h1>Austranet</h1>
                       <h3>Soporte e Infraestructura</h3>
@@ -321,11 +321,22 @@
         </div>
           
       </section>
-      <footer class="site-footer"> <!-- Pie de página -->
-        <p>© Rafael Ortiz, 2023–<span id="year"></span> — Hecho con 💻, datos y <em>"casi"</em> sin procrastinar.</p>
-        <p class="contact-line">📧 <a href=mailto:lustigrfortiz@gmail.com>Correo</a> | 🔗 <a href="https://www.linkedin.com/in/rafaelortizaguilar/" target="_blank">LinkedIn</a></p>
+      <footer class="site-footer">
+          <p>© Rafael Ortiz, 2023–<span id="year"></span> — Hecho con 💻, datos y <em>"casi"</em> sin procrastinar.</p>
+          <p>Este portafolio es un proyecto personal y no está asociado a ninguna empresa.</p>
       </footer>
     </main>
     <script src="./scripts/scripts.js" defer></script>
+    <div class="contact-overlay" id="contactOverlay">
+    <div class="contact-card">
+      <h3>¿Hablamos?</h3>
+      <p>
+        📧 <a href="mailto:lustigrfortiz@gmail.com">Correo</a>
+      </p>
+      <p>
+        🔗 <a href="https://www.linkedin.com/in/rafaelortizaguilar/" target="_blank">LinkedIn</a>
+      </p>
+    </div>
+  </div>
   </body>
 </html>
