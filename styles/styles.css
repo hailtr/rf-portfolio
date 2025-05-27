@@ -76,6 +76,15 @@ main {
   margin: 0;
 }
 
+main {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+main.visible {
+  opacity: 1;
+}
+
 /* Estilos para banner */
 .banner-top {
   /* background-color: var(--main-darkblue); 
@@ -658,7 +667,7 @@ a:active {
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   gap: 1rem;
-  padding: 1rem 0;
+  padding: 1rem 0.5rem;
 }
 
 .job-card {
@@ -739,6 +748,210 @@ a:active {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+/* Estilos tarjeta de proyecto */
+/* ESTRUCTURA BASE */
+.job-card {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  padding: 1px;
+  min-width: 320px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  position: relative;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.job-card.expanded {
+  display: grid;
+  grid-template-columns: minmax(300px, 40%) auto;
+  gap: 1rem;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 1.5rem;
+  align-items: start;
+}
+
+/* IMÁGENES */
+.job-card-image-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.job-image-desktop {
+  width: 70%;
+  aspect-ratio: 16 / 10;
+  border-radius: 0.4rem;
+  object-fit: cover;
+}
+
+.job-image-mobile {
+  width: 28%;
+  aspect-ratio: 9 / 16;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+/* CONTENIDO */
+.job-card-content {
+  margin: 0.5rem;
+}
+
+/* TÍTULOS */
+.job-card-content h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: cyan;
+}
+
+.job-card-content h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--main-grey);
+}
+
+/* DESCRIPCIÓN (envoltura con scroll) */
+.job-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: none;
+}
+
+.job-card.expanded .job-description {
+  -webkit-line-clamp: unset;
+  display: block;
+  overflow-y: auto;
+  max-height: 23rem;
+  margin-top: 0.5rem;
+}
+
+
+/* Estilo opcional para párrafos internos */
+.job-description p {
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  color: whitesmoke;
+  line-height: 1.6;
+}
+
+/* Scroll visual */
+.job-description::-webkit-scrollbar {
+  width: 6px;
+}
+.job-description::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+/* TAGS */
+.job-tags {
+  display: none;
+}
+
+.job-card.expanded .job-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-height: 100%;
+  margin-top: 0.5rem;
+}
+
+/* BOTÓN EXPANSIÓN */
+.job-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--main-lightblue);
+  cursor: pointer;
+  display: none;
+}
+
+.job-card.expanded .job-close {
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .job-card.expanded {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 90vh;
+  }
+
+  .job-card.expanded .job-card-image-container {
+    flex-direction: column;
+  }
+
+  .job-card.expanded .job-image-desktop,
+  .job-card.expanded .job-image-mobile {
+    width: 100%;
+  }
+
+  .job-tags {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+/* TRANSICIONES */
+
+.job-description {
+  max-height: 8rem;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.job-card.expanded .job-description {
+  max-height: 20rem;
+  overflow-y: auto;
+}
+
+.job-description {
+  opacity: 0.95;
+  transition: opacity 0.3s ease, max-height 0.4s ease;
+}
+
+.job-card.expanded .job-description {
+  opacity: 1;
+}
+
+.job-card {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.job-card:not(.expanded):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.job-card:not(.expanded):hover {
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+  cursor: pointer;
+  transform: translateY(-2px);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.job-card-inner {
+  grid-column: 1 / -1;
+  max-height: 140px;
+  transition: max-height 0.4s ease;
+  overflow: hidden;
+}
+
+.job-card.expanded .job-card-inner {
+  max-height: 1200px; /* o cualquier valor que incluya toda la altura */
 }
 
 
@@ -1052,4 +1265,15 @@ svg,
 .reveal-section.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.experience-gallery-wrapper,
+.experience-gallery {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.section {
+  scroll-margin-top: 80px; /* ajusta según el alto de tu header */
 }

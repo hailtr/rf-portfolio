@@ -16,7 +16,7 @@
     <div class="spinner"></div>
     <p>Cargando portafolio...</p>
     </div>
-    <main style="display: none;">
+    <main>
       <div class="banner-top glass animated-glass"> <!-- Banner superior -->
         <p><span style="color:cyan">RAFAEL</span>ORTIZ</p>
         <button class="menu-toggle" aria-label="Abrir menú">
@@ -52,7 +52,7 @@
       </section>
 
       <!-- Galería de proyectos -->
-      <section id="job" class="section">
+      <section id="job" class="section" data-aos="fade-up" data-aos-duration="750"> <!-- Sección de proyectos -->
         <div class="bg-shape shape3"></div>
         <div class="bg-shape shape4"></div>
         <div class="job-section">
@@ -74,22 +74,37 @@
                     <button id="next-exp" class="glass round-border"><span class="material-symbols-rounded">navigate_next</span></button>
                 </div>
               </div>
+              <!-- Aquí empieza la galería scroll -->
                 <div class="experience-gallery">
                   <!-- Tarjetas individuales con data-category para filtrar -->
-                  <div class="job-card animated-glass" data-category="proyectos">
-                    <h3>Sistema de cotizaciones</h3>
-                    <p>Profit Plus - 2022</p>
+                <div class="job-card" data-category="proyectos">
+                 
+                    <div class="job-card-image-container">
+                      <img src="images/mockups/2.png" alt="Desktop preview" class="job-image-desktop" loading="eager">
+                      <img src="images/mockups/1.png" alt="Mobile preview" class="job-image-mobile" loading="eager">
+                    </div>
+
+                    <div class="job-card-content">
+                      <h3>Portafolio</h3>
+                      <h4>WebPage - 2025</h4>
+                      <!-- <p>Aquí muestro mi trabajo, herramientas y experiencia.</p> -->
+                      <div class="job-description">
+                        <p>Este es mi portafolio personal, donde muestro mis proyectos, herramientas y experiencia. Está diseñado para ser una vitrina de mis habilidades y logros en el campo del análisis de datos.</p>
+                      </div>
+                      <div class="job-tags">
+                        <span class="relative-skill hidden">HTML</span>
+                        <span class="relative-skill hidden">CSS</span>
+                        <span class="relative-skill hidden">JS</span>
+                        <span class="relative-skill hidden">Diseño</span>
+                      </div>
+                    </div>
+                    <button class="job-close">×</button>
+             
                   </div>
-                  <div class="job-card animated-glass" data-category="trabajo">
-                    <h3>Dashboard de ventas</h3>
-                    <p>PowerBI - 2023</p>
-                  </div>
-                  <div class="job-card animated-glass" data-category="aprendizaje">
-                    <h3>Dashboard de ventas</h3>
-                    <p>PowerBI - 2023</p>
-                  </div>
+                  
                   <!-- ... más tarjetas -->
                 </div>
+                  <!-- Aquí termina la galería (scroll) -->
               </div>
             </div>
           </div>

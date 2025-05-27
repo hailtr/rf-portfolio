@@ -1,6 +1,6 @@
 // Date: 2025-02-06 (6th February 2025)
-// Version: 1.0.4
-// Description: JavaScript file for the portfolio website
+// Version: 1.0.5
+// Description: JavaScript file for the portfolio website (corregido)
 
 // --- Inicializar AOS (esperando trigger manual) ---
 AOS.init({
@@ -11,25 +11,42 @@ AOS.init({
 });
 
 // --- Loader, AOS y botón de contacto ---
-window.addEventListener("load", () => {
+async function waitForGalleryReady() {
+  const gallery = document.querySelector('.experience-gallery');
+  const images = gallery.querySelectorAll('img');
+
+  const imagePromises = Array.from(images).map(img =>
+    new Promise(resolve => {
+      if (img.complete) resolve();
+      else img.onload = img.onerror = resolve;
+    })
+  );
+
+  await Promise.all(imagePromises);
+
+  // Forzar cálculo de layout
+  gallery.scrollLeft = gallery.scrollWidth;
+  gallery.offsetHeight;
+  gallery.scrollLeft = 0;
+}
+
+window.addEventListener("load", async () => {
   const loader = document.getElementById("loader");
   const main = document.querySelector("main");
+
+  await waitForGalleryReady();
 
   loader.style.opacity = 0;
   loader.style.transition = "opacity 0.5s ease";
 
   setTimeout(() => {
     loader.style.display = "none";
-    main.style.display = "block";
+    main.classList.add("visible"); // transición suave
 
-    // Activar AOS
-    setTimeout(() => {
-      requestAnimationFrame(() => {
-        document.dispatchEvent(new Event("aos:manual-start"));
-        AOS.refresh();
-      });
-    }, 100);
-
+    requestAnimationFrame(() => {
+      document.dispatchEvent(new Event("aos:manual-start"));
+      AOS.refresh();
+    });
   }, 600);
 });
 
@@ -43,8 +60,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.querySelectorAll("#nav-banner a").forEach(link => {
-    link.addEventListener("click", () => {
-      navBanner.classList.remove("active");
+    link.addEventListener("click", (e) => {
+      const href = link.getAttribute("href");
+
+      if (href && href.startsWith("#")) {
+        e.preventDefault();
+        navBanner.classList.remove("active");
+
+        const target = document.querySelector(href);
+        if (target) {
+          waitUntilStable(target).then(() => {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+        }
+      }
     });
   });
 
@@ -98,7 +127,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   window.addEventListener('resize', updateExperienceFade);
-  updateExperienceFade();
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -146,3 +174,44 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(section);
   });
 });
+
+// --- Lógica de tarjetas de proyecto --
+document.querySelectorAll('.job-card').forEach(card => {
+  card.addEventListener('click', e => {
+    if (e.target.classList.contains('job-close')) return;
+
+    card.classList.add('expanded');
+    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+});
+
+document.querySelectorAll('.job-close').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    const card = e.target.closest('.job-card');
+    const jobDescription = card.querySelector('.job-description');
+    jobDescription.scrollTop = 0;
+    card.classList.remove('expanded');
+  });
+});
+
+// --- Función para esperar que un elemento se estabilice visualmente ---
+function waitUntilStable(element, maxTries = 10) {
+  return new Promise(resolve => {
+    let lastHeight = element.offsetHeight;
+    let tries = 0;
+
+    function check() {
+      const newHeight = element.offsetHeight;
+      if (newHeight === lastHeight || tries >= maxTries) {
+        resolve();
+      } else {
+        lastHeight = newHeight;
+        tries++;
+        setTimeout(check, 50);
+      }
+    }
+
+    check();
+  });
+}
