@@ -87,30 +87,53 @@ main.visible {
 
 /* Estilos para banner */
 .banner-top {
-  /* background-color: var(--main-darkblue); 
-  border-bottom: 1px solid white; */
   display: flex;
-  z-index: 999;
+  justify-content: center; /* centro el bloque principal */
   position: sticky;
-  height: auto;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
-  width: auto;
   top: 0;
-  box-sizing: border-box;
-  background: rgba(15, 28, 48, 0.5); /* fondo oscuro semi-transparente */
+  z-index: 999;
+  background: rgba(15, 28, 48, 0.5);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0 2rem;
 }
 
-.nav-banner {
+.banner-content {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  height: 100%;
+  max-width: 1200px; /* o lo que uses como límite */
 }
+
+#nav-banner {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lang-switcher {
+  background: rgba(255, 255, 255, 0.1);
+  color: cyan;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.lang-switcher:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
 
 .nav-list {
   display: flex;
@@ -1276,4 +1299,22 @@ svg,
 
 .section {
   scroll-margin-top: 80px; /* ajusta según el alto de tu header */
+}
+
+.lang-switcher {
+  background: rgba(255, 255, 255, 0.1);
+  color: cyan;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  margin-left: auto; /* empuja a la derecha */
+  margin-right: 1rem; /* espacio al borde */
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.lang-switcher:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
 }

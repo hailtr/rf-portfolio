@@ -1,6 +1,14 @@
 import { getLang } from './i18n.js';
 import { loadGallery } from './loadGallery.js';
 import { renderGallery } from './renderGallery.js';
+import { toggleLang } from './i18n.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  const langBtn = document.getElementById("lang-toggle");
+  if (langBtn) {
+    langBtn.addEventListener("click", toggleLang);
+  }
+});
 
 async function waitForGalleryReady() {
   const gallery = document.querySelector('.experience-gallery');
@@ -24,9 +32,14 @@ window.addEventListener("load", async () => {
   const main = document.querySelector("main");
   const lang = getLang();
 
+  console.log("Cargando galería...");
   const projects = await loadGallery(lang);
+  console.log("Proyectos cargados:", projects);
+  console.log("Renderizando...");
   renderGallery(projects);
+  console.log("Esperando imágenes...");
   await waitForGalleryReady();
+  console.log("Galería lista. Ocultando loader...");
 
   loader.style.opacity = 0;
   loader.style.transition = "opacity 0.5s ease";

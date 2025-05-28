@@ -6,10 +6,31 @@
       "subtitle": "WebPage - 2025",
       "category": "proyectos",
       "description": "Este es mi portafolio personal, donde muestro mis proyectos, herramientas y experiencia.",
-      "tags": ["HTML", "CSS", "JS", "Diseño"],
+      "tags": [
+        "HTML",
+        "CSS",
+        "JS",
+        "Diseño"
+      ],
       "images": {
         "desktop": "images/mockups/2.png",
         "mobile": "images/mockups/1.png"
+      }
+    },
+    {
+      "id": "dashboard-ventas",
+      "title": "Dashboard de Ventas",
+      "subtitle": "Power BI - 2024",
+      "category": "trabajo",
+      "description": "Dashboard interactivo para monitorear ventas, productos y zonas comerciales.",
+      "tags": [
+        "PowerBI",
+        "DAX",
+        "PostgreSQL"
+      ],
+      "images": {
+        "desktop": "images/mockups/ventas-desktop.png",
+        "mobile": "images/mockups/ventas-mobile.png"
       }
     }
   ],
@@ -20,10 +41,31 @@
       "subtitle": "WebPage - 2025",
       "category": "projects",
       "description": "This is my personal portfolio where I showcase my projects, tools, and experience.",
-      "tags": ["HTML", "CSS", "JS", "Design"],
+      "tags": [
+        "HTML",
+        "CSS",
+        "JS",
+        "Design"
+      ],
       "images": {
         "desktop": "images/mockups/2.png",
         "mobile": "images/mockups/1.png"
+      }
+    },
+    {
+      "id": "dashboard-ventas",
+      "title": "Sales Dashboard",
+      "subtitle": "Power BI - 2024",
+      "category": "work",
+      "description": "Interactive dashboard for monitoring sales, products, and commercial zones.",
+      "tags": [
+        "PowerBI",
+        "DAX",
+        "PostgreSQL"
+      ],
+      "images": {
+        "desktop": "images/mockups/ventas-desktop.png",
+        "mobile": "images/mockups/ventas-mobile.png"
       }
     }
   ]
