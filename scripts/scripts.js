@@ -1,6 +1,6 @@
-// Date: 2025-02-06 (6th February 2025)
-// Version: 1.0.5
-// Description: JavaScript file for the portfolio website (corregido)
+// Date: 2025-05-27
+// Version: 2.0
+// Description: Limpieza de scripts.js tras modularización
 
 // --- Inicializar AOS (esperando trigger manual) ---
 AOS.init({
@@ -8,46 +8,6 @@ AOS.init({
   once: true,
   startEvent: 'aos:manual-start',
   disableMutationObserver: true
-});
-
-// --- Loader, AOS y botón de contacto ---
-async function waitForGalleryReady() {
-  const gallery = document.querySelector('.experience-gallery');
-  const images = gallery.querySelectorAll('img');
-
-  const imagePromises = Array.from(images).map(img =>
-    new Promise(resolve => {
-      if (img.complete) resolve();
-      else img.onload = img.onerror = resolve;
-    })
-  );
-
-  await Promise.all(imagePromises);
-
-  // Forzar cálculo de layout
-  gallery.scrollLeft = gallery.scrollWidth;
-  gallery.offsetHeight;
-  gallery.scrollLeft = 0;
-}
-
-window.addEventListener("load", async () => {
-  const loader = document.getElementById("loader");
-  const main = document.querySelector("main");
-
-  await waitForGalleryReady();
-
-  loader.style.opacity = 0;
-  loader.style.transition = "opacity 0.5s ease";
-
-  setTimeout(() => {
-    loader.style.display = "none";
-    main.classList.add("visible"); // transición suave
-
-    requestAnimationFrame(() => {
-      document.dispatchEvent(new Event("aos:manual-start"));
-      AOS.refresh();
-    });
-  }, 600);
 });
 
 // --- Menú responsive ---
@@ -80,55 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("year").textContent = new Date().getFullYear();
 });
 
-// --- Galería: Fades, botones y scroll ---
-document.addEventListener("DOMContentLoaded", () => {
-  const gallery = document.querySelector('.experience-gallery');
-  const leftFade = document.querySelector('.experience-fade.left');
-  const rightFade = document.querySelector('.experience-fade.right');
-  const btnPrev = document.getElementById('prev-exp');
-  const btnNext = document.getElementById('next-exp');
-
-  function updateExperienceFade() {
-    if (!gallery) return;
-
-    const scrollLeft = gallery.scrollLeft;
-    const clientWidth = gallery.clientWidth;
-    const scrollWidth = gallery.scrollWidth;
-    const maxScroll = scrollWidth - clientWidth;
-    const tolerance = 5;
-
-    const hasOverflow = scrollWidth > clientWidth + 1;
-    const canScrollLeft = scrollLeft > tolerance;
-    const canScrollRight = scrollLeft < maxScroll - tolerance;
-
-    if (leftFade) leftFade.classList.toggle("visible", hasOverflow && canScrollLeft);
-    if (rightFade) rightFade.classList.toggle("visible", hasOverflow && canScrollRight);
-
-    if (btnPrev) btnPrev.classList.toggle("disabled", !canScrollLeft);
-    if (btnNext) btnNext.classList.toggle("disabled", !canScrollRight);
-  }
-
-  if (btnPrev) {
-    btnPrev.addEventListener('click', () => {
-      gallery.scrollBy({ left: -300, behavior: 'smooth' });
-      setTimeout(updateExperienceFade, 350);
-    });
-  }
-
-  if (btnNext) {
-    btnNext.addEventListener('click', () => {
-      gallery.scrollBy({ left: 300, behavior: 'smooth' });
-      setTimeout(updateExperienceFade, 350);
-    });
-  }
-
-  if (gallery) {
-    gallery.addEventListener('scroll', updateExperienceFade);
-  }
-
-  window.addEventListener('resize', updateExperienceFade);
-});
-
+// --- Contact overlay ---
 document.addEventListener("DOMContentLoaded", () => {
   const contactLink = document.querySelector('#contact-link');
   const overlay = document.querySelector('#contactOverlay');
@@ -167,31 +79,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, {
-    threshold: 0.8 // solo cuando esté al 80% visible
+    threshold: 0.8
   });
 
   document.querySelectorAll('.reveal-section').forEach(section => {
     observer.observe(section);
-  });
-});
-
-// --- Lógica de tarjetas de proyecto --
-document.querySelectorAll('.job-card').forEach(card => {
-  card.addEventListener('click', e => {
-    if (e.target.classList.contains('job-close')) return;
-
-    card.classList.add('expanded');
-    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  });
-});
-
-document.querySelectorAll('.job-close').forEach(btn => {
-  btn.addEventListener('click', e => {
-    e.stopPropagation();
-    const card = e.target.closest('.job-card');
-    const jobDescription = card.querySelector('.job-description');
-    jobDescription.scrollTop = 0;
-    card.classList.remove('expanded');
   });
 });
 

@@ -1,0 +1,30 @@
+{
+  "es": [
+    {
+      "id": "portfolio",
+      "title": "Portafolio",
+      "subtitle": "WebPage - 2025",
+      "category": "proyectos",
+      "description": "Este es mi portafolio personal, donde muestro mis proyectos, herramientas y experiencia.",
+      "tags": ["HTML", "CSS", "JS", "Diseño"],
+      "images": {
+        "desktop": "images/mockups/2.png",
+        "mobile": "images/mockups/1.png"
+      }
+    }
+  ],
+  "en": [
+    {
+      "id": "portfolio",
+      "title": "Portfolio",
+      "subtitle": "WebPage - 2025",
+      "category": "projects",
+      "description": "This is my personal portfolio where I showcase my projects, tools, and experience.",
+      "tags": ["HTML", "CSS", "JS", "Design"],
+      "images": {
+        "desktop": "images/mockups/2.png",
+        "mobile": "images/mockups/1.png"
+      }
+    }
+  ]
+}
