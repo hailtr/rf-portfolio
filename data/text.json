@@ -1,0 +1,57 @@
+{
+  "es": {
+    "loader": {
+      "title": "Cargando portafolio...",
+      "subtitle": "Por favor, espera mientras se cargan los datos."
+    }
+    ,
+    "menu": {
+      "home": "Inicio",
+      "projects": "Proyectos",
+      "about": "Acerca de mí",
+      "contact": "Contacto",
+      "download": "Descargar CV"
+    },
+    "sections": {
+      "skills": "Habilidades",
+      "education": "Educación",
+      "experience": "Experiencia"
+    },
+    "profile": {
+      "role": "Análista de datos",
+      "tagline": "Transformando datos en decisiones inteligentes",
+      "location": "Caracas, Venezuela"
+    },
+    "footer": {
+      "disclaimer": "Este portafolio es un proyecto personal y no está asociado a ninguna empresa.",
+      "credit": "Hecho con 💻, datos y \"casi\" sin procrastinar."
+    }
+  },
+  "en": {
+    "loader": {
+      "title": "Loading portfolio...",
+      "subtitle": "Please wait while the data is being loaded."
+    },
+    "menu": {
+      "home": "Home",
+      "projects": "Projects",
+      "about": "About Me",
+      "contact": "Contact",
+      "download": "Download CV"
+    },
+    "sections": {
+      "skills": "Skills",
+      "education": "Education",
+      "experience": "Experience"
+    },
+    "profile": {
+      "role": "Data Analyst",
+      "tagline": "Turning data into smart decisions",
+      "location": "Santiago, Chile"
+    },
+    "footer": {
+      "disclaimer": "This portfolio is a personal project and not affiliated with any company.",
+      "credit": "Built with 💻, data, and *almost* no procrastination."
+    }
+  }
+}

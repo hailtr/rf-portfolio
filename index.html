@@ -14,7 +14,8 @@
   <body>
     <div id="loader">
     <div class="spinner"></div>
-    <p>Cargando portafolio...</p>
+    <p data-i18n="loader.title"></p>
+    <p data-i18n="loader.subtitle"></p>
     </div>
     <main>
       <div class="banner-top glass animated-glass"> <!-- Banner superior -->
@@ -24,16 +25,16 @@
         </button>
         <nav id="nav-banner">
           <ul class="nav-list">
-            <li class="nav-link"><a class="nlink" href="#home">Inicio</a></li>
-            <li class="nav-link"><a class="nlink" href="#job">Proyectos</a></li>
-            <li class="nav-link"><a class="nlink" href="#about">Acerca de mí</a></li>
-            <li class="nav-link"><a class="nlink" id="contact-link" href="#contact">Contacto</a></li>
+            <li class="nav-link"><a class="nlink" href="#home" data-i18n="menu.home"></a></li>
+            <li class="nav-link"><a class="nlink" href="#job" data-i18n="menu.projects"></a></li>
+            <li class="nav-link"><a class="nlink" href="#about" data-i18n="menu.about"></a></li>
+            <li class="nav-link"><a class="nlink" id="contact-link" href="#contact" data-i18n="menu.contact"></a></li>
           </ul>
         </nav>
         <div class="banner-actions">
           <button id="lang-toggle" class="lang-switcher">EN/ES</button>
           <a href="files/curriculum.pdf" download="curriculum.pdf">
-            <button type="button" class="download-curriculum">Descargar CV</button>
+            <button type="button" class="download-curriculum" data-i18n="menu.download"></button>
           </a>
         </div>
       </div>
@@ -46,8 +47,8 @@
             <img src="images/profilepicture.jpg" alt="Foto personal" class="profile-picture animated-glass" data-aos="fade-up">
             <div class="profile-greating">
               <h2><span class="name">Rafael</span> Ortiz</h2>
-              <h1>Análista de datos</h1>
-              <p class="tagline">Transformando datos en decisiones inteligentes</p>
+              <h1 data-i18n="profile.role"></h1>
+              <p class="tagline" data-i18n="profile.tagline"></p>
               <p><span class="country-before">Santiago de Chile, Chile</span><span class="country-after"> Caracas, Venezuela</span></p>
             </div>
           </div>
@@ -60,7 +61,7 @@
         <div class="bg-shape shape4"></div>
         <div class="job-section">
           <div class="content-container">
-            <h2>Proyectos</h2>
+            <h2 data-i18n="menu.projects"></h2>
             <div class="experience-gallery-wrapper glass round-border">
               <div class="experience-fade left"></div>
               <div class="experience-fade right"></div>
@@ -123,7 +124,7 @@
 
           </div>
             <div class="content-container" data-aos="zoom-in" data-aos-duration="750"> <!-- Contenedor de habilidades -->
-              <h2>Habilidades</h2>
+              <h2 data-i18n="sections.skills"></h2>
               <div class="skills-tree glass round-border">
                 <div class="skill-tree-column on animated-glass">
                   <div class="skill-tree-title">
@@ -267,7 +268,7 @@
             </div>
 
             <div class="content-container presentation-section reveal-section"> <!-- Contenedor de educación -->
-              <h2>Educación</h2>
+              <h2 data-i18n="sections.education"></h2>
               <div class="educationitems">
                 <div class="education-card glass round-border animated-glass">
                   <div class="experience-header">
@@ -300,7 +301,7 @@
             </div>
 
             <div class="content-container" data-aos="fade-up" data-aos-delay="100">
-              <h2>Experiencia</h2>
+              <h2 data-i18n="sections.experience"></h2>
                 <div class="experienceitems">
                   <div class="experience-card glass round-border animated-glass">
                     <div class="experience-header">
@@ -340,8 +341,8 @@
           
       </section>
       <footer class="site-footer">
-          <p>© Rafael Ortiz, 2023–<span id="year"></span> — Hecho con 💻, datos y <em>"casi"</em> sin procrastinar.</p>
-          <p>Este portafolio es un proyecto personal y no está asociado a ninguna empresa.</p>
+          <p data-i18n="footer.credit">–<span id="year"></span><em></em></p>
+          <p data-i18n="footer.disclaimer"></p>
       </footer>
     </main>
     <script src="./scripts/scripts.js" defer></script>

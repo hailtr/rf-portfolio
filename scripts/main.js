@@ -2,6 +2,12 @@ import { getLang } from './i18n.js';
 import { loadGallery } from './loadGallery.js';
 import { renderGallery } from './renderGallery.js';
 import { toggleLang } from './i18n.js';
+import { applyTextTranslations } from './loadText.js';
+
+const lang = getLang();
+applyTextTranslations(lang);
+
+loadGallery(lang).then(renderGallery);
 
 document.addEventListener('DOMContentLoaded', () => {
   const langBtn = document.getElementById("lang-toggle");
