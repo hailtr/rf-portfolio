@@ -29,8 +29,8 @@
         "PostgreSQL"
       ],
       "images": {
-        "desktop": "images/mockups/ventas-desktop.png",
-        "mobile": "images/mockups/ventas-mobile.png"
+        "desktop": "images/mockups/desktop_2.png",
+        "mobile": "images/mockups/demo.jpeg"
       }
     }
   ],
@@ -64,8 +64,8 @@
         "PostgreSQL"
       ],
       "images": {
-        "desktop": "images/mockups/ventas-desktop.png",
-        "mobile": "images/mockups/ventas-mobile.png"
+        "desktop": "images/mockups/desktop_2.png",
+        "mobile": "images/mockups/demo.jpeg"
       }
     }
   ]

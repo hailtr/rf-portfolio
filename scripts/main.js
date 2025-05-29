@@ -5,6 +5,8 @@ import { toggleLang } from './i18n.js';
 import { applyTextTranslations } from './loadText.js';
 
 const lang = getLang();
+document.documentElement.setAttribute("lang", lang);
+
 applyTextTranslations(lang);
 
 loadGallery(lang).then(renderGallery);

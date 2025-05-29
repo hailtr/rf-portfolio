@@ -1,6 +1,9 @@
 export function getLang() {
-  return localStorage.getItem("lang") ||
-         (navigator.language.startsWith("en") ? "en" : "es");
+  const stored = localStorage.getItem("lang");
+  if (stored) return stored;
+
+  const browserLang = navigator.language.slice(0, 2).toLowerCase();
+  return browserLang === "es" ? "es" : "en";
 }
 
 export function setLang(lang) {
