@@ -13,8 +13,8 @@
         "Diseño"
       ],
       "images": {
-        "desktop": "images/mockups/2.png",
-        "mobile": "images/mockups/1.png"
+        "desktop": "images/mockups/2.jpg",
+        "mobile": "images/mockups/1.jpg"
       }
     },
     {
@@ -29,8 +29,8 @@
         "PostgreSQL"
       ],
       "images": {
-        "desktop": "images/mockups/desktop_2.png",
-        "mobile": "images/mockups/demo.jpeg"
+        "desktop": "images/mockups/3.jpg",
+        "mobile": "images/mockups/4.jpeg"
       }
     }
   ],
@@ -48,8 +48,8 @@
         "Design"
       ],
       "images": {
-        "desktop": "images/mockups/2.png",
-        "mobile": "images/mockups/1.png"
+        "desktop": "images/mockups/2.jpg",
+        "mobile": "images/mockups/1.jpg"
       }
     },
     {
@@ -64,8 +64,8 @@
         "PostgreSQL"
       ],
       "images": {
-        "desktop": "images/mockups/desktop_2.png",
-        "mobile": "images/mockups/demo.jpeg"
+        "desktop": "images/mockups/3.jpg",
+        "mobile": "images/mockups/4.jpeg"
       }
     }
   ]
