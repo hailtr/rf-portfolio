@@ -40,6 +40,12 @@ window.addEventListener("load", async () => {
   const main = document.querySelector("main");
   const lang = getLang();
 
+setTimeout(() => {
+  const delayMsg = document.getElementById("loader-delay-msg");
+  if (delayMsg) delayMsg.style.display = "block";
+}, 30000); // 30 segundos
+
+
   console.log("Cargando galería...");
   const projects = await loadGallery(lang);
   console.log("Proyectos cargados:", projects);

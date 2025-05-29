@@ -1,8 +1,9 @@
 {
   "es": {
     "loader": {
-      "title": "Cargando portafolio...",
-      "subtitle": "Por favor, espera mientras se cargan los datos."
+      "title": "Cargando portafolio interactivo...",
+      "subtitle": "Estamos preparando las animaciones y proyectos.",
+      "delay": "Esto está tardando más de lo normal. Gracias por tu paciencia."
     }
     ,
     "menu": {
@@ -56,8 +57,9 @@
   },
   "en": {
     "loader": {
-      "title": "Loading portfolio...",
-      "subtitle": "Please wait while the data is being loaded."
+     "title": "Loading interactive portfolio...",
+     "subtitle": "We're setting up animations and projects.",
+     "delay": "This is taking longer than usual. Thanks for your patience."
     },
     "menu": {
       "home": "Home",
