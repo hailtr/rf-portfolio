@@ -22,10 +22,37 @@
       "tagline": "Transformando datos en decisiones inteligentes",
       "location": "Caracas, Venezuela"
     },
+    "gallery-filters": {
+      "all": "Todos",
+      "jobs": "Trabajos",
+      "learning": "Aprendizaje"
+    }
+    ,
+    "about": {
+      "description": "Me encanta resolver problemas, automatizar tareas y optimizar procesos. Investigador de naturaleza, encuentro que aprender y colaborar es una forma efectiva de crecer y compartir conocimiento."
+    }
+    ,
+    "skills": {
+      "programming": "Programación",
+      "databases": "Bases de datos",
+      "data-visualization": "Visualización de datos",
+      "web-development": "Desarrollo web",
+      "mobile-development": "Desarrollo móvil",
+      "infrastructure": "Infraestructura"
+    }
+    ,
     "footer": {
       "disclaimer": "Este portafolio es un proyecto personal y no está asociado a ninguna empresa.",
       "credit": "Hecho con 💻, datos y \"casi\" sin procrastinar."
+    },
+    "cards": {
+      "card1-title": "TSU en Informática",
+      "card1-date": " En curso",
+      "card1-skill4": "Estadística",
+      "card2-title": "Informática y Computación",
+      "card4-title": "Soporte e infraestructura"
     }
+    
   },
   "en": {
     "loader": {
@@ -49,9 +76,35 @@
       "tagline": "Turning data into smart decisions",
       "location": "Santiago, Chile"
     },
+    "gallery-filters": {
+      "all": "All",
+      "jobs": "Jobs",
+      "learning": "Learning"
+    },
+    "about": {
+      "description": "I love solving problems, automating tasks, and optimizing processes. A researcher by nature, I find learning and collaboration an effective way to grow and share knowledge."
+    }
+    ,
+    "skills": {
+      "programming": "Programming",
+      "databases": "Databases",
+      "data-visualization": "Data Visualization",
+      "web-development": "Web Development",
+      "mobile-development": "Mobile Development",
+      "infrastructure": "Infrastructure"
+    }
+    ,
     "footer": {
       "disclaimer": "This portfolio is a personal project and not affiliated with any company.",
       "credit": "Built with 💻, data, and *almost* no procrastination."
+    }
+    ,
+    "cards": {
+      "card1-title": "Associate's Degree in Computer Science",
+      "card1-date": " In progress",
+      "card1-skill4": "Statistics",
+      "card2-title": "Computer Science and Computing",
+      "card4-title": "Support and Infrastructure"
     }
   }
 }
