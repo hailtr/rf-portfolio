@@ -65,6 +65,8 @@ setTimeout(() => {
   await waitForGalleryReady();
   console.log("Galería lista. Ocultando loader...");
 
+  updateExperienceFade();
+
   loader.style.opacity = 0;
   loader.style.transition = "opacity 0.5s ease";
 
@@ -78,3 +80,47 @@ setTimeout(() => {
     });
   }, 600);
 });
+
+window.updateExperienceFade = function () {
+  const gallery = document.querySelector('.experience-gallery');
+  const fadeLeft = document.querySelector('.experience-fade.left');
+  const fadeRight = document.querySelector('.experience-fade.right');
+  const prevBtn = document.getElementById('prev-exp');
+  const nextBtn = document.getElementById('next-exp');
+
+  if (!gallery || !fadeLeft || !fadeRight || !prevBtn || !nextBtn) return;
+
+  const scrollLeft = gallery.scrollLeft;
+  const maxScrollLeft = gallery.scrollWidth - gallery.clientWidth;
+
+  const canScrollLeft = scrollLeft > 5;
+  const canScrollRight = scrollLeft < maxScrollLeft - 5;
+
+  // Fades
+  fadeLeft.classList.toggle('visible', canScrollLeft);
+  fadeRight.classList.toggle('visible', canScrollRight);
+
+  // Botones
+  prevBtn.classList.toggle('disabled', !canScrollLeft);
+  nextBtn.classList.toggle('disabled', !canScrollRight);
+};
+
+const gallery = document.querySelector('.experience-gallery');
+const prevBtn = document.getElementById('prev-exp');
+const nextBtn = document.getElementById('next-exp');
+
+if (gallery && prevBtn && nextBtn) {
+  const scrollAmount = 350;
+
+  prevBtn.addEventListener('click', () => {
+    gallery.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  nextBtn.addEventListener('click', () => {
+    gallery.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+
+  // Actualizar fades dinámicamente cuando se hace scroll manual o con botón
+  gallery.addEventListener('scroll', updateExperienceFade);
+}
+
