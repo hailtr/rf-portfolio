@@ -18,9 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-async function waitForGalleryReady() {
+async function waitForGalleryReady(timeout = 10000) {
   const gallery = document.querySelector('.experience-gallery');
+  if (!gallery) return;
+
   const images = gallery.querySelectorAll('img');
+  if (images.length === 0) return;
 
   const imagePromises = Array.from(images).map(img =>
     new Promise(resolve => {
@@ -29,11 +32,18 @@ async function waitForGalleryReady() {
     })
   );
 
-  await Promise.all(imagePromises);
+  // Si tarda más de X segundos, continúa igual
+  await Promise.race([
+    Promise.all(imagePromises),
+    new Promise(resolve => setTimeout(resolve, timeout))
+  ]);
+
+  // Forzar layout para evitar el bug del scroll
   gallery.scrollLeft = gallery.scrollWidth;
   gallery.offsetHeight;
   gallery.scrollLeft = 0;
 }
+
 
 window.addEventListener("load", async () => {
   const loader = document.getElementById("loader");
