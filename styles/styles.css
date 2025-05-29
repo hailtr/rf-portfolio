@@ -96,6 +96,7 @@ main.visible {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding: 0 2rem;
+  transform: translateZ(0);
 }
 
 .banner-content {
@@ -911,14 +912,6 @@ a:active {
     overflow-y: auto;
     max-height: 90vh;
   }
-
-  .job-card.expanded .job-card-image-container {
-    flex-direction: column;
-  }
-
-  .job-card.expanded .job-image-desktop,
-  .job-card.expanded .job-image-mobile {
-    width: 100%;
   }
 
   .job-tags {
@@ -1228,6 +1221,15 @@ a:active {
     z-index: 998;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
+  
+  .menu-toggle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999; /* para que esté sobre todo */
+  }
+  
+
 
   #nav-banner.active {
     display: block;
@@ -1317,4 +1319,65 @@ svg,
 .lang-switcher:hover {
   background: rgba(255, 255, 255, 0.2);
   color: white;
+}
+
+@media (max-width: 768px) {
+  /* Botones de filtro y navegación */
+  .experience-filters button,
+  .experience-nav button {
+    font-size: 2rem;
+    padding: 0.3rem 0.8rem;
+    min-width: auto;
+  }
+
+  .experience-gallery {
+    margin: auto;
+  }
+
+  .material-symbols-rounded {
+    font-size: 1.8rem;
+    padding: 0.4rem;
+  }
+
+  /* Layout vertical más apretado para los contenedores */
+  .experience-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .job-card.expanded .job-card-image-container {
+  flex-direction: row;
+  gap: 0.5rem;
+}
+  
+  .job-card.expanded {
+    padding: 3rem 1rem 1rem 1rem;
+  }
+  .banner-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: cyan;
+}
+
+.banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.menu-toggle {
+  font-size: 2.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
 }
