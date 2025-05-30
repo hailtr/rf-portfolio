@@ -62,9 +62,6 @@ setTimeout(() => {
   console.log("Renderizando...");
   renderGallery(projects);
   console.log("Esperando imágenes...");
-  console.log("Galería renderizada.");  
-  setupGalleryFilters();
-  console.log("Configurando filtros de galería...");
   
   await waitForGalleryReady();
   console.log("Galería lista. Ocultando loader...");
@@ -128,25 +125,38 @@ if (gallery && prevBtn && nextBtn) {
   gallery.addEventListener('scroll', updateExperienceFade);
 }
 
-function setupGalleryFilters() {
+window.setupGalleryFilters = function () {
   const filterButtons = document.querySelectorAll('.experience-filters button');
-  const cards = document.querySelectorAll('.job-card');
+
+  // Ocultar los botones de categorías vacías
+  const categoriesInUse = new Set(
+    [...document.querySelectorAll('.job-card')].map(card =>
+      card.getAttribute('data-category')
+    )
+  );
 
   filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const filter = button.getAttribute('data-filter');
+    const filter = button.getAttribute('data-filter');
+    if (filter !== 'all' && !categoriesInUse.has(filter)) {
+      button.style.display = 'none';
+    }
 
+    // Asignar el evento de click solo a los visibles
+    button.addEventListener('click', () => {
+      const cards = document.querySelectorAll('.job-card');
       filterButtons.forEach(btn => btn.classList.remove('active'));
       button.classList.add('active');
 
       cards.forEach(card => {
         const category = card.getAttribute('data-category');
         if (filter === 'all' || category === filter) {
-          card.style.display = 'flex'; // o 'block' si usas display:block
+          card.classList.remove('hide');
         } else {
-          card.style.display = 'none';
+          card.classList.add('hide');
         }
       });
     });
   });
-}
+};
+
+
