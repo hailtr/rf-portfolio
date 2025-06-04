@@ -148,8 +148,11 @@ window.setupGalleryFilters = function () {
       button.classList.add('active');
 
       cards.forEach(card => {
-        const category = card.getAttribute('data-category');
 
+        card.classList.remove('expanded');
+        card.querySelector('.job-description')?.scrollTo({ top: 0 });
+        
+        const category = card.getAttribute('data-category');
         if (filter === 'all' || category === filter) {
           // Mostrar tarjeta: quitar hidden, luego permitir transición
           card.classList.remove('hidden');
