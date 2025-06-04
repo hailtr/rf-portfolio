@@ -149,10 +149,19 @@ window.setupGalleryFilters = function () {
 
       cards.forEach(card => {
         const category = card.getAttribute('data-category');
+
         if (filter === 'all' || category === filter) {
-          card.classList.remove('hide');
+          // Mostrar tarjeta: quitar hidden, luego permitir transición
+          card.classList.remove('hidden');
+          requestAnimationFrame(() => {
+            card.classList.remove('hide-transition');
+          });
         } else {
-          card.classList.add('hide');
+          // Ocultar con transición
+          card.classList.add('hide-transition');
+          setTimeout(() => {
+            card.classList.add('hidden');
+          }, 300); // mismo tiempo que la transición en CSS
         }
       });
     });
