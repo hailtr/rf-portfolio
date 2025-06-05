@@ -73,26 +73,26 @@
       {
         "company": "Austranet",
         "position": "Soporte e Infraestructura",
-        "startDate": "2021-01",
-        "endDate": "2022-06",
+        "startDate": "2023-09",
+        "endDate": "2023-12",
         "summary": "Responsable del mantenimiento de sistemas, redes internas y soporte a usuarios finales.",
         "highlights": [
           "Implementación de rutinas de respaldo automatizado",
           "Reducción de tiempos de respuesta en incidencias comunes"
         ],
-        "url": "https://austranet.example.com"
+        "url": "https://www.austranet.com/"
       },
       {
         "company": "Thermogroup",
         "position": "Analista de Datos / Consultor",
-        "startDate": "2022-07",
+        "startDate": "2024-02",
         "endDate": "2024-12",
         "summary": "Análisis de datos operativos, diseño de dashboards y automatización de reportes en Power BI.",
         "highlights": [
           "Creación de un sistema de monitoreo en tiempo real usando Power BI",
           "Consultoría para optimización de procesos internos"
         ],
-        "url": "https://thermogroup.example.com"
+        "url": "https://www.instagram.com/thermogroupvzla/"
       }
     ],
     "volunteer": [],
@@ -101,8 +101,8 @@
         "institution": "Instituto Universitario de Gerencia y Tecnología",
         "area": "Informática",
         "studyType": "Técnico Superior Universitario",
-        "startDate": "2017-01",
-        "endDate": "2020-12",
+        "startDate": "2024-01",
+        "endDate": "Actualidad",
         "gpa": "17/20",
         "location": "Caracas, Venezuela",
         "courses": [
@@ -117,7 +117,8 @@
         "title": "Certificación Microsoft AZ-900",
         "date": "2024-05",
         "awarder": "Microsoft",
-        "summary": "Fundamentos de Azure y servicios en la nube para soluciones empresariales."
+        "summary": "Fundamentos de Azure y servicios en la nube para soluciones empresariales.",
+        "link": "https://learn.microsoft.com/api/credentials/share/es-es/RafaelEstebanOrtizAguilar-2880/A246428961210115?sharingId=FDC73CAD8975D5C6"
       }
     ],
     "publications": [],
@@ -197,26 +198,26 @@
       {
         "company": "Austranet",
         "position": "Support and Infrastructure",
-        "startDate": "2021-01",
-        "endDate": "2022-06",
+        "startDate": "2023-08",
+        "endDate": "2023-12",
         "summary": "Responsible for systems maintenance, internal networks, and end-user support.",
         "highlights": [
           "Implemented automated backup routines",
           "Reduced response time for common issues"
         ],
-        "url": "https://austranet.example.com"
+        "url": "https://www.austranet.com/"
       },
       {
         "company": "Thermogroup",
         "position": "Data Analyst / Consultant",
-        "startDate": "2022-07",
+        "startDate": "2024-02",
         "endDate": "2024-12",
         "summary": "Operational data analysis, dashboard design, and report automation in Power BI.",
         "highlights": [
           "Created a real-time monitoring system using Power BI",
           "Consulted on process optimization internally"
         ],
-        "url": "https://thermogroup.example.com"
+        "url": "https://www.instagram.com/thermogroupvzla/"
       }
     ],
     "volunteer": [],
@@ -225,8 +226,8 @@
         "institution": "Instituto Universitario de Gerencia y Tecnología",
         "area": "Computer Science",
         "studyType": "Associate Degree",
-        "startDate": "2017-01",
-        "endDate": "2020-12",
+        "startDate": "2024-01",
+        "endDate": "Present",
         "gpa": "17/20",
         "location": "Caracas, Venezuela",
         "courses": [
@@ -239,9 +240,10 @@
     "awards": [
       {
         "title": "Microsoft AZ-900 Certification",
-        "date": "2024-05",
+        "date": "2023-09",
         "awarder": "Microsoft",
-        "summary": "Fundamentals of Azure and cloud services for enterprise solutions."
+        "summary": "Fundamentals of Azure and cloud services for enterprise solutions.",
+        "link": "https://learn.microsoft.com/api/credentials/share/es-es/RafaelEstebanOrtizAguilar-2880/A246428961210115?sharingId=FDC73CAD8975D5C6"
       }
     ],
     "publications": [],

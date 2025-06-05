@@ -102,7 +102,9 @@ async function loadResume() {
   renderSection("cv-awards", "awards", resume.awards, award => `
     <section class="item">
       <div class="section-header clearfix">
-        <h3 class="bold pull-left">${award.title}</h3>
+        <h3 class="bold pull-left">
+          <a href="${award.link}" target="_blank">${award.title} <i class="fa fa-external-link"></i></a>
+        </h3>
         <h5 class="italic pull-right">${award.date || ''}</h5>
       </div>
       <h5 class="awarder">${award.awarder}</h5>
