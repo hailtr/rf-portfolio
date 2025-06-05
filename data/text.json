@@ -1,5 +1,9 @@
 {
   "es": {
+    "DOM": {
+      "title": "Rafael Ortiz - Portafolio",
+      "cv-title": "Rafael Ortiz - Curriculum Vitae"
+    },
     "loader": {
       "title": "Cargando portafolio...",
       "subtitle": "Estamos preparando las imagenes.",
@@ -69,6 +73,10 @@
     }
   },
   "en": {
+    "DOM": {
+      "title": "Rafael Ortiz - Portfolio",
+      "cv-title": "Rafael Ortiz - Curriculum Vitae"
+    },
     "loader": {
       "title": "Loading portfolio...",
       "subtitle": "We're setting up images.",
