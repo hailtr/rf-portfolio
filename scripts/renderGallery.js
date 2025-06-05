@@ -108,11 +108,12 @@ export function renderGallery(projects) {
   }
 
   console.log("snapToNearestCard() llamada")
-}
-
-// Reactivar animaciones y fades
-requestAnimationFrame(() => {
+  // Reactivar animaciones y fades
+  requestAnimationFrame(() => {
   if (window.AOS) AOS.refresh();
   if (window.updateExperienceFade) updateExperienceFade();
-  if (window.setupGalleryFilters) window.setupGalleryFilters(); // <- Aquí invocas el filtro una vez renderizado
-});
+  if (window.setupGalleryFilters) window.setupGalleryFilters();
+  });
+
+}
+
