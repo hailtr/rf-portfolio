@@ -6,3 +6,6 @@ generar_zip.bat
 
 # Archivos de estructura
 structure.json
+
+# Archivos basura
+dump*

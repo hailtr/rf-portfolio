@@ -4,8 +4,7 @@
       "title": "Cargando portafolio...",
       "subtitle": "Estamos preparando las imagenes.",
       "delay": "Esto está tardando más de lo normal. Gracias por tu paciencia."
-    }
-    ,
+    },
     "menu": {
       "home": "Inicio",
       "projects": "Proyectos",
@@ -27,12 +26,10 @@
       "all": "Todos",
       "jobs": "Trabajos",
       "learning": "Aprendizaje"
-    }
-    ,
+    },
     "about": {
       "description": "Me encanta resolver problemas, automatizar tareas y optimizar procesos. Investigador de naturaleza, encuentro que aprender y colaborar es una forma efectiva de crecer y compartir conocimiento."
-    }
-    ,
+    },
     "skills": {
       "programming": "Programación",
       "databases": "Bases de datos",
@@ -40,8 +37,7 @@
       "web-development": "Desarrollo web",
       "mobile-development": "Desarrollo móvil",
       "infrastructure": "Infraestructura"
-    }
-    ,
+    },
     "footer": {
       "disclaimer": "Este portafolio es un proyecto personal y no está asociado a ninguna empresa.",
       "credit": "Hecho con 💻, datos y \"casi\" sin procrastinar."
@@ -52,14 +48,27 @@
       "card1-skill4": "Estadística",
       "card2-title": "Informática y Computación",
       "card4-title": "Soporte e infraestructura"
+    },
+    "text-cv": {
+      "about": "Acerca de mí",
+      "summary": "Resumen",
+      "skills": "Habilidades",
+      "languages": "Idiomas",
+      "interests": "Intereses",
+      "experience": "Experiencia",
+      "volunteer": "Voluntariado",
+      "education": "Educación",
+      "awards": "Premios",
+      "publications": "Publicaciones",
+      "references": "Referencias",
+      "download-cv": "Descargar CV"
     }
-    
   },
   "en": {
     "loader": {
-     "title": "Loading portfolio...",
-     "subtitle": "We're setting up images.",
-     "delay": "This is taking longer than usual. Thanks for your patience."
+      "title": "Loading portfolio...",
+      "subtitle": "We're setting up images.",
+      "delay": "This is taking longer than usual. Thanks for your patience."
     },
     "menu": {
       "home": "Home",
@@ -85,8 +94,7 @@
     },
     "about": {
       "description": "I love solving problems, automating tasks, and optimizing processes. A researcher by nature, I find learning and collaboration an effective way to grow and share knowledge."
-    }
-    ,
+    },
     "skills": {
       "programming": "Programming",
       "databases": "Databases",
@@ -94,19 +102,31 @@
       "web-development": "Web Development",
       "mobile-development": "Mobile Development",
       "infrastructure": "Infrastructure"
-    }
-    ,
+    },
     "footer": {
       "disclaimer": "This portfolio is a personal project and not affiliated with any company.",
       "credit": "Built with 💻, data, and *almost* no procrastination."
-    }
-    ,
+    },
     "cards": {
       "card1-title": "Associate's Degree in Computer Science",
       "card1-date": " In progress",
       "card1-skill4": "Statistics",
       "card2-title": "Computer Science and Computing",
       "card4-title": "Support and Infrastructure"
+    },
+    "text-cv": {
+      "about": "About Me",
+      "summary": "Summary",
+      "skills": "Skills",
+      "languages": "Languages",
+      "interests": "Interests",
+      "experience": "Experience",
+      "volunteer": "Volunteer",
+      "education": "Education",
+      "awards": "Awards",
+      "publications": "Publications",
+      "references": "References",
+      "download-cv": "Download CV"
     }
   }
 }

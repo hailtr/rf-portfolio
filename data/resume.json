@@ -1,124 +1,250 @@
 {
-  "basics": {
-    "name": "Rafael Ortiz",
-    "label": "Analytics Engineer",
-    "image": "./images/profilepicture.jpg",
-    "email": "lustigrfortiz@gmail.com",
-    "phone": "+58 412-1234567",
-    "website": "https://hailtr.github.io/rf-portfolio/",
-    "summary": "Analytics Engineer con experiencia en infraestructura, soporte técnico y análisis de datos. Apasionado por la automatización, la inteligencia artificial y la resolución lógica de problemas.",
-    "location": {
-      "address": "Montecristo",
-      "postalCode": "1010",
-      "city": "Caracas",
-      "region": "Distrito Capital",
-      "countryCode": "VE"
-    }
+  "es": {
+    "basics": {
+      "name": "Rafael Ortiz",
+      "label": "Analytics Engineer",
+      "image": "./images/profilepicture.jpg",
+      "email": "lustigrfortiz@gmail.com",
+      "phone": "+58 424-2700455",
+      "website": "https://hailtr.github.io/rf-portfolio/",
+      "summary": "Analista de datos con experiencia en infraestructura, soporte técnico y habilidades analíticas sólidas. Me impulsa la automatización, valoro la optimización y me interesa profundamente la inteligencia artificial. Enfoco mi trabajo en resolver problemas mediante la lógica. Por eso, estoy en constante aprendizaje y disfruto compartir conocimiento: aprender es lo que más valoro.",
+      "location": {
+        "address": "Montecristo",
+        "postalCode": "1010",
+        "city": "Caracas",
+        "region": "Distrito Capital",
+        "countryCode": "VE"
+      }
+    },
+    "skills": [
+      {
+        "name": "Data Engineering",
+        "level": "Avanzado",
+        "keywords": [
+          "Python",
+          "ETL",
+          "SQL",
+          "Pandas",
+          "Scraping",
+          "Power BI"
+        ]
+      },
+      {
+        "name": "DevOps / Infraestructura",
+        "level": "Intermedio",
+        "keywords": [
+          "Azure",
+          "Docker",
+          "Git",
+          "Railway",
+          "CI/CD"
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "language": "Español",
+        "fluency": "Nativo"
+      },
+      {
+        "language": "Inglés",
+        "fluency": "Fluido"
+      }
+    ],
+    "interests": [
+      {
+        "name": "Bienestar personal",
+        "keywords": [
+          "Gimnasio",
+          "Alimentación consciente",
+          "Longevidad"
+        ]
+      },
+      {
+        "name": "Debate lógico",
+        "keywords": [
+          "Filosofía",
+          "Ética",
+          "Estoicismo"
+        ]
+      }
+    ],
+    "work": [
+      {
+        "company": "Austranet",
+        "position": "Soporte e Infraestructura",
+        "startDate": "2021-01",
+        "endDate": "2022-06",
+        "summary": "Responsable del mantenimiento de sistemas, redes internas y soporte a usuarios finales.",
+        "highlights": [
+          "Implementación de rutinas de respaldo automatizado",
+          "Reducción de tiempos de respuesta en incidencias comunes"
+        ],
+        "url": "https://austranet.example.com"
+      },
+      {
+        "company": "Thermogroup",
+        "position": "Analista de Datos / Consultor",
+        "startDate": "2022-07",
+        "endDate": "2024-12",
+        "summary": "Análisis de datos operativos, diseño de dashboards y automatización de reportes en Power BI.",
+        "highlights": [
+          "Creación de un sistema de monitoreo en tiempo real usando Power BI",
+          "Consultoría para optimización de procesos internos"
+        ],
+        "url": "https://thermogroup.example.com"
+      }
+    ],
+    "volunteer": [],
+    "education": [
+      {
+        "institution": "Instituto Universitario de Gerencia y Tecnología",
+        "area": "Informática",
+        "studyType": "Técnico Superior Universitario",
+        "startDate": "2017-01",
+        "endDate": "2020-12",
+        "gpa": "17/20",
+        "location": "Caracas, Venezuela",
+        "courses": [
+          "Estructuras de Datos",
+          "Base de Datos",
+          "Programación Python"
+        ]
+      }
+    ],
+    "awards": [
+      {
+        "title": "Certificación Microsoft AZ-900",
+        "date": "2024-05",
+        "awarder": "Microsoft",
+        "summary": "Fundamentos de Azure y servicios en la nube para soluciones empresariales."
+      }
+    ],
+    "publications": [],
+    "references": []
   },
-  "skills": [
-    {
-      "name": "Data Engineering",
-      "level": "Avanzado",
-      "keywords": [
-        "Python",
-        "ETL",
-        "SQL",
-        "Pandas",
-        "Scraping",
-        "Power BI"
-      ]
+  "en": {
+    "basics": {
+      "name": "Rafael Ortiz",
+      "label": "Analytics Engineer",
+      "image": "./images/profilepicture.jpg",
+      "email": "lustigrfortiz@gmail.com",
+      "phone": "+58 412-1234567",
+      "website": "https://hailtr.github.io/rf-portfolio/",
+      "summary": "Analytics Engineer with experience in infrastructure, technical support, and strong analytical skills. Driven by automation, I value optimization and have a deep interest in artificial intelligence. I focus my work on solving problems through logic. Therefore, I am in constant learning and enjoy sharing knowledge: learning is what I value most.",
+      "location": {
+        "address": "Montecristo",
+        "postalCode": "1010",
+        "city": "Caracas",
+        "region": "Distrito Capital",
+        "countryCode": "VE"
+      }
     },
-    {
-      "name": "DevOps / Infraestructura",
-      "level": "Intermedio",
-      "keywords": [
-        "Azure",
-        "Docker",
-        "Git",
-        "Railway",
-        "CI/CD"
-      ]
-    }
-  ],
-  "languages": [
-    {
-      "language": "Español",
-      "fluency": "Nativo"
-    },
-    {
-      "language": "Inglés",
-      "fluency": "Fluido"
-    }
-  ],
-  "interests": [
-    {
-      "name": "Bienestar personal",
-      "keywords": [
-        "Gimnasio",
-        "Alimentación consciente",
-        "Longevidad"
-      ]
-    },
-    {
-      "name": "Debate lógico",
-      "keywords": [
-        "Filosofía",
-        "Ética",
-        "Estoicismo"
-      ]
-    }
-  ],
-  "work": [
-    {
-      "company": "Austranet",
-      "position": "Soporte e Infraestructura",
-      "startDate": "2021-01",
-      "endDate": "2022-06",
-      "summary": "Responsable del mantenimiento de sistemas, redes internas y soporte a usuarios finales.",
-      "highlights": [
-        "Implementación de rutinas de respaldo automatizado",
-        "Reducción de tiempos de respuesta en incidencias comunes"
-      ],
-      "url": "https://austranet.example.com"
-    },
-    {
-      "company": "Thermogroup",
-      "position": "Analista de Datos / Consultor",
-      "startDate": "2022-07",
-      "endDate": "2024-12",
-      "summary": "Análisis de datos operativos, diseño de dashboards y automatización de reportes en Power BI.",
-      "highlights": [
-        "Creación de un sistema de monitoreo en tiempo real usando Power BI",
-        "Consultoría para optimización de procesos internos"
-      ],
-      "url": "https://thermogroup.example.com"
-    }
-  ],
-  "volunteer": [],
-  "education": [
-    {
-      "institution": "Instituto Universitario de Gerencia y Tecnología",
-      "area": "Informática",
-      "studyType": "Técnico Superior Universitario",
-      "startDate": "2017-01",
-      "endDate": "2020-12",
-      "gpa": "17/20",
-      "location": "Caracas, Venezuela",
-      "courses": [
-        "Estructuras de Datos",
-        "Base de Datos",
-        "Programación Python"
-      ]
-    }
-  ],
-  "awards": [
-    {
-      "title": "Certificación Microsoft AZ-900",
-      "date": "2024-05",
-      "awarder": "Microsoft",
-      "summary": "Fundamentos de Azure y servicios en la nube para soluciones empresariales."
-    }
-  ],
-  "publications": [],
-  "references": []
+    "skills": [
+      {
+        "name": "Data Engineering",
+        "level": "Advanced",
+        "keywords": [
+          "Python",
+          "ETL",
+          "SQL",
+          "Pandas",
+          "Scraping",
+          "Power BI"
+        ]
+      },
+      {
+        "name": "DevOps / Infrastructure",
+        "level": "Intermediate",
+        "keywords": [
+          "Azure",
+          "Docker",
+          "Git",
+          "Railway",
+          "CI/CD"
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "language": "Spanish",
+        "fluency": "Native"
+      },
+      {
+        "language": "English",
+        "fluency": "Fluent"
+      }
+    ],
+    "interests": [
+      {
+        "name": "Personal Well-being",
+        "keywords": [
+          "Gym",
+          "Mindful eating",
+          "Longevity"
+        ]
+      },
+      {
+        "name": "Logical Debate",
+        "keywords": [
+          "Philosophy",
+          "Ethics",
+          "Stoicism"
+        ]
+      }
+    ],
+    "work": [
+      {
+        "company": "Austranet",
+        "position": "Support and Infrastructure",
+        "startDate": "2021-01",
+        "endDate": "2022-06",
+        "summary": "Responsible for systems maintenance, internal networks, and end-user support.",
+        "highlights": [
+          "Implemented automated backup routines",
+          "Reduced response time for common issues"
+        ],
+        "url": "https://austranet.example.com"
+      },
+      {
+        "company": "Thermogroup",
+        "position": "Data Analyst / Consultant",
+        "startDate": "2022-07",
+        "endDate": "2024-12",
+        "summary": "Operational data analysis, dashboard design, and report automation in Power BI.",
+        "highlights": [
+          "Created a real-time monitoring system using Power BI",
+          "Consulted on process optimization internally"
+        ],
+        "url": "https://thermogroup.example.com"
+      }
+    ],
+    "volunteer": [],
+    "education": [
+      {
+        "institution": "Instituto Universitario de Gerencia y Tecnología",
+        "area": "Computer Science",
+        "studyType": "Associate Degree",
+        "startDate": "2017-01",
+        "endDate": "2020-12",
+        "gpa": "17/20",
+        "location": "Caracas, Venezuela",
+        "courses": [
+          "Data Structures",
+          "Databases",
+          "Python Programming"
+        ]
+      }
+    ],
+    "awards": [
+      {
+        "title": "Microsoft AZ-900 Certification",
+        "date": "2024-05",
+        "awarder": "Microsoft",
+        "summary": "Fundamentals of Azure and cloud services for enterprise solutions."
+      }
+    ],
+    "publications": [],
+    "references": []
+  }
 }

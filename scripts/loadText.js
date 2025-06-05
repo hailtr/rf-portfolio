@@ -12,12 +12,14 @@ export async function applyTextTranslations(lang = 'es') {
 
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
-      const value = key.split('.').reduce((acc, part) => acc?.[part], translations);
+      const scope = el.getAttribute('data-i18n-scope') || '';
+      const fullPath = scope ? [scope, ...key.split('.')] : key.split('.');
+      const value = fullPath.reduce((acc, part) => acc?.[part], translations);
 
-      console.log(`→ ${key}:`, value);
+      console.log(`→ ${scope ? scope + '.' : ''}${key}:`, value);
 
       if (value) el.textContent = value;
-      else console.warn(`Clave sin traducción encontrada: ${key}`);
+      else console.warn(`Clave sin traducción encontrada: ${scope ? scope + '.' : ''}${key}`);
     });
   } catch (err) {
     console.error("Error cargando traducciones:", err);

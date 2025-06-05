@@ -1,9 +1,14 @@
+import { applyTextTranslations } from '../loadText.js';
+import { getLang } from '../i18n.js';
+
 async function loadResume() {
+  const lang = getLang();
   const res = await fetch('data/resume.json');
   const data = await res.json();
-  const basics = data.basics;
+  const resume = data[lang];
+  const basics = resume.basics;
 
-  // Header
+
   document.getElementById("cv-name").textContent = basics.name;
   document.getElementById("cv-role").textContent = basics.label;
   document.getElementById("cv-email").textContent = basics.email;
@@ -12,11 +17,9 @@ async function loadResume() {
   document.getElementById("cv-location").innerHTML = `${basics.location.address}<br>${basics.location.city}, ${basics.location.region}`;
   document.getElementById("cv-image").src = basics.image;
 
-  // Summary
   document.getElementById("cv-summary").textContent = basics.summary;
 
-  // Skills
-  renderList(data.skills, "cv-skills", skill => `
+  renderList(resume.skills, "cv-skills", skill => `
     <section class="container">
       <div class="title">
         <h3>${skill.name}</h3>
@@ -29,15 +32,13 @@ async function loadResume() {
     </section>
   `);
 
-  // Languages
-  renderBlock("cv-languages", "Languages", `
+  renderBlock("cv-languages", "languages", `
     <ul class="minimal">
-      ${data.languages.map(lang => `<li><h6>${lang.language} <em>(${lang.fluency})</em></h6></li>`).join('')}
+      ${resume.languages.map(lang => `<li><h6>${lang.language} <em>(${lang.fluency})</em></h6></li>`).join('')}
     </ul>
   `);
 
-  // Interests
-  renderBlock("cv-interests", "Interests", data.interests.map(interest => `
+  renderBlock("cv-interests", "interests", resume.interests.map(interest => `
     <section class="item">
       <h4 class="bold">${interest.name}</h4>
       <ul class="minimal">
@@ -46,8 +47,7 @@ async function loadResume() {
     </section>
   `).join(''));
 
-  // Work
-  renderSection("cv-work", "Experience", data.work, job => `
+  renderSection("cv-work", "experience", resume.work, job => `
     <section class="item">
       <div class="section-header clearfix">
         <h3 class="bold pull-left">
@@ -65,8 +65,7 @@ async function loadResume() {
     </section>
   `);
 
-  // Volunteer
-  renderSection("cv-volunteer", "Volunteer", data.volunteer, vol => `
+  renderSection("cv-volunteer", "volunteer", resume.volunteer, vol => `
     <section class="item">
       <div class="section-header clearfix">
         <h3 class="bold pull-left">
@@ -84,8 +83,7 @@ async function loadResume() {
     </section>
   `);
 
-  // Education
-  renderSection("cv-education", "Education", data.education, edu => `
+  renderSection("cv-education", "education", resume.education, edu => `
     <section class="item">
       <div class="section-header clearfix">
         <h3 class="bold pull-left">${edu.institution}</h3>
@@ -101,8 +99,7 @@ async function loadResume() {
     </section>
   `);
 
-  // Awards
-  renderSection("cv-awards", "Awards", data.awards, award => `
+  renderSection("cv-awards", "awards", resume.awards, award => `
     <section class="item">
       <div class="section-header clearfix">
         <h3 class="bold pull-left">${award.title}</h3>
@@ -113,8 +110,7 @@ async function loadResume() {
     </section>
   `);
 
-  // Publications
-  renderSection("cv-publications", "Publications", data.publications, pub => `
+  renderSection("cv-publications", "publications", resume.publications, pub => `
     <section class="item">
       <div class="section-header clearfix">
         <h3 class="bold pull-left">
@@ -127,8 +123,7 @@ async function loadResume() {
     </section>
   `);
 
-  // References
-  renderSection("cv-references", "References", data.references, ref => `
+  renderSection("cv-references", "references", resume.references, ref => `
     <section class="item clearfix">
       <i class="fa fa-quote-left pull-left" aria-hidden="true"></i>
       <blockquote>${ref.reference}</blockquote>
@@ -136,7 +131,10 @@ async function loadResume() {
     </section>
   `);
 
-  // Download PDF
+  // Aplicar traducciones
+  applyTextTranslations(lang);
+
+  // PDF export
   const pdfButton = document.getElementById('download-pdf');
   if (pdfButton) {
     pdfButton.addEventListener('click', async () => {
@@ -163,37 +161,38 @@ async function loadResume() {
       pdf.save('cv-rafael-ortiz.pdf');
     });
   }
-
 }
 
-function renderList(list, containerId, templateFn) {
-  const container = document.getElementById(containerId);
-  if (!list || list.length === 0 || !container) return;
-  container.innerHTML = list.map(templateFn).join('');
-}
-
-function renderBlock(containerId, title, content) {
+function renderBlock(containerId, i18nKey, content) {
   const container = document.getElementById(containerId);
   if (!container || !content) return;
+
   container.innerHTML = `
     <div class="title">
-      <h3>${title}</h3>
+      <h3 data-i18n="${i18nKey}" data-i18n-scope="text-cv">${i18nKey}</h3>
       <div class="keyline"></div>
     </div>
     ${content}
   `;
 }
 
-function renderSection(containerId, title, list, templateFn) {
+function renderSection(containerId, i18nKey, list, templateFn) {
   const container = document.getElementById(containerId);
   if (!list || list.length === 0 || !container) return;
+
   container.innerHTML = `
     <div class="title">
-      <h3>${title}</h3>
+      <h3 data-i18n="${i18nKey}" data-i18n-scope="text-cv">${i18nKey}</h3>
       <div class="keyline"></div>
     </div>
     ${list.map(templateFn).join('')}
   `;
+}
+
+function renderList(list, containerId, templateFn) {
+  const container = document.getElementById(containerId);
+  if (!list || list.length === 0 || !container) return;
+  container.innerHTML = list.map(templateFn).join('');
 }
 
 loadResume();

@@ -287,5 +287,17 @@ ul.two-column li {
   }
 }
 
+@media (min-width: 768px) {
+  #cv-summary {
+    text-align: justify;
+  }
+}
+
+@media (max-width: 767px) {
+  #cv-summary {
+    text-align: left;
+  }
+}
+
 
 /*# sourceMappingURL=style.css.map */
