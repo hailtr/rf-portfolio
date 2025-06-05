@@ -1,0 +1,124 @@
+{
+  "basics": {
+    "name": "Rafael Ortiz",
+    "label": "Analytics Engineer",
+    "image": "./images/profilepicture.jpg",
+    "email": "lustigrfortiz@gmail.com",
+    "phone": "+58 412-1234567",
+    "website": "https://hailtr.github.io/rf-portfolio/",
+    "summary": "Analytics Engineer con experiencia en infraestructura, soporte técnico y análisis de datos. Apasionado por la automatización, la inteligencia artificial y la resolución lógica de problemas.",
+    "location": {
+      "address": "Montecristo",
+      "postalCode": "1010",
+      "city": "Caracas",
+      "region": "Distrito Capital",
+      "countryCode": "VE"
+    }
+  },
+  "skills": [
+    {
+      "name": "Data Engineering",
+      "level": "Avanzado",
+      "keywords": [
+        "Python",
+        "ETL",
+        "SQL",
+        "Pandas",
+        "Scraping",
+        "Power BI"
+      ]
+    },
+    {
+      "name": "DevOps / Infraestructura",
+      "level": "Intermedio",
+      "keywords": [
+        "Azure",
+        "Docker",
+        "Git",
+        "Railway",
+        "CI/CD"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Español",
+      "fluency": "Nativo"
+    },
+    {
+      "language": "Inglés",
+      "fluency": "Fluido"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Bienestar personal",
+      "keywords": [
+        "Gimnasio",
+        "Alimentación consciente",
+        "Longevidad"
+      ]
+    },
+    {
+      "name": "Debate lógico",
+      "keywords": [
+        "Filosofía",
+        "Ética",
+        "Estoicismo"
+      ]
+    }
+  ],
+  "work": [
+    {
+      "company": "Austranet",
+      "position": "Soporte e Infraestructura",
+      "startDate": "2021-01",
+      "endDate": "2022-06",
+      "summary": "Responsable del mantenimiento de sistemas, redes internas y soporte a usuarios finales.",
+      "highlights": [
+        "Implementación de rutinas de respaldo automatizado",
+        "Reducción de tiempos de respuesta en incidencias comunes"
+      ],
+      "url": "https://austranet.example.com"
+    },
+    {
+      "company": "Thermogroup",
+      "position": "Analista de Datos / Consultor",
+      "startDate": "2022-07",
+      "endDate": "2024-12",
+      "summary": "Análisis de datos operativos, diseño de dashboards y automatización de reportes en Power BI.",
+      "highlights": [
+        "Creación de un sistema de monitoreo en tiempo real usando Power BI",
+        "Consultoría para optimización de procesos internos"
+      ],
+      "url": "https://thermogroup.example.com"
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Instituto Universitario de Gerencia y Tecnología",
+      "area": "Informática",
+      "studyType": "Técnico Superior Universitario",
+      "startDate": "2017-01",
+      "endDate": "2020-12",
+      "gpa": "17/20",
+      "location": "Caracas, Venezuela",
+      "courses": [
+        "Estructuras de Datos",
+        "Base de Datos",
+        "Programación Python"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Certificación Microsoft AZ-900",
+      "date": "2024-05",
+      "awarder": "Microsoft",
+      "summary": "Fundamentos de Azure y servicios en la nube para soluciones empresariales."
+    }
+  ],
+  "publications": [],
+  "references": []
+}

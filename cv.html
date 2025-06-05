@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CV de Rafael Ortiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/cv-theme/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <main id="resume" class="page">
+    <button id="download-pdf" style="
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #56817A;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 12px;
+        cursor: pointer;
+        border-radius: 4px;
+        z-index: 1000;
+        ">
+        Descargar PDF
+    </button>
+
+    <header class="resume-header clearfix">
+      <div class="profile-header pull-left">
+        <h1 id="cv-name"></h1>
+        <h2 id="cv-role"></h2>
+      </div>
+      <div class="profile-pic pull-right">
+          <img id="cv-image" src="" alt="Foto de perfil">
+      </div>
+    </header>
+    <div class="resume-content">
+      <aside class="left-column">
+        <div class="container about-container">
+          <div class="title">
+            <h3>About</h3>
+            <div class="keyline"></div>
+          </div>
+
+          <div class="info-tag-container">
+            <i class="fa fa-map-marker"></i>
+            <h6 id="cv-location" class="info-text"></h6>
+          </div>
+          <div class="info-tag-container">
+            <i class="fa fa-envelope-o"></i>
+            <h6 id="cv-email" class="info-text"></h6>
+          </div>
+          <div class="info-tag-container">
+            <i class="fa fa-mobile"></i>
+            <h6 id="cv-phone" class="info-text"></h6>
+          </div>
+          <div class="info-tag-container">
+            <i class="fa fa-desktop"></i>
+            <h6 id="cv-website" class="info-text"></h6>
+          </div>
+        </div>
+
+        <div id="cv-skills" class="skills-container"></div>
+        <div id="cv-languages" class="container languages-container"></div>
+        <div id="cv-interests" class="container interests-container"></div>
+      </aside>
+
+      <div class="right-column">
+        <div class="container summary-container">
+          <div class="title">
+            <h3>Summary</h3>
+            <div class="keyline"></div>
+          </div>
+          <p id="cv-summary" class="summary"></p>
+        </div>
+
+        <div id="cv-work" class="container work-container"></div>
+        <div id="cv-volunteer" class="container volunteer-container"></div>
+        <div id="cv-education" class="container education-container"></div>
+        <div id="cv-awards" class="container awards-container"></div>
+        <div id="cv-publications" class="container publications-container"></div>
+        <div id="cv-references" class="container references-container"></div>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="scripts/cv-theme/cv.js"></script>
+
+</body>
+</html>

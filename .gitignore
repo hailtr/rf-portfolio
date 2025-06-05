@@ -3,3 +3,6 @@
 
 # No incluir el script para generar zips
 generar_zip.bat
+
+# Archivos de estructura
+structure.json
