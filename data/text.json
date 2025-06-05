@@ -11,7 +11,7 @@
       "projects": "Proyectos",
       "about": "Acerca de mí",
       "contact": "Contacto",
-      "download": "Descargar CV"
+      "view-cv": "Ver CV"
     },
     "sections": {
       "skills": "Habilidades",
@@ -66,7 +66,7 @@
       "projects": "Projects",
       "about": "About Me",
       "contact": "Contact",
-      "download": "Download CV"
+      "view-cv": "View CV"
     },
     "sections": {
       "skills": "Skills",

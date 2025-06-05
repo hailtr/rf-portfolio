@@ -1,0 +1,24 @@
+{
+  "es": {
+    "skills": "Habilidades",
+    "languages": "Idiomas",
+    "interests": "Intereses",
+    "experience": "Experiencia",
+    "volunteer": "Voluntariado",
+    "education": "Educación",
+    "awards": "Premios",
+    "publications": "Publicaciones",
+    "references": "Referencias"
+  },
+  "en": {
+    "skills": "Skills",
+    "languages": "Languages",
+    "interests": "Interests",
+    "experience": "Experience",
+    "volunteer": "Volunteer",
+    "education": "Education",
+    "awards": "Awards",
+    "publications": "Publications",
+    "references": "References"
+  }
+}
