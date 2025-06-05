@@ -49,6 +49,10 @@
       "card2-title": "Informática y Computación",
       "card4-title": "Soporte e infraestructura"
     },
+    "contact": {
+      "message": "¿Hablamos?",
+      "email": "Correo"
+    },
     "text-cv": {
       "about": "Acerca de mí",
       "summary": "Resumen",
@@ -113,6 +117,10 @@
       "card1-skill4": "Statistics",
       "card2-title": "Computer Science and Computing",
       "card4-title": "Support and Infrastructure"
+    },
+    "contact": {
+      "message": "Contact me?",
+      "email": "Email"
     },
     "text-cv": {
       "about": "About Me",
