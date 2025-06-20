@@ -812,6 +812,7 @@ a:active {
   aspect-ratio: 16 / 10;
   border-radius: 0.4rem;
   object-fit: cover;
+  max-height: 230px;
 }
 
 .job-image-mobile {
@@ -819,6 +820,7 @@ a:active {
   aspect-ratio: 9 / 16;
   border-radius: 1rem;
   object-fit: cover;
+  max-height: 230px;
 }
 
 /* CONTENIDO */
@@ -885,7 +887,13 @@ a:active {
   flex-wrap: wrap;
   gap: 0.5rem;
   max-height: 100%;
-  margin-top: 0.5rem;
+  margin-top: 2rem;
+}
+
+.job-card.expanded a {
+  text-decoration: none;
+  padding: 0;
+  font-size: 1.3rem;
 }
 
 /* BOTÓN EXPANSIÓN */
