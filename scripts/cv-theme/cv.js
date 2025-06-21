@@ -153,6 +153,7 @@ async function loadResume() {
 
       const imgData = canvas.toDataURL('image/jpeg', 1.0);
       const { jsPDF } = window.jspdf;
+      const date = new Date().toISOString().split('T')[0]; // e.g. "2025-06-21"
       const pdf = new jsPDF({
         orientation: 'portrait',
         unit: 'px',
@@ -160,7 +161,7 @@ async function loadResume() {
       });
 
       pdf.addImage(imgData, 'JPEG', 0, 0, width, height);
-      pdf.save('cv-rafael-ortiz.pdf');
+      pdf.save(`cv-rafael-ortiz-${lang}-${date}.pdf`);
     });
   }
 }
