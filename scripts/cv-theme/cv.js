@@ -137,31 +137,25 @@ async function loadResume() {
   applyTextTranslations(lang);
 
   // PDF export
+  
   const pdfButton = document.getElementById('download-pdf');
   if (pdfButton) {
-    pdfButton.addEventListener('click', async () => {
+    pdfButton.addEventListener('click', () => {
       const element = document.getElementById('resume');
-      const bounds = element.getBoundingClientRect();
-      const width = Math.round(bounds.width);
-      const height = Math.round(bounds.height);
+      const date = new Date().toISOString().split('T')[0];
+      const lang = getLang();  // Obtener el idioma actual
 
-      const canvas = await html2canvas(element, {
-        scale: 2,
-        useCORS: true,
-        backgroundColor: '#ffffff'
-      });
-
-      const imgData = canvas.toDataURL('image/jpeg', 1.0);
-      const { jsPDF } = window.jspdf;
-      const date = new Date().toISOString().split('T')[0]; // e.g. "2025-06-21"
-      const pdf = new jsPDF({
-        orientation: 'portrait',
-        unit: 'px',
-        format: [width, height]
-      });
-
-      pdf.addImage(imgData, 'JPEG', 0, 0, width, height);
-      pdf.save(`cv-rafael-ortiz-${lang}-${date}.pdf`);
+      const opt = {
+        margin:       0,
+        filename:     `cv-rafael-ortiz-${lang}-${date}.pdf`,
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true },
+        jsPDF:        { unit: 'pt', format: 'a4', orientation: 'portrait' },
+        pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] }
+      };
+      console.log(getComputedStyle(document.getElementById('resume')).width);
+      document.getElementById('resume').style.transform = 'translateX(-7px)';
+      html2pdf().set(opt).from(element).save();
     });
   }
 }
