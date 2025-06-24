@@ -158,11 +158,13 @@ ul.two-column li {
   margin-right: 18px;
 }
 .profile-pic img {
-  height: 52px;
-  width: 52px;
+  height: 96px;
+  width: 96px;
   border-radius: 50%;
   border: 2px solid #56817A;
 }
+
+
 
 .summary {
   margin: 5px 0 5px;
@@ -306,4 +308,8 @@ ul.two-column li {
 
 #resume {
   margin: 0 auto;
+}
+/* padding para alinear el titulo/nombre del perfil */
+.profile-header {
+  padding-top: 22px; 
 }

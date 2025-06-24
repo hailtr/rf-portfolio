@@ -154,6 +154,8 @@ async function loadResume() {
         pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] }
       };
       console.log(getComputedStyle(document.getElementById('resume')).width);
+      // El desplazamiento corrige un offset de html2canvas que empuja el contenido ~7px a la derecha
+      // No modificar sin volver a validar visualmente el PDF pues esto parece ser un bug de html2canvas
       document.getElementById('resume').style.transform = 'translateX(-7px)';
       html2pdf().set(opt).from(element).save();
     });
