@@ -1,0 +1,26 @@
+{
+  "id": "api-scraper_bcv",
+  "version": 1,
+  "created_at": "2025-06-26T00:00:00Z",
+  "updated_at": "2025-06-26T00:00:00Z",
+  "meta": {
+    "category": "proyectos",
+    "tags": ["Python", "Flask", "Web Scraping", "Railway", "PostgreSQL"],
+    "images": {
+      "desktop": "images/mockups/5.jpg",
+      "mobile": "images/mockups/6.jpg"
+    }
+  },
+  "translations": {
+    "es": {
+      "title": "Buscador de tasa de BCV",
+      "subtitle": "Web Scraping API - 2025",
+      "description": "Necesitaba una forma de obtener el tipo de cambio del BCV (para la conversión de USD a Bs) y poder usarlo en mis aplicaciones, proyectos o casos prácticos. Busqué si existía una API disponible para uso público, pero lamentablemente la única que encontré no era gratuita, así que creé la mía propia de la siguiente manera:<br><br> - Diseñé dos scrapers con BeautifulSoup: uno para datos históricos y otro que obtiene el tipo de cambio actual del BCV periódicamente mediante GitHub Actions.<br>- Creé una API con Flask, alojada en Railway.com con una base de datos PostgreSQL.<br>- Creé usuarios de servicio con roles para los scrapers y la API para interactuar de forma segura con la base de datos.<br>- Implementé endpoints de API para acceder a los datos, por ejemplo: <a target='_blank' href='https://tasabcv-production-3994.up.railway.app/api/tasa'>https://tasabcv-production-3994.up.railway.app/api/tasa</a> <br>Repositorio: <a target='_blank' href='https://github.com/hailtr/tasa_bcv'>https://github.com/hailtr/tasa_bcv</a>"
+    },
+    "en": {
+      "title": "BCV rate searcher",
+      "subtitle": "Web Scraping API - 2025",
+      "description": "I needed a way to get the BCV rate (for USD to Bs conversions) and be able to use it in my applications, projects, or case studies. I looked into whether there was an API available for public use, but unfortunately the only one I found wasn't free, so I built my own as follows:<br><br> - I designed two scrapers using BeautifulSoup: one for historical data and one that fetches the current BCV rate periodically via GitHub Actions.<br>- I built an API using Flask, hosted on Railway.com with a PostgreSQL database.<br>- I created service users with roles for the scrapers and API to interact securely with the database.<br>- I implemented API endpoints to access the data, for example: <a target='_blank' href='https://tasabcv-production-3994.up.railway.app/api/tasa'>https://tasabcv-production-3994.up.railway.app/api/tasa</a> <br>Repository: <a target='_blank' href='https://github.com/hailtr/tasa_bcv'>https://github.com/hailtr/tasa_bcv</a>"
+    }
+  }
+}

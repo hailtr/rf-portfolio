@@ -59,7 +59,7 @@ async function loadResume() {
       </div>
       <h4>${job.position}</h4>
       <p class="summary">${job.summary}</p>
-      <ul>
+      <ul style="text-align: justify;">
         ${(job.highlights || []).map(h => `<li>${h}</li>`).join('')}
       </ul>
     </section>
