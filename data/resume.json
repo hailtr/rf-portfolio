@@ -7,7 +7,7 @@
       "email": "lustigrfortiz@gmail.com",
       "phone": "+58 424-2700455",
       "website": "https://hailtr.github.io/rf-portfolio/",
-      "summary": "Analista de datos con experiencia en infraestructura, soporte técnico y habilidades analíticas sólidas. Me impulsa la automatización, valoro la optimización y me interesa profundamente la inteligencia artificial. Enfoco mi trabajo en resolver problemas mediante la lógica. Por eso, estoy en constante aprendizaje y disfruto compartir conocimiento: aprender es lo que más valoro.",
+      "summary": "Profesional orientado a datos con base sólida en sistemas, análisis y automatización. Tengo experiencia diseñando flujos de trabajo personalizados que abarcan desde la ingesta y transformación de datos hasta la generación de reportes estratégicos, adaptados a necesidades reales del negocio y entornos regulados. He depurado entornos heredados, automatizado pipelines de datos y desarrollado herramientas de monitoreo utilizadas por equipos operativos y de auditoría. Capacidad para convertir información desestructurada en reportes claros, auditables y accionables.",
       "location": {
         "address": "Montecristo",
         "postalCode": "1010",
@@ -75,22 +75,26 @@
         "position": "Analista de Datos / Consultor",
         "startDate": "2024-02",
         "endDate": "2024-12",
-        "summary": "Análisis de datos operativos, diseño de dashboards y automatización de reportes en Power BI.",
+        "summary": "Análisis operativo, documentación de procesos y generación de reportes estratégicos en <b>Power BI</b>.",
         "highlights": [
-          "Creación de un sistema de monitoreo en tiempo real usando Power BI",
-          "Consultoría para optimización de procesos internos"
+          "Diseñé un sistema de monitoreo en tiempo real que integraba <b>recolección de datos, ETL, visualización y reportes orientados a cumplimiento</b>",
+          "Propuse y documenté mejoras de procesos que <b>redujeron errores manuales</b> y alinearon operaciones con políticas internas",
+          "Desarrollé un <b>dashboard en Power BI</b> para el seguimiento continuo de KPIs, mejorando la <b>supervisión y preparación para auditorías</b>",
+          "Automaticé la <b>generación de reportes</b> para garantizar <b>trazabilidad, consistencia y entrega oportuna</b> de información crítica"
         ],
         "url": "https://www.instagram.com/thermogroupvzla/"
       },
       {
         "company": "Austranet",
         "position": "Soporte e Infraestructura",
-        "startDate": "2023-09",
+        "startDate": "2023-08",
         "endDate": "2023-12",
-        "summary": "Responsable del mantenimiento de sistemas, redes internas y soporte a usuarios finales.",
+        "summary": "Gestión de infraestructura, documentación técnica y soporte en un entorno de <b>Gobierno, Riesgo y Cumplimiento (GRC)</b>.",
         "highlights": [
-          "Implementación de rutinas de respaldo automatizado",
-          "Reducción de tiempos de respuesta en incidencias comunes"
+          "Trabajé con <b>AustranetGRC</b>, adquiriendo experiencia directa en <b>marcos de cumplimiento, riesgos y auditoría interna</b>",
+          "Construí un inventario completo de <b>Azure</b> con más de 200 recursos y etiquetas para <b>gestión de activos y cumplimiento de políticas</b>",
+          "Implementé <b>rutinas y políticas de respaldo automatizadas</b> en Azure, Docker y sistemas heredados, mejorando la <b>continuidad operativa y el cumplimiento</b>",
+          "Contribuí al desarrollo de <b>alertanormativa</b>, un scraper web que analizaba más de 500 páginas de normativas chilenas y devolvía los cambios relevantes al personal de cumplimiento"
         ],
         "url": "https://www.austranet.com/"
       }
@@ -104,7 +108,6 @@
         "studyType": "Técnico Superior Universitario",
         "startDate": "2024-01",
         "endDate": "Actualidad",
-        "gpa": "17/20",
         "location": "Caracas, Venezuela",
         "courses": [
           "Estructuras de Datos",
