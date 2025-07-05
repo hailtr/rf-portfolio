@@ -71,6 +71,19 @@
     ],
     "work": [
       {
+        "company":"Venepandi C.A.",
+        "position":"Consultor de Datos",
+        "startDate": "2025-03",
+        "endDate": "2025-06",
+        "summary": "Extracción, transformación y análisis de datos para la creación de reportes.",
+        "highlights": [
+                    "Desarrollé un sistema automatizado de <b>seguimiento de gastos</b> utilizando <b>OCR (Tesseract)</b> para extraer datos desde recibos físicos o audios.",
+                    "Transformé la información extraída en <b>datos estructurados</b> e integrables en reportes personalizados.",
+                    "Contribuí a reducir más de <b>$5,000 USD</b> en gastos innecesarios en pocos meses."
+                    ],
+        "url": "https://venepandi.com/"
+      },
+      {
         "company": "Thermogroup",
         "position": "Analista de Datos / Consultor",
         "startDate": "2024-02",
@@ -79,9 +92,8 @@
         "highlights": [
           "Diseñé un sistema de monitoreo en tiempo real que integraba <b>recolección de datos, ETL, visualización y reportes orientados a cumplimiento</b>",
           "Propuse y documenté mejoras de procesos que <b>redujeron errores manuales</b> y alinearon operaciones con políticas internas",
-          "Desarrollé un <b>dashboard en Power BI</b> para el seguimiento continuo de KPIs, mejorando la <b>supervisión y preparación para auditorías</b>",
-          "Automaticé la <b>generación de reportes</b> para garantizar <b>trazabilidad, consistencia y entrega oportuna</b> de información crítica"
-        ],
+          "Desarrollé un <b>dashboard en Power BI</b> para el seguimiento continuo de KPIs, mejorando la <b>supervisión y preparación para auditorías</b>"
+          ],
         "url": "https://www.instagram.com/thermogroupvzla/"
       },
       {
@@ -93,11 +105,10 @@
         "highlights": [
           "Trabajé con <b>AustranetGRC</b>, adquiriendo experiencia directa en <b>marcos de cumplimiento, riesgos y auditoría interna</b>",
           "Construí un inventario completo de <b>Azure</b> con más de 200 recursos y etiquetas para <b>gestión de activos y cumplimiento de políticas</b>",
-          "Implementé <b>rutinas y políticas de respaldo automatizadas</b> en Azure, Docker y sistemas heredados, mejorando la <b>continuidad operativa y el cumplimiento</b>",
-          "Contribuí al desarrollo de <b>alertanormativa</b>, un scraper web que analizaba más de 500 páginas de normativas chilenas y devolvía los cambios relevantes al personal de cumplimiento"
-        ],
+          "Implementé <b>rutinas y políticas de respaldo automatizadas</b> en Azure, Docker y sistemas heredados, mejorando la <b>continuidad operativa y el cumplimiento</b>"
+          ],
         "url": "https://www.austranet.com/"
-      }
+      }    
       
     ],
     "volunteer": [],
@@ -199,6 +210,19 @@
       }
     ],
     "work": [
+      {
+        "company":"Venepandi C.A.",
+        "position":"Data Consultant",
+        "startDate": "2025-03",
+        "endDate": "2025-06",
+        "summary": "Data extraction, transformation, and analysis for report generation.",
+        "highlights": [
+          "Developed an automated <b>expense tracking system</b> using <b>OCR (Tesseract)</b> to extract data from physical receipts or audio files.",
+          "Transformed extracted information into <b>structured data</b> for integration into custom reports.",
+          "Contributed to reducing over <b>$5,000 USD</b> in unnecessary expenses in a few months."
+        ],
+        "url": "https://venepandi.com/"
+      },
       {
         "company": "Thermogroup",
         "position": "Data Analyst / Consultant",
