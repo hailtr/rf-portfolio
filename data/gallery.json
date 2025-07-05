@@ -5,7 +5,7 @@
       "title": "Portafolio",
       "subtitle": "WebPage - 2025",
       "category": "proyectos",
-      "description": "Este es mi portafolio personal, donde muestro mis proyectos, herramientas y experiencia.",
+      "description": "Este es mi portafolio personal, donde muestro mis proyectos, herramientas y experiencia. No es perfecto, tiene algunos bugs pero es funcional y está en constante mejora. Espero que te guste. PD: Estoy trabajando en la versión con backend para resolver los bugs actuales. <br> PD2: El bug más loco es al generar el CV, debes tener el scroll al máximo hacia arriba para que funcione correctamente, pues está usando una captura de pantalla en lugar de hacer el documento, (requiere backend).",
       "tags": [
         "HTML",
         "CSS",
@@ -58,7 +58,7 @@
       "title": "Portfolio",
       "subtitle": "WebPage - 2025",
       "category": "projects",
-      "description": "This is my personal portfolio where I showcase my projects, tools, and experience.",
+      "description": "This is my personal portfolio where I showcase my projects, tools, and experience. It's not perfect, it has some bugs but it's functional and constantly improving. I hope you like it. PS: I'm working on the backend version to fix the current bugs. <br> PS2: The craziest bug is when generating the CV, you need to have the scroll all the way up for it to work correctly, as it's using a screenshot instead of making the document (requires backend).",
       "tags": [
         "HTML",
         "CSS",
