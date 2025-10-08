@@ -2,7 +2,7 @@
   "es": {
     "basics": {
       "name": "Rafael Ortiz",
-      "label": "Analytics Engineer",
+      "label": "Analista de datos",
       "image": "./images/profilepicture.jpg",
       "email": "lustigrfortiz@gmail.com",
       "phone": "+58 424-2700455",
@@ -77,7 +77,7 @@
         "endDate": "2025-06",
         "summary": "Extracción, transformación y análisis de datos para la creación de reportes.",
         "highlights": [
-                    "Desarrollé un sistema automatizado de <b>seguimiento de gastos</b> utilizando <b>OCR (Tesseract)</b> para extraer datos desde recibos físicos o audios.",
+                    "Desarrollé un sistema automatizado de <b>seguimiento de gastos</b> utilizando <b>OCR (Tesseract) y Whisper de OpenIA</b> para extraer datos desde recibos físicos o audios.",
                     "Transformé la información extraída en <b>datos estructurados</b> e integrables en reportes personalizados.",
                     "Contribuí a reducir más de <b>$5,000 USD</b> en gastos innecesarios en pocos meses."
                     ],
@@ -142,12 +142,12 @@
   "en": {
     "basics": {
       "name": "Rafael Ortiz",
-      "label": "Analytics Engineer",
+      "label": "Data Analyst",
       "image": "./images/profilepicture.jpg",
       "email": "lustigrfortiz@gmail.com",
       "phone": "+58 424-2700455",
       "website": "https://hailtr.github.io/rf-portfolio/",
-      "summary": "Analytics Engineer with experience in infrastructure, technical support, and strong analytical skills. Driven by automation, I value optimization and have a deep interest in artificial intelligence. I focus my work on solving problems through logic. Therefore, I am in constant learning and enjoy sharing knowledge: learning is what I value most.",
+      "summary": "Experience in infrastructure, technical support, and strong analytical skills. Driven by automation, I value optimization and have a deep interest in artificial intelligence. I focus my work on solving problems through logic. Therefore, I am in constant learning and enjoy sharing knowledge: learning is what I value most.",
       "location": {
         "address": "Montecristo",
         "postalCode": "1010",
@@ -210,6 +210,20 @@
       }
     ],
     "work": [
+        {
+        "company": "Honor",
+        "position": "Business Intelligence",
+        "startDate": "2025-09",
+        "endDate": "2025-10",
+        "summary": "Encargado de mantener y optimizar la infraestructura de datos existente, generar reportes BI y automatizar procesos para mejorar la eficiencia del equipo. Responsable del tenant completo y del diseño de pipelines de datos para procesos internos.",
+        "highlights": [
+          "Diseñé y desarrollé una <b>página de control</b> para reemplazar Excel en la gestión de solicitudes, transformando un proceso manual en una herramienta de software funcional.",
+          "Automatizé múltiples procesos internos y pipelines, mejorando la eficiencia y reduciendo errores manuales en el manejo de datos.",
+          "Gestioné la infraestructura de BI y el tenant completo, implementando mejoras que optimizaron el flujo de datos y la accesibilidad de la información.",
+          "Trabajé con <b>Power BI, Python, Pandas, SQL, HTML, CSS y JavaScript</b> para integración, visualización y automatización de reportes."
+        ],
+        "url": ""
+      },
       {
         "company":"Venepandi C.A.",
         "position":"Data Consultant",
@@ -217,7 +231,7 @@
         "endDate": "2025-06",
         "summary": "Data extraction, transformation, and analysis for report generation.",
         "highlights": [
-          "Developed an automated <b>expense tracking system</b> using <b>OCR (Tesseract)</b> to extract data from physical receipts or audio files.",
+          "Developed an automated <b>expense tracking system</b> using <b>OCR (Tesseract) and Whisper from OpenIA</b> to extract data from physical receipts or audio files.",
           "Transformed extracted information into <b>structured data</b> for integration into custom reports.",
           "Contributed to reducing over <b>$5,000 USD</b> in unnecessary expenses in a few months."
         ],
